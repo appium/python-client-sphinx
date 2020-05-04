@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webdriver.common package &mdash; Python client 1.0 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="webdriver.extensions package" href="webdriver.extensions.html" />
+    <link rel="prev" title="webdriver package" href="webdriver.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python client 1.0
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="webdriver.html">webdriver package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="webdriver.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">webdriver.common package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-webdriver.common.mobileby">webdriver.common.mobileby module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-webdriver.common.multi_action">webdriver.common.multi_action module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-webdriver.common.touch_action">webdriver.common.touch_action module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-webdriver.common">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="webdriver.extensions.html">webdriver.extensions package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver.appium_connection">webdriver.appium_connection module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver.appium_service">webdriver.appium_service module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver.applicationstate">webdriver.applicationstate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver.clipboard_content_type">webdriver.clipboard_content_type module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver.connectiontype">webdriver.connectiontype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver.errorhandler">webdriver.errorhandler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver.mobilecommand">webdriver.mobilecommand module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver.switch_to">webdriver.switch_to module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver.webdriver">webdriver.webdriver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver.webelement">webdriver.webelement module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.html#module-webdriver">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python client 1.0</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="webdriver.html">webdriver package</a> &raquo;</li>
+        
+      <li>webdriver.common package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/webdriver.common.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="webdriver-common-package">
+<h1>webdriver.common package<a class="headerlink" href="#webdriver-common-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-webdriver.common.mobileby">
+<span id="webdriver-common-mobileby-module"></span><h2>webdriver.common.mobileby module<a class="headerlink" href="#module-webdriver.common.mobileby" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="webdriver.common.mobileby.MobileBy">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.common.mobileby.</code><code class="sig-name descname">MobileBy</code><a class="headerlink" href="#webdriver.common.mobileby.MobileBy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.common.by.By</span></code></p>
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.ACCESSIBILITY_ID">
+<code class="sig-name descname">ACCESSIBILITY_ID</code><em class="property"> = 'accessibility id'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.ACCESSIBILITY_ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.ANDROID_DATA_MATCHER">
+<code class="sig-name descname">ANDROID_DATA_MATCHER</code><em class="property"> = '-android datamatcher'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.ANDROID_DATA_MATCHER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.ANDROID_UIAUTOMATOR">
+<code class="sig-name descname">ANDROID_UIAUTOMATOR</code><em class="property"> = '-android uiautomator'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.ANDROID_UIAUTOMATOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.ANDROID_VIEWTAG">
+<code class="sig-name descname">ANDROID_VIEWTAG</code><em class="property"> = '-android viewtag'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.ANDROID_VIEWTAG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.ANDROID_VIEW_MATCHER">
+<code class="sig-name descname">ANDROID_VIEW_MATCHER</code><em class="property"> = '-android viewmatcher'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.ANDROID_VIEW_MATCHER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.CUSTOM">
+<code class="sig-name descname">CUSTOM</code><em class="property"> = '-custom'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.CUSTOM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.IMAGE">
+<code class="sig-name descname">IMAGE</code><em class="property"> = '-image'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.IMAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.IOS_CLASS_CHAIN">
+<code class="sig-name descname">IOS_CLASS_CHAIN</code><em class="property"> = '-ios class chain'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.IOS_CLASS_CHAIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.IOS_PREDICATE">
+<code class="sig-name descname">IOS_PREDICATE</code><em class="property"> = '-ios predicate string'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.IOS_PREDICATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.IOS_UIAUTOMATION">
+<code class="sig-name descname">IOS_UIAUTOMATION</code><em class="property"> = '-ios uiautomation'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.IOS_UIAUTOMATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="webdriver.common.mobileby.MobileBy.WINDOWS_UI_AUTOMATION">
+<code class="sig-name descname">WINDOWS_UI_AUTOMATION</code><em class="property"> = '-windows uiautomation'</em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.WINDOWS_UI_AUTOMATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.common.multi_action">
+<span id="webdriver-common-multi-action-module"></span><h2>webdriver.common.multi_action module<a class="headerlink" href="#module-webdriver.common.multi_action" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="webdriver.common.multi_action.MultiAction">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.common.multi_action.</code><code class="sig-name descname">MultiAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">WebDriver</span></em>, <em class="sig-param"><span class="n">element</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>WebElement<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.common.multi_action.MultiAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="webdriver.common.multi_action.MultiAction.add">
+<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">touch_actions</span><span class="p">:</span> <span class="n">TouchAction</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#webdriver.common.multi_action.MultiAction.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add TouchAction objects to the MultiAction, to be performed later.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>touch_actions</strong> (<cite>TouchAction</cite>) – one or more TouchAction objects describing a chain of actions to be performed by one finger</p>
+</dd>
+</dl>
+<dl>
+<dt>Usage:</dt><dd><p>a1 = TouchAction(driver)</p>
+<p>a1.press(el1).move_to(el2).release()</p>
+<p>a2 = TouchAction(driver)</p>
+<p>a2.press(el2).move_to(el1).release()</p>
+<p>MultiAction(driver).add(a1, a2)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.common.multi_action.MultiAction.json_wire_gestures">
+<em class="property">property </em><code class="sig-name descname">json_wire_gestures</code><a class="headerlink" href="#webdriver.common.multi_action.MultiAction.json_wire_gestures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.common.multi_action.MultiAction.perform">
+<code class="sig-name descname">perform</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.common.multi_action.MultiAction.perform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the actions stored in the object.</p>
+<dl>
+<dt>Usage:</dt><dd><p>a1 = TouchAction(driver)</p>
+<p>a1.press(el1).move_to(el2).release()</p>
+<p>a2 = TouchAction(driver)</p>
+<p>a2.press(el2).move_to(el1).release()</p>
+<p>MultiAction(driver).add(a1, a2).perform()</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.common.touch_action">
+<span id="webdriver-common-touch-action-module"></span><h2>webdriver.common.touch_action module<a class="headerlink" href="#module-webdriver.common.touch_action" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="webdriver.common.touch_action.TouchAction">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.common.touch_action.</code><code class="sig-name descname">TouchAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>WebDriver<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.common.touch_action.TouchAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="webdriver.common.touch_action.TouchAction.json_wire_gestures">
+<em class="property">property </em><code class="sig-name descname">json_wire_gestures</code><a class="headerlink" href="#webdriver.common.touch_action.TouchAction.json_wire_gestures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.common.touch_action.TouchAction.long_press">
+<code class="sig-name descname">long_press</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">el</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>WebElement<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">duration</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.common.touch_action.TouchAction.long_press" title="Permalink to this definition">¶</a></dt>
+<dd><p>Begin a chain with a press down that lasts <cite>duration</cite> milliseconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>el</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code>, optional) – the element to press</p></li>
+<li><p><strong>x</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – x coordiate to press. If y is used, x must also be set</p></li>
+<li><p><strong>y</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – y coordiate to press. If x is used, y must also be set</p></li>
+<li><p><strong>duration</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – Duration to press</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>TouchAction</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.common.touch_action.TouchAction.move_to">
+<code class="sig-name descname">move_to</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">el</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>WebElement<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.common.touch_action.TouchAction.move_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the pointer from the previous point to the element or point specified</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>el</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code>, optional) – the element to be moved to</p></li>
+<li><p><strong>x</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – x coordiate to be moved to. If y is used, x must also be set</p></li>
+<li><p><strong>y</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – y coordiate to be moved to. If x is used, y must also be set</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>TouchAction</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.common.touch_action.TouchAction.perform">
+<code class="sig-name descname">perform</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.common.touch_action.TouchAction.perform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the action by sending the commands to the server to be operated upon</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><cite>TouchAction</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.common.touch_action.TouchAction.press">
+<code class="sig-name descname">press</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">el</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>WebElement<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pressure</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.common.touch_action.TouchAction.press" title="Permalink to this definition">¶</a></dt>
+<dd><p>Begin a chain with a press down action at a particular element or point</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>el</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code>, optional) – the element to press</p></li>
+<li><p><strong>x</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – x coordiate to press. If y is used, x must also be set</p></li>
+<li><p><strong>y</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – y coordiate to press. If x is used, y must also be set</p></li>
+<li><p><strong>pressure</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>, optional) – [iOS Only] press as force touch. Read the description of <cite>force</cite> property on Apple’s UITouch class
+(<a class="reference external" href="https://developer.apple.com/documentation/uikit/uitouch?language=objc">https://developer.apple.com/documentation/uikit/uitouch?language=objc</a>) for more details on possible value ranges.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>TouchAction</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.common.touch_action.TouchAction.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.common.touch_action.TouchAction.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>End the action by lifting the pointer off the screen</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><cite>TouchAction</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.common.touch_action.TouchAction.tap">
+<code class="sig-name descname">tap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">element</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>WebElement<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">count</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.common.touch_action.TouchAction.tap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a tap action on the element</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> (<cite>appium.webdriver.webelement.WebElement</cite>) – the element to tap</p></li>
+<li><p><strong>x</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – x coordinate to tap, relative to the top left corner of the element.</p></li>
+<li><p><strong>y</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – y coordinate. If y is used, x must also be set, and vice versa</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>TouchAction</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.common.touch_action.TouchAction.wait">
+<code class="sig-name descname">wait</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ms</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.common.touch_action.TouchAction.wait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pause for <cite>ms</cite> milliseconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ms</strong> (<em>int</em>) – The time to pause</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>TouchAction</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.common">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-webdriver.common" title="Permalink to this headline">¶</a></h2>
+<p>Appium Python Client: WebDriver common classes</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="webdriver.extensions.html" class="btn btn-neutral float-right" title="webdriver.extensions package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="webdriver.html" class="btn btn-neutral float-left" title="webdriver package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Appium
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
