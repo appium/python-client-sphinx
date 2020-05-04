@@ -1,0 +1,1269 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webdriver package &mdash; Python client 1.0 beta 1.0beta documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="webdriver.common package" href="webdriver.common.html" />
+    <link rel="prev" title="Welcome to Appium python client’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python client 1.0 beta
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">webdriver package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="webdriver.common.html">webdriver.common package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webdriver.extensions.html">webdriver.extensions package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.appium_connection">webdriver.appium_connection module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.appium_service">webdriver.appium_service module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.applicationstate">webdriver.applicationstate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.clipboard_content_type">webdriver.clipboard_content_type module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.connectiontype">webdriver.connectiontype module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.errorhandler">webdriver.errorhandler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.mobilecommand">webdriver.mobilecommand module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.switch_to">webdriver.switch_to module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.webdriver">webdriver.webdriver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.webelement">webdriver.webelement module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python client 1.0 beta</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>webdriver package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/webdriver.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="webdriver-package">
+<h1>webdriver package<a class="headerlink" href="#webdriver-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="webdriver.common.html">webdriver.common package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.common.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.common.html#module-webdriver.common.mobileby">webdriver.common.mobileby module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.common.html#module-webdriver.common.multi_action">webdriver.common.multi_action module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.common.html#module-webdriver.common.touch_action">webdriver.common.touch_action module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.common.html#module-webdriver.common">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="webdriver.extensions.html">webdriver.extensions package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="webdriver.extensions.android.html">webdriver.extensions.android package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android.activities">webdriver.extensions.android.activities module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android.common">webdriver.extensions.android.common module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android.display">webdriver.extensions.android.display module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android.gsm">webdriver.extensions.android.gsm module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android.nativekey">webdriver.extensions.android.nativekey module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android.network">webdriver.extensions.android.network module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android.performance">webdriver.extensions.android.performance module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android.power">webdriver.extensions.android.power module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android.sms">webdriver.extensions.android.sms module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android.system_bars">webdriver.extensions.android.system_bars module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.android.html#module-webdriver.extensions.android">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="webdriver.extensions.search_context.html">webdriver.extensions.search_context package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.search_context.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.android">webdriver.extensions.search_context.android module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.base_search_context">webdriver.extensions.search_context.base_search_context module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.custom">webdriver.extensions.search_context.custom module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.ios">webdriver.extensions.search_context.ios module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.mobile">webdriver.extensions.search_context.mobile module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.windows">webdriver.extensions.search_context.windows module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.action_helpers">webdriver.extensions.action_helpers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.applications">webdriver.extensions.applications module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.clipboard">webdriver.extensions.clipboard module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.context">webdriver.extensions.context module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.device_time">webdriver.extensions.device_time module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.execute_driver">webdriver.extensions.execute_driver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.execute_mobile_command">webdriver.extensions.execute_mobile_command module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.hw_actions">webdriver.extensions.hw_actions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.images_comparison">webdriver.extensions.images_comparison module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.ime">webdriver.extensions.ime module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.keyboard">webdriver.extensions.keyboard module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.location">webdriver.extensions.location module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.log_event">webdriver.extensions.log_event module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.remote_fs">webdriver.extensions.remote_fs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.screen_record">webdriver.extensions.screen_record module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.session">webdriver.extensions.session module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions.settings">webdriver.extensions.settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.extensions.html#module-webdriver.extensions">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-webdriver.appium_connection">
+<span id="webdriver-appium-connection-module"></span><h2>webdriver.appium_connection module<a class="headerlink" href="#module-webdriver.appium_connection" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="webdriver.appium_connection.AppiumConnection">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.appium_connection.</code><code class="sig-name descname">AppiumConnection</code><span class="sig-paren">(</span><em class="sig-param">remote_server_addr</em>, <em class="sig-param">keep_alive=False</em>, <em class="sig-param">resolve_ip=True</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.appium_connection.AppiumConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.remote_connection.RemoteConnection</span></code></p>
+<dl class="method">
+<dt id="webdriver.appium_connection.AppiumConnection.get_remote_connection_headers">
+<em class="property">classmethod </em><code class="sig-name descname">get_remote_connection_headers</code><span class="sig-paren">(</span><em class="sig-param">parsed_url: str</em>, <em class="sig-param">keep_alive: bool = True</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="headerlink" href="#webdriver.appium_connection.AppiumConnection.get_remote_connection_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override get_remote_connection_headers in RemoteConnection</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.appium_service">
+<span id="webdriver-appium-service-module"></span><h2>webdriver.appium_service module<a class="headerlink" href="#module-webdriver.appium_service" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="webdriver.appium_service.AppiumService">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.appium_service.</code><code class="sig-name descname">AppiumService</code><a class="headerlink" href="#webdriver.appium_service.AppiumService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="webdriver.appium_service.AppiumService.is_listening">
+<em class="property">property </em><code class="sig-name descname">is_listening</code><a class="headerlink" href="#webdriver.appium_service.AppiumService.is_listening" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the service is listening on the given/default host/port.</p>
+<p>The fact, that the service is running, does not always mean it is listening.
+the default host/port values can be customized by providing –address/–port
+command line arguments while starting the service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>True</cite> if the service is running and listening on the given/default host/port</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.appium_service.AppiumService.is_running">
+<em class="property">property </em><code class="sig-name descname">is_running</code><a class="headerlink" href="#webdriver.appium_service.AppiumService.is_running" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the service is running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>True</cite> or <cite>False</cite></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.appium_service.AppiumService.start">
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">**kwargs: Any</em><span class="sig-paren">)</span> &#x2192; subprocess.Popen<a class="headerlink" href="#webdriver.appium_service.AppiumService.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts Appium service with given arguments.</p>
+<p>The service will be forcefully restarted if it is already running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env</strong> (<em>dict</em>) – Environment variables mapping. The default system environment,
+which is inherited from the parent process is assigned by default.</p></li>
+<li><p><strong>node</strong> (<em>str</em>) – The full path to the main NodeJS executable. The service will try
+to retrieve it automatically by default.</p></li>
+<li><p><strong>stdout</strong> – Check on the documentation for subprocess.Popen for more details.
+The default value is subprocess.PIPE.</p></li>
+<li><p><strong>stderr</strong> – Check on the documentation for subprocess.Popen for more details.
+The default value is subprocess.PIPE.</p></li>
+<li><p><strong>timeout_ms</strong> (<em>int</em>) – The maximum time to wait until Appium process starts listening
+for HTTP connections. If set to zero or a negative number then no wait will be applied.
+60000 ms by default</p></li>
+<li><p><strong>main_script</strong> (<em>str</em>) – The full path to the main Appium executable
+(usually located this is build/lib/main.js). If this is not set
+then the service tries to detect the path automatically.</p></li>
+<li><p><strong>args</strong> (<em>str</em>) – List of Appium arguments (all must be strings). Check on
+<a class="reference external" href="https://appium.io/docs/en/writing-running-appium/server-args/">https://appium.io/docs/en/writing-running-appium/server-args/</a> for more details
+about possible arguments and their values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>You can use Popen.communicate interface</dt><dd><p>or stderr/stdout properties of the instance
+(stdout/stderr must not be set to None in such case)
+in order to retrieve the actual process output.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>subprocess.Popen instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.appium_service.AppiumService.stop">
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.appium_service.AppiumService.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops Appium service if it is running.</p>
+<p>The call will be ignored if the service is not running
+or has been already stopped.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>True</cite> if the service was running before being stopped</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="webdriver.appium_service.AppiumServiceError">
+<em class="property">exception </em><code class="sig-prename descclassname">webdriver.appium_service.</code><code class="sig-name descname">AppiumServiceError</code><a class="headerlink" href="#webdriver.appium_service.AppiumServiceError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="webdriver.appium_service.find_executable">
+<code class="sig-prename descclassname">webdriver.appium_service.</code><code class="sig-name descname">find_executable</code><span class="sig-paren">(</span><em class="sig-param">executable: str</em><span class="sig-paren">)</span> &#x2192; Optional[str]<a class="headerlink" href="#webdriver.appium_service.find_executable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="webdriver.appium_service.poll_url">
+<code class="sig-prename descclassname">webdriver.appium_service.</code><code class="sig-name descname">poll_url</code><span class="sig-paren">(</span><em class="sig-param">host: str</em>, <em class="sig-param">port: int</em>, <em class="sig-param">path: str</em>, <em class="sig-param">timeout_ms: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.appium_service.poll_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.applicationstate">
+<span id="webdriver-applicationstate-module"></span><h2>webdriver.applicationstate module<a class="headerlink" href="#module-webdriver.applicationstate" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="webdriver.applicationstate.ApplicationState">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.applicationstate.</code><code class="sig-name descname">ApplicationState</code><a class="headerlink" href="#webdriver.applicationstate.ApplicationState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="webdriver.applicationstate.ApplicationState.NOT_INSTALLED">
+<code class="sig-name descname">NOT_INSTALLED</code><em class="property"> = 0</em><a class="headerlink" href="#webdriver.applicationstate.ApplicationState.NOT_INSTALLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.applicationstate.ApplicationState.NOT_RUNNING">
+<code class="sig-name descname">NOT_RUNNING</code><em class="property"> = 1</em><a class="headerlink" href="#webdriver.applicationstate.ApplicationState.NOT_RUNNING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.applicationstate.ApplicationState.RUNNING_IN_BACKGROUND">
+<code class="sig-name descname">RUNNING_IN_BACKGROUND</code><em class="property"> = 3</em><a class="headerlink" href="#webdriver.applicationstate.ApplicationState.RUNNING_IN_BACKGROUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.applicationstate.ApplicationState.RUNNING_IN_BACKGROUND_SUSPENDED">
+<code class="sig-name descname">RUNNING_IN_BACKGROUND_SUSPENDED</code><em class="property"> = 2</em><a class="headerlink" href="#webdriver.applicationstate.ApplicationState.RUNNING_IN_BACKGROUND_SUSPENDED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.applicationstate.ApplicationState.RUNNING_IN_FOREGROUND">
+<code class="sig-name descname">RUNNING_IN_FOREGROUND</code><em class="property"> = 4</em><a class="headerlink" href="#webdriver.applicationstate.ApplicationState.RUNNING_IN_FOREGROUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.clipboard_content_type">
+<span id="webdriver-clipboard-content-type-module"></span><h2>webdriver.clipboard_content_type module<a class="headerlink" href="#module-webdriver.clipboard_content_type" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="webdriver.clipboard_content_type.ClipboardContentType">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.clipboard_content_type.</code><code class="sig-name descname">ClipboardContentType</code><a class="headerlink" href="#webdriver.clipboard_content_type.ClipboardContentType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="webdriver.clipboard_content_type.ClipboardContentType.IMAGE">
+<code class="sig-name descname">IMAGE</code><em class="property"> = 'image'</em><a class="headerlink" href="#webdriver.clipboard_content_type.ClipboardContentType.IMAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.clipboard_content_type.ClipboardContentType.PLAINTEXT">
+<code class="sig-name descname">PLAINTEXT</code><em class="property"> = 'plaintext'</em><a class="headerlink" href="#webdriver.clipboard_content_type.ClipboardContentType.PLAINTEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.clipboard_content_type.ClipboardContentType.URL">
+<code class="sig-name descname">URL</code><em class="property"> = 'url'</em><a class="headerlink" href="#webdriver.clipboard_content_type.ClipboardContentType.URL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.connectiontype">
+<span id="webdriver-connectiontype-module"></span><h2>webdriver.connectiontype module<a class="headerlink" href="#module-webdriver.connectiontype" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Connection types are specified here:</dt><dd><p><a class="reference external" href="https://code.google.com/p/selenium/source/browse/spec-draft.md?repo=mobile#120">https://code.google.com/p/selenium/source/browse/spec-draft.md?repo=mobile#120</a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value (Alias)</p></th>
+<th class="head"><p>Data</p></th>
+<th class="head"><p>Wifi</p></th>
+<th class="head"><p>Airplane Mode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0 (None)</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1 (Airplane Mode)</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>2 (Wifi only)</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>4 (Data only)</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>6 (All network on)</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="class">
+<dt id="webdriver.connectiontype.ConnectionType">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.connectiontype.</code><code class="sig-name descname">ConnectionType</code><a class="headerlink" href="#webdriver.connectiontype.ConnectionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="webdriver.connectiontype.ConnectionType.AIRPLANE_MODE">
+<code class="sig-name descname">AIRPLANE_MODE</code><em class="property"> = 1</em><a class="headerlink" href="#webdriver.connectiontype.ConnectionType.AIRPLANE_MODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.connectiontype.ConnectionType.ALL_NETWORK_ON">
+<code class="sig-name descname">ALL_NETWORK_ON</code><em class="property"> = 6</em><a class="headerlink" href="#webdriver.connectiontype.ConnectionType.ALL_NETWORK_ON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.connectiontype.ConnectionType.DATA_ONLY">
+<code class="sig-name descname">DATA_ONLY</code><em class="property"> = 4</em><a class="headerlink" href="#webdriver.connectiontype.ConnectionType.DATA_ONLY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.connectiontype.ConnectionType.NO_CONNECTION">
+<code class="sig-name descname">NO_CONNECTION</code><em class="property"> = 0</em><a class="headerlink" href="#webdriver.connectiontype.ConnectionType.NO_CONNECTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.connectiontype.ConnectionType.WIFI_ONLY">
+<code class="sig-name descname">WIFI_ONLY</code><em class="property"> = 2</em><a class="headerlink" href="#webdriver.connectiontype.ConnectionType.WIFI_ONLY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.errorhandler">
+<span id="webdriver-errorhandler-module"></span><h2>webdriver.errorhandler module<a class="headerlink" href="#module-webdriver.errorhandler" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="webdriver.errorhandler.MobileErrorHandler">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.errorhandler.</code><code class="sig-name descname">MobileErrorHandler</code><a class="headerlink" href="#webdriver.errorhandler.MobileErrorHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.errorhandler.ErrorHandler</span></code></p>
+<dl class="method">
+<dt id="webdriver.errorhandler.MobileErrorHandler.check_response">
+<code class="sig-name descname">check_response</code><span class="sig-paren">(</span><em class="sig-param">response: Dict</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#webdriver.errorhandler.MobileErrorHandler.check_response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks that a JSON response from the WebDriver does not have an error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Args</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>response - The JSON response from the WebDriver server as a dictionary
+object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>If the response contains an error message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.mobilecommand">
+<span id="webdriver-mobilecommand-module"></span><h2>webdriver.mobilecommand module<a class="headerlink" href="#module-webdriver.mobilecommand" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="webdriver.mobilecommand.MobileCommand">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.mobilecommand.</code><code class="sig-name descname">MobileCommand</code><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.ACTIVATE_APP">
+<code class="sig-name descname">ACTIVATE_APP</code><em class="property"> = 'activateApp'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.ACTIVATE_APP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.ACTIVATE_IME_ENGINE">
+<code class="sig-name descname">ACTIVATE_IME_ENGINE</code><em class="property"> = 'activateIMEEngine'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.ACTIVATE_IME_ENGINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.BACKGROUND">
+<code class="sig-name descname">BACKGROUND</code><em class="property"> = 'background'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.BACKGROUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.CLEAR">
+<code class="sig-name descname">CLEAR</code><em class="property"> = 'clear'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.CLEAR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.CLOSE_APP">
+<code class="sig-name descname">CLOSE_APP</code><em class="property"> = 'closeApp'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.CLOSE_APP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.COMPARE_IMAGES">
+<code class="sig-name descname">COMPARE_IMAGES</code><em class="property"> = 'compareImages'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.COMPARE_IMAGES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.CONTEXTS">
+<code class="sig-name descname">CONTEXTS</code><em class="property"> = 'getContexts'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.CONTEXTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.DEACTIVATE_IME_ENGINE">
+<code class="sig-name descname">DEACTIVATE_IME_ENGINE</code><em class="property"> = 'deactivateIMEEngine'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.DEACTIVATE_IME_ENGINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.END_TEST_COVERAGE">
+<code class="sig-name descname">END_TEST_COVERAGE</code><em class="property"> = 'endTestCoverage'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.END_TEST_COVERAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.EXECUTE_DRIVER">
+<code class="sig-name descname">EXECUTE_DRIVER</code><em class="property"> = 'executeDriver'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.EXECUTE_DRIVER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.FINGER_PRINT">
+<code class="sig-name descname">FINGER_PRINT</code><em class="property"> = 'fingerPrint'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.FINGER_PRINT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_ACTIVE_IME_ENGINE">
+<code class="sig-name descname">GET_ACTIVE_IME_ENGINE</code><em class="property"> = 'getActiveEngine'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_ACTIVE_IME_ENGINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_ALL_SESSIONS">
+<code class="sig-name descname">GET_ALL_SESSIONS</code><em class="property"> = 'getAllSessions'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_ALL_SESSIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_APP_STRINGS">
+<code class="sig-name descname">GET_APP_STRINGS</code><em class="property"> = 'getAppStrings'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_APP_STRINGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_AVAILABLE_IME_ENGINES">
+<code class="sig-name descname">GET_AVAILABLE_IME_ENGINES</code><em class="property"> = 'getAvailableIMEEngines'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_AVAILABLE_IME_ENGINES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_CLIPBOARD">
+<code class="sig-name descname">GET_CLIPBOARD</code><em class="property"> = 'getClipboard'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_CLIPBOARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_CURRENT_ACTIVITY">
+<code class="sig-name descname">GET_CURRENT_ACTIVITY</code><em class="property"> = 'getCurrentActivity'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_CURRENT_ACTIVITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_CURRENT_CONTEXT">
+<code class="sig-name descname">GET_CURRENT_CONTEXT</code><em class="property"> = 'getCurrentContext'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_CURRENT_CONTEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_CURRENT_PACKAGE">
+<code class="sig-name descname">GET_CURRENT_PACKAGE</code><em class="property"> = 'getCurrentPackage'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_CURRENT_PACKAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_DEVICE_TIME_GET">
+<code class="sig-name descname">GET_DEVICE_TIME_GET</code><em class="property"> = 'getDeviceTimeGet'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_DEVICE_TIME_GET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_DEVICE_TIME_POST">
+<code class="sig-name descname">GET_DEVICE_TIME_POST</code><em class="property"> = 'getDeviceTimePost'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_DEVICE_TIME_POST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_DISPLAY_DENSITY">
+<code class="sig-name descname">GET_DISPLAY_DENSITY</code><em class="property"> = 'getDisplayDensity'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_DISPLAY_DENSITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_EVENTS">
+<code class="sig-name descname">GET_EVENTS</code><em class="property"> = 'getLogEvents'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_EVENTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_LOCATION">
+<code class="sig-name descname">GET_LOCATION</code><em class="property"> = 'getLocation'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_LOCATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_NETWORK_CONNECTION">
+<code class="sig-name descname">GET_NETWORK_CONNECTION</code><em class="property"> = 'getNetworkConnection'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_NETWORK_CONNECTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_PERFORMANCE_DATA">
+<code class="sig-name descname">GET_PERFORMANCE_DATA</code><em class="property"> = 'getPerformanceData'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_PERFORMANCE_DATA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_PERFORMANCE_DATA_TYPES">
+<code class="sig-name descname">GET_PERFORMANCE_DATA_TYPES</code><em class="property"> = 'getPerformanceDataTypes'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_PERFORMANCE_DATA_TYPES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_SESSION">
+<code class="sig-name descname">GET_SESSION</code><em class="property"> = 'getSession'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_SESSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_SETTINGS">
+<code class="sig-name descname">GET_SETTINGS</code><em class="property"> = 'getSettings'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_SETTINGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.GET_SYSTEM_BARS">
+<code class="sig-name descname">GET_SYSTEM_BARS</code><em class="property"> = 'getSystemBars'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.GET_SYSTEM_BARS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.HIDE_KEYBOARD">
+<code class="sig-name descname">HIDE_KEYBOARD</code><em class="property"> = 'hideKeyboard'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.HIDE_KEYBOARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.INSTALL_APP">
+<code class="sig-name descname">INSTALL_APP</code><em class="property"> = 'installApp'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.INSTALL_APP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.IS_APP_INSTALLED">
+<code class="sig-name descname">IS_APP_INSTALLED</code><em class="property"> = 'isAppInstalled'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.IS_APP_INSTALLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.IS_IME_ACTIVE">
+<code class="sig-name descname">IS_IME_ACTIVE</code><em class="property"> = 'isIMEActive'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.IS_IME_ACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.IS_KEYBOARD_SHOWN">
+<code class="sig-name descname">IS_KEYBOARD_SHOWN</code><em class="property"> = 'isKeyboardShown'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.IS_KEYBOARD_SHOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.IS_LOCKED">
+<code class="sig-name descname">IS_LOCKED</code><em class="property"> = 'isLocked'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.IS_LOCKED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.KEY_EVENT">
+<code class="sig-name descname">KEY_EVENT</code><em class="property"> = 'keyEvent'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.KEY_EVENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.LAUNCH_APP">
+<code class="sig-name descname">LAUNCH_APP</code><em class="property"> = 'launchApp'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.LAUNCH_APP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.LOCATION_IN_VIEW">
+<code class="sig-name descname">LOCATION_IN_VIEW</code><em class="property"> = 'locationInView'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.LOCATION_IN_VIEW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.LOCK">
+<code class="sig-name descname">LOCK</code><em class="property"> = 'lock'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.LOCK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.LOG_EVENT">
+<code class="sig-name descname">LOG_EVENT</code><em class="property"> = 'logCustomEvent'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.LOG_EVENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.LONG_PRESS_KEYCODE">
+<code class="sig-name descname">LONG_PRESS_KEYCODE</code><em class="property"> = 'longPressKeyCode'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.LONG_PRESS_KEYCODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.MAKE_GSM_CALL">
+<code class="sig-name descname">MAKE_GSM_CALL</code><em class="property"> = 'makeGsmCall'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.MAKE_GSM_CALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.MULTI_ACTION">
+<code class="sig-name descname">MULTI_ACTION</code><em class="property"> = 'multiAction'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.MULTI_ACTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.OPEN_NOTIFICATIONS">
+<code class="sig-name descname">OPEN_NOTIFICATIONS</code><em class="property"> = 'openNotifications'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.OPEN_NOTIFICATIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.PRESS_KEYCODE">
+<code class="sig-name descname">PRESS_KEYCODE</code><em class="property"> = 'pressKeyCode'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.PRESS_KEYCODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.PULL_FILE">
+<code class="sig-name descname">PULL_FILE</code><em class="property"> = 'pullFile'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.PULL_FILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.PULL_FOLDER">
+<code class="sig-name descname">PULL_FOLDER</code><em class="property"> = 'pullFolder'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.PULL_FOLDER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.PUSH_FILE">
+<code class="sig-name descname">PUSH_FILE</code><em class="property"> = 'pushFile'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.PUSH_FILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.QUERY_APP_STATE">
+<code class="sig-name descname">QUERY_APP_STATE</code><em class="property"> = 'queryAppState'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.QUERY_APP_STATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.REMOVE_APP">
+<code class="sig-name descname">REMOVE_APP</code><em class="property"> = 'removeApp'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.REMOVE_APP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.REPLACE_KEYS">
+<code class="sig-name descname">REPLACE_KEYS</code><em class="property"> = 'replaceKeys'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.REPLACE_KEYS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.RESET">
+<code class="sig-name descname">RESET</code><em class="property"> = 'reset'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.RESET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SEND_SMS">
+<code class="sig-name descname">SEND_SMS</code><em class="property"> = 'sendSms'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SEND_SMS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SET_CLIPBOARD">
+<code class="sig-name descname">SET_CLIPBOARD</code><em class="property"> = 'setClipboard'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SET_CLIPBOARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SET_GSM_SIGNAL">
+<code class="sig-name descname">SET_GSM_SIGNAL</code><em class="property"> = 'setGsmSignal'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SET_GSM_SIGNAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SET_GSM_VOICE">
+<code class="sig-name descname">SET_GSM_VOICE</code><em class="property"> = 'setGsmVoice'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SET_GSM_VOICE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SET_IMMEDIATE_VALUE">
+<code class="sig-name descname">SET_IMMEDIATE_VALUE</code><em class="property"> = 'setImmediateValue'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SET_IMMEDIATE_VALUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SET_LOCATION">
+<code class="sig-name descname">SET_LOCATION</code><em class="property"> = 'setLocation'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SET_LOCATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SET_NETWORK_CONNECTION">
+<code class="sig-name descname">SET_NETWORK_CONNECTION</code><em class="property"> = 'setNetworkConnection'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SET_NETWORK_CONNECTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SET_NETWORK_SPEED">
+<code class="sig-name descname">SET_NETWORK_SPEED</code><em class="property"> = 'setNetworkSpeed'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SET_NETWORK_SPEED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SET_POWER_AC">
+<code class="sig-name descname">SET_POWER_AC</code><em class="property"> = 'setPowerAc'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SET_POWER_AC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SET_POWER_CAPACITY">
+<code class="sig-name descname">SET_POWER_CAPACITY</code><em class="property"> = 'setPowerCapacity'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SET_POWER_CAPACITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SHAKE">
+<code class="sig-name descname">SHAKE</code><em class="property"> = 'shake'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SHAKE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.START_ACTIVITY">
+<code class="sig-name descname">START_ACTIVITY</code><em class="property"> = 'startActivity'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.START_ACTIVITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.START_RECORDING_SCREEN">
+<code class="sig-name descname">START_RECORDING_SCREEN</code><em class="property"> = 'startRecordingScreen'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.START_RECORDING_SCREEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.STOP_RECORDING_SCREEN">
+<code class="sig-name descname">STOP_RECORDING_SCREEN</code><em class="property"> = 'stopRecordingScreen'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.STOP_RECORDING_SCREEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.SWITCH_TO_CONTEXT">
+<code class="sig-name descname">SWITCH_TO_CONTEXT</code><em class="property"> = 'switchToContext'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.SWITCH_TO_CONTEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.TERMINATE_APP">
+<code class="sig-name descname">TERMINATE_APP</code><em class="property"> = 'terminateApp'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.TERMINATE_APP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.TOGGLE_LOCATION_SERVICES">
+<code class="sig-name descname">TOGGLE_LOCATION_SERVICES</code><em class="property"> = 'toggleLocationServices'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.TOGGLE_LOCATION_SERVICES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.TOGGLE_TOUCH_ID_ENROLLMENT">
+<code class="sig-name descname">TOGGLE_TOUCH_ID_ENROLLMENT</code><em class="property"> = 'toggleTouchIdEnrollment'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.TOGGLE_TOUCH_ID_ENROLLMENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.TOGGLE_WIFI">
+<code class="sig-name descname">TOGGLE_WIFI</code><em class="property"> = 'toggleWiFi'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.TOGGLE_WIFI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.TOUCH_ACTION">
+<code class="sig-name descname">TOUCH_ACTION</code><em class="property"> = 'touchAction'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.TOUCH_ACTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.TOUCH_ID">
+<code class="sig-name descname">TOUCH_ID</code><em class="property"> = 'touchId'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.TOUCH_ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.UNLOCK">
+<code class="sig-name descname">UNLOCK</code><em class="property"> = 'unlock'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.UNLOCK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="webdriver.mobilecommand.MobileCommand.UPDATE_SETTINGS">
+<code class="sig-name descname">UPDATE_SETTINGS</code><em class="property"> = 'updateSettings'</em><a class="headerlink" href="#webdriver.mobilecommand.MobileCommand.UPDATE_SETTINGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.switch_to">
+<span id="webdriver-switch-to-module"></span><h2>webdriver.switch_to module<a class="headerlink" href="#module-webdriver.switch_to" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="webdriver.switch_to.MobileSwitchTo">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.switch_to.</code><code class="sig-name descname">MobileSwitchTo</code><span class="sig-paren">(</span><em class="sig-param">driver</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.switch_to.MobileSwitchTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.switch_to.SwitchTo</span></code></p>
+<dl class="method">
+<dt id="webdriver.switch_to.MobileSwitchTo.context">
+<code class="sig-name descname">context</code><span class="sig-paren">(</span><em class="sig-param">context_name: str</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.switch_to.MobileSwitchTo.context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the context for the current session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context_name</strong> (<em>str</em>) – The name of the context to switch to.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>driver.switch_to.context(‘WEBVIEW_1’)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.webdriver">
+<span id="webdriver-webdriver-module"></span><h2>webdriver.webdriver module<a class="headerlink" href="#module-webdriver.webdriver" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="webdriver.webdriver.WebDriver">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.webdriver.</code><code class="sig-name descname">WebDriver</code><span class="sig-paren">(</span><em class="sig-param">command_executor: str = 'http://127.0.0.1:4444/wd/hub'</em>, <em class="sig-param">desired_capabilities: Optional[Dict] = None</em>, <em class="sig-param">browser_profile: str = None</em>, <em class="sig-param">proxy: str = None</em>, <em class="sig-param">keep_alive: bool = True</em>, <em class="sig-param">direct_connection: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.webdriver.WebDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.AppiumSearchContext" title="webdriver.extensions.search_context.AppiumSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.AppiumSearchContext</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.action_helpers.ActionHelpers" title="webdriver.extensions.action_helpers.ActionHelpers"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.action_helpers.ActionHelpers</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.activities.Activities" title="webdriver.extensions.android.activities.Activities"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.activities.Activities</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.applications.Applications" title="webdriver.extensions.applications.Applications"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.applications.Applications</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.clipboard.Clipboard" title="webdriver.extensions.clipboard.Clipboard"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.clipboard.Clipboard</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.context.Context" title="webdriver.extensions.context.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.context.Context</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.common.Common" title="webdriver.extensions.android.common.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.common.Common</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.device_time.DeviceTime" title="webdriver.extensions.device_time.DeviceTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.device_time.DeviceTime</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.display.Display" title="webdriver.extensions.android.display.Display"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.display.Display</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.execute_driver.ExecuteDriver" title="webdriver.extensions.execute_driver.ExecuteDriver"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.execute_driver.ExecuteDriver</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.execute_mobile_command.ExecuteMobileCommand" title="webdriver.extensions.execute_mobile_command.ExecuteMobileCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.execute_mobile_command.ExecuteMobileCommand</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.gsm.Gsm" title="webdriver.extensions.android.gsm.Gsm"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.gsm.Gsm</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.hw_actions.HardwareActions" title="webdriver.extensions.hw_actions.HardwareActions"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.hw_actions.HardwareActions</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.images_comparison.ImagesComparison" title="webdriver.extensions.images_comparison.ImagesComparison"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.images_comparison.ImagesComparison</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.ime.IME" title="webdriver.extensions.ime.IME"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.ime.IME</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.keyboard.Keyboard" title="webdriver.extensions.keyboard.Keyboard"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.keyboard.Keyboard</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.location.Location" title="webdriver.extensions.location.Location"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.location.Location</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.log_event.LogEvent" title="webdriver.extensions.log_event.LogEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.log_event.LogEvent</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.network.Network" title="webdriver.extensions.android.network.Network"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.network.Network</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.performance.Performance" title="webdriver.extensions.android.performance.Performance"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.performance.Performance</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.power.Power" title="webdriver.extensions.android.power.Power"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.power.Power</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.remote_fs.RemoteFS" title="webdriver.extensions.remote_fs.RemoteFS"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.remote_fs.RemoteFS</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.screen_record.ScreenRecord" title="webdriver.extensions.screen_record.ScreenRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.screen_record.ScreenRecord</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.session.Session" title="webdriver.extensions.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.session.Session</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.settings.Settings" title="webdriver.extensions.settings.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.settings.Settings</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.sms.Sms" title="webdriver.extensions.android.sms.Sms"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.sms.Sms</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.system_bars.SystemBars" title="webdriver.extensions.android.system_bars.SystemBars"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.system_bars.SystemBars</span></code></a></p>
+<dl class="method">
+<dt id="webdriver.webdriver.WebDriver.create_web_element">
+<code class="sig-name descname">create_web_element</code><span class="sig-paren">(</span><em class="sig-param">element_id: int</em>, <em class="sig-param">w3c: bool = False</em><span class="sig-paren">)</span> &#x2192; webdriver.webelement.WebElement<a class="headerlink" href="#webdriver.webdriver.WebDriver.create_web_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a web element with the specified element_id.</p>
+<p>Overrides method in Selenium WebDriver in order to always give them
+Appium WebElement</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element_id</strong> (<em>int</em>) – The element id to create a web element</p></li>
+<li><p><strong>w3c</strong> (<em>bool</em>) – Whether the element is W3C or MJSONWP</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>MobileWebElement</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webdriver.WebDriver.find_element">
+<code class="sig-name descname">find_element</code><span class="sig-paren">(</span><em class="sig-param">by: str = 'id'</em>, <em class="sig-param">value: Union[str</em>, <em class="sig-param">Dict] = None</em><span class="sig-paren">)</span> &#x2192; webdriver.webelement.WebElement<a class="headerlink" href="#webdriver.webdriver.WebDriver.find_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘Private’ method used by the find_element_by_* methods.</p>
+<p>Override for Appium</p>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>Use the corresponding find_element_by_* instead of this.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><cite>MobileWebElement</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webdriver.WebDriver.find_elements">
+<code class="sig-name descname">find_elements</code><span class="sig-paren">(</span><em class="sig-param">by: str = 'id'</em>, <em class="sig-param">value: Union[str</em>, <em class="sig-param">Dict] = None</em><span class="sig-paren">)</span> &#x2192; Union[List[webdriver.webelement.WebElement], List]<a class="headerlink" href="#webdriver.webdriver.WebDriver.find_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘Private’ method used by the find_elements_by_* methods.</p>
+<p>Override for Appium</p>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>Use the corresponding find_elements_by_* instead of this.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of <cite>MobileWebElement</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webdriver.WebDriver.set_value">
+<code class="sig-name descname">set_value</code><span class="sig-paren">(</span><em class="sig-param">element: webdriver.webelement.WebElement</em>, <em class="sig-param">value: str</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.webdriver.WebDriver.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value on an element in the application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>(</strong><strong>appium.webdriver.webelement.WebElement</strong> (<em>element</em>) – the element whose value will be set</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – the value to set on the element</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webdriver.WebDriver.start_session">
+<code class="sig-name descname">start_session</code><span class="sig-paren">(</span><em class="sig-param">capabilities: Dict</em>, <em class="sig-param">browser_profile: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#webdriver.webdriver.WebDriver.start_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new session with the desired capabilities.</p>
+<p>Override for Appium</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>automation_name</strong> – The name of automation engine to use.</p></li>
+<li><p><strong>platform_name</strong> – The name of target platform.</p></li>
+<li><p><strong>platform_version</strong> – The kind of mobile device or emulator to use</p></li>
+<li><p><strong>app</strong> – The absolute local path or remote http URL to an .ipa or .apk file, or a .zip containing one of these.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Read <a class="reference external" href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md</a> for more details.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver.webelement">
+<span id="webdriver-webelement-module"></span><h2>webdriver.webelement module<a class="headerlink" href="#module-webdriver.webelement" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="webdriver.webelement.WebElement">
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.webelement.</code><code class="sig-name descname">WebElement</code><span class="sig-paren">(</span><em class="sig-param">parent</em>, <em class="sig-param">id_</em>, <em class="sig-param">w3c=False</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.webelement.WebElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.AppiumWebElementSearchContext" title="webdriver.extensions.search_context.AppiumWebElementSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.AppiumWebElementSearchContext</span></code></a></p>
+<dl class="method">
+<dt id="webdriver.webelement.WebElement.clear">
+<code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.webelement.WebElement.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears text.</p>
+<p>Override for Appium</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webelement.WebElement.find_element">
+<code class="sig-name descname">find_element</code><span class="sig-paren">(</span><em class="sig-param">by: str = 'id'</em>, <em class="sig-param">value: Union[str</em>, <em class="sig-param">Dict] = None</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.webelement.WebElement.find_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find an element given a By strategy and locator</p>
+<p>Override for Appium</p>
+<p>Prefer the find_element_by_* methods when possible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>by</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The strategy</p></li>
+<li><p><strong>value</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The locator</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>element = element.find_element(By.ID, ‘foo’)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webelement.WebElement.find_elements">
+<code class="sig-name descname">find_elements</code><span class="sig-paren">(</span><em class="sig-param">by: str = 'id'</em>, <em class="sig-param">value: Union[str</em>, <em class="sig-param">Dict] = None</em><span class="sig-paren">)</span> &#x2192; List[T]<a class="headerlink" href="#webdriver.webelement.WebElement.find_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find elements given a By strategy and locator</p>
+<p>Override for Appium</p>
+<p>Prefer the find_elements_by_* methods when possible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>by</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The strategy</p></li>
+<li><p><strong>value</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The locator</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>element = element.find_elements(By.CLASS_NAME, ‘foo’)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webelement.WebElement.get_attribute">
+<code class="sig-name descname">get_attribute</code><span class="sig-paren">(</span><em class="sig-param">name: str</em><span class="sig-paren">)</span> &#x2192; Optional[str]<a class="headerlink" href="#webdriver.webelement.WebElement.get_attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the given attribute or property of the element.</p>
+<p>Override for Appium</p>
+<p>This method will first try to return the value of a property with the
+given name. If a property with that name doesn’t exist, it returns the
+value of the attribute with the same name. If there’s no attribute with
+that name, <code class="docutils literal notranslate"><span class="pre">None</span></code> is returned.</p>
+<p>Values which are considered truthy, that is equals “true” or “false”,
+are returned as booleans.  All other non-<code class="docutils literal notranslate"><span class="pre">None</span></code> values are returned
+as strings.  For attributes or properties which do not exist, <code class="docutils literal notranslate"><span class="pre">None</span></code>
+is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the attribute/property to retrieve.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Usage:</dt><dd><p># Check if the “active” CSS class is applied to an element.
+is_active = “active” in target_element.get_attribute(“class”)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The given attribute or property of the element</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webelement.WebElement.is_displayed">
+<code class="sig-name descname">is_displayed</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.webelement.WebElement.is_displayed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the element is visible to a user.</p>
+<p>Override for Appium</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webelement.WebElement.location_in_view">
+<em class="property">property </em><code class="sig-name descname">location_in_view</code><a class="headerlink" href="#webdriver.webelement.WebElement.location_in_view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the location of an element relative to the view.</p>
+<dl>
+<dt>Usage:</dt><dd><p>location = element.location_in_view</p>
+<p>x = location[‘x’]</p>
+<p>y = location[‘y’]</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The location of an element relative to the view</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webelement.WebElement.set_text">
+<code class="sig-name descname">set_text</code><span class="sig-paren">(</span><em class="sig-param">keys: str = ''</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.webelement.WebElement.set_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends text to the element.</p>
+<p>Previous text is removed.
+Android only.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>keys</strong> (<em>str</em>) – the text to be sent to the element.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>element.set_text(‘some text’)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="webdriver.webelement.WebElement.set_value">
+<code class="sig-name descname">set_value</code><span class="sig-paren">(</span><em class="sig-param">value: str</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.webelement.WebElement.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value on this element in the application</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – The value to be set</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-webdriver">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-webdriver" title="Permalink to this headline">¶</a></h2>
+<p>Appium Python Client: WebDriver module</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="webdriver.common.html" class="btn btn-neutral float-right" title="webdriver.common package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Appium python client’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Appium
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
