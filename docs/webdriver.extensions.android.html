@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>webdriver.extensions.android package &mdash; Python client 1.0 beta 1.0beta documentation</title>
+  <title>webdriver.extensions.android package &mdash; Python client 1.0 1.0 documentation</title>
   
 
   
@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Python client 1.0 beta
+            <a href="index.html" class="icon icon-home"> Python client 1.0
           
 
           
@@ -138,7 +138,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Python client 1.0 beta</a>
+          <a href="index.html">Python client 1.0</a>
         
       </nav>
 
@@ -199,11 +199,11 @@
 </div>
 <div class="section" id="module-webdriver.extensions.android.activities">
 <span id="webdriver-extensions-android-activities-module"></span><h2>webdriver.extensions.android.activities module<a class="headerlink" href="#module-webdriver.extensions.android.activities" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.activities.Activities">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.activities.</code><code class="sig-name descname">Activities</code><span class="sig-paren">(</span><em class="sig-param">command_executor='http://127.0.0.1:4444/wd/hub'</em>, <em class="sig-param">desired_capabilities=None</em>, <em class="sig-param">browser_profile=None</em>, <em class="sig-param">proxy=None</em>, <em class="sig-param">keep_alive=False</em>, <em class="sig-param">file_detector=None</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.activities.Activities" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.activities.</code><code class="sig-name descname">Activities</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.activities.Activities" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.activities.Activities.current_activity">
 <em class="property">property </em><code class="sig-name descname">current_activity</code><a class="headerlink" href="#webdriver.extensions.android.activities.Activities.current_activity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the current activity running on the device.</p>
@@ -217,9 +217,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.activities.Activities.start_activity">
-<code class="sig-name descname">start_activity</code><span class="sig-paren">(</span><em class="sig-param">app_package: str</em>, <em class="sig-param">app_activity: str</em>, <em class="sig-param">**opts: str</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.activities.Activities.start_activity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start_activity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app_package</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">app_activity</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">opts</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.activities.Activities.start_activity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Opens an arbitrary activity during a test. If the activity belongs to
 another application, that application is started and the activity is opened.</p>
 <p>This is an Android-only method.</p>
@@ -244,9 +244,9 @@ another application, that application is started and the activity is opened.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.activities.Activities.wait_activity">
-<code class="sig-name descname">wait_activity</code><span class="sig-paren">(</span><em class="sig-param">activity: str</em>, <em class="sig-param">timeout: int</em>, <em class="sig-param">interval: int = 1</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.activities.Activities.wait_activity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wait_activity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">activity</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">interval</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.activities.Activities.wait_activity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for an activity: block until target activity presents or time out.</p>
 <p>This is an Android-only method.</p>
 <dl class="field-list simple">
@@ -271,19 +271,19 @@ another application, that application is started and the activity is opened.</p>
 </div>
 <div class="section" id="module-webdriver.extensions.android.common">
 <span id="webdriver-extensions-android-common-module"></span><h2>webdriver.extensions.android.common module<a class="headerlink" href="#module-webdriver.extensions.android.common" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.common.Common">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.common.</code><code class="sig-name descname">Common</code><span class="sig-paren">(</span><em class="sig-param">command_executor='http://127.0.0.1:4444/wd/hub'</em>, <em class="sig-param">desired_capabilities=None</em>, <em class="sig-param">browser_profile=None</em>, <em class="sig-param">proxy=None</em>, <em class="sig-param">keep_alive=False</em>, <em class="sig-param">file_detector=None</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.common.Common" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.common.</code><code class="sig-name descname">Common</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.common.Common" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.common.Common.current_package">
 <em class="property">property </em><code class="sig-name descname">current_package</code><a class="headerlink" href="#webdriver.extensions.android.common.Common.current_package" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the current package running on the device.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.common.Common.end_test_coverage">
-<code class="sig-name descname">end_test_coverage</code><span class="sig-paren">(</span><em class="sig-param">intent: str</em>, <em class="sig-param">path: str</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#webdriver.extensions.android.common.Common.end_test_coverage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">end_test_coverage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">intent</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#webdriver.extensions.android.common.Common.end_test_coverage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ends the coverage collection and pull the coverage.ec file from the device.</p>
 <p>Android only.
 See <a class="reference external" href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/android-coverage.md">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/android-coverage.md</a></p>
@@ -300,7 +300,7 @@ See <a class="reference external" href="https://github.com/appium/appium/blob/ma
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.common.Common.open_notifications">
 <code class="sig-name descname">open_notifications</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.common.Common.open_notifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open notification shade in Android (API Level 18 and above)</p>
@@ -316,11 +316,11 @@ See <a class="reference external" href="https://github.com/appium/appium/blob/ma
 </div>
 <div class="section" id="module-webdriver.extensions.android.display">
 <span id="webdriver-extensions-android-display-module"></span><h2>webdriver.extensions.android.display module<a class="headerlink" href="#module-webdriver.extensions.android.display" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.display.Display">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.display.</code><code class="sig-name descname">Display</code><span class="sig-paren">(</span><em class="sig-param">command_executor='http://127.0.0.1:4444/wd/hub'</em>, <em class="sig-param">desired_capabilities=None</em>, <em class="sig-param">browser_profile=None</em>, <em class="sig-param">proxy=None</em>, <em class="sig-param">keep_alive=False</em>, <em class="sig-param">file_detector=None</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.display.Display" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.display.</code><code class="sig-name descname">Display</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.display.Display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.display.Display.get_display_density">
 <code class="sig-name descname">get_display_density</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#webdriver.extensions.android.display.Display.get_display_density" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the display density, Android only</p>
@@ -343,13 +343,13 @@ See <a class="reference external" href="https://github.com/appium/appium/blob/ma
 </div>
 <div class="section" id="module-webdriver.extensions.android.gsm">
 <span id="webdriver-extensions-android-gsm-module"></span><h2>webdriver.extensions.android.gsm module<a class="headerlink" href="#module-webdriver.extensions.android.gsm" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.gsm.Gsm">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.gsm.</code><code class="sig-name descname">Gsm</code><span class="sig-paren">(</span><em class="sig-param">command_executor='http://127.0.0.1:4444/wd/hub'</em>, <em class="sig-param">desired_capabilities=None</em>, <em class="sig-param">browser_profile=None</em>, <em class="sig-param">proxy=None</em>, <em class="sig-param">keep_alive=False</em>, <em class="sig-param">file_detector=None</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.gsm.Gsm" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.gsm.</code><code class="sig-name descname">Gsm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.gsm.Gsm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.gsm.Gsm.make_gsm_call">
-<code class="sig-name descname">make_gsm_call</code><span class="sig-paren">(</span><em class="sig-param">phone_number: str</em>, <em class="sig-param">action: str</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.gsm.Gsm.make_gsm_call" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">make_gsm_call</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">phone_number</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">action</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.gsm.Gsm.make_gsm_call" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make GSM call (Emulator only)</p>
 <p>Android only.</p>
 <dl class="field-list simple">
@@ -366,9 +366,9 @@ A member of the const <cite>appium.webdriver.extensions.android.gsm.GsmCallActio
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.gsm.Gsm.set_gsm_signal">
-<code class="sig-name descname">set_gsm_signal</code><span class="sig-paren">(</span><em class="sig-param">strength: int</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.gsm.Gsm.set_gsm_signal" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_gsm_signal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">strength</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.gsm.Gsm.set_gsm_signal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set GSM signal strength (Emulator only)</p>
 <p>Android only.</p>
 <dl class="field-list simple">
@@ -383,9 +383,9 @@ A member of the enum <cite>appium.webdriver.extensions.android.gsm.GsmSignalStre
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.gsm.Gsm.set_gsm_voice">
-<code class="sig-name descname">set_gsm_voice</code><span class="sig-paren">(</span><em class="sig-param">state: str</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.gsm.Gsm.set_gsm_voice" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_gsm_voice</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.gsm.Gsm.set_gsm_voice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set GSM voice state (Emulator only)</p>
 <p>Android only.</p>
 <dl class="field-list simple">
@@ -402,98 +402,98 @@ A member of the const <cite>appium.webdriver.extensions.android.gsm.GsmVoiceStat
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.gsm.GsmCallActions">
 <em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.gsm.</code><code class="sig-name descname">GsmCallActions</code><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmCallActions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmCallActions.ACCEPT">
 <code class="sig-name descname">ACCEPT</code><em class="property"> = 'accept'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmCallActions.ACCEPT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmCallActions.CALL">
 <code class="sig-name descname">CALL</code><em class="property"> = 'call'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmCallActions.CALL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmCallActions.CANCEL">
 <code class="sig-name descname">CANCEL</code><em class="property"> = 'cancel'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmCallActions.CANCEL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmCallActions.HOLD">
 <code class="sig-name descname">HOLD</code><em class="property"> = 'hold'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmCallActions.HOLD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.gsm.GsmSignalStrength">
 <em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.gsm.</code><code class="sig-name descname">GsmSignalStrength</code><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmSignalStrength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmSignalStrength.GOOD">
 <code class="sig-name descname">GOOD</code><em class="property"> = 3</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmSignalStrength.GOOD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmSignalStrength.GREAT">
 <code class="sig-name descname">GREAT</code><em class="property"> = 4</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmSignalStrength.GREAT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmSignalStrength.MODERATE">
 <code class="sig-name descname">MODERATE</code><em class="property"> = 2</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmSignalStrength.MODERATE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmSignalStrength.NONE_OR_UNKNOWN">
 <code class="sig-name descname">NONE_OR_UNKNOWN</code><em class="property"> = 0</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmSignalStrength.NONE_OR_UNKNOWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmSignalStrength.POOR">
 <code class="sig-name descname">POOR</code><em class="property"> = 1</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmSignalStrength.POOR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.gsm.GsmVoiceState">
 <em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.gsm.</code><code class="sig-name descname">GsmVoiceState</code><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmVoiceState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmVoiceState.DENIED">
 <code class="sig-name descname">DENIED</code><em class="property"> = 'denied'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmVoiceState.DENIED" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmVoiceState.HOME">
 <code class="sig-name descname">HOME</code><em class="property"> = 'home'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmVoiceState.HOME" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmVoiceState.OFF">
 <code class="sig-name descname">OFF</code><em class="property"> = 'off'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmVoiceState.OFF" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmVoiceState.ON">
 <code class="sig-name descname">ON</code><em class="property"> = 'on'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmVoiceState.ON" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmVoiceState.ROAMING">
 <code class="sig-name descname">ROAMING</code><em class="property"> = 'roaming'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmVoiceState.ROAMING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmVoiceState.SEARCHING">
 <code class="sig-name descname">SEARCHING</code><em class="property"> = 'searching'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmVoiceState.SEARCHING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmVoiceState.UNREGISTERED">
 <code class="sig-name descname">UNREGISTERED</code><em class="property"> = 'unregistered'</em><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmVoiceState.UNREGISTERED" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -503,1457 +503,1457 @@ A member of the const <cite>appium.webdriver.extensions.android.gsm.GsmVoiceStat
 </div>
 <div class="section" id="module-webdriver.extensions.android.nativekey">
 <span id="webdriver-extensions-android-nativekey-module"></span><h2>webdriver.extensions.android.nativekey module<a class="headerlink" href="#module-webdriver.extensions.android.nativekey" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey">
 <em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.nativekey.</code><code class="sig-name descname">AndroidKey</code><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.A">
 <code class="sig-name descname">A</code><em class="property"> = 29</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.A" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.ALT_LEFT">
 <code class="sig-name descname">ALT_LEFT</code><em class="property"> = 57</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.ALT_LEFT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.ALT_RIGHT">
 <code class="sig-name descname">ALT_RIGHT</code><em class="property"> = 58</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.ALT_RIGHT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.APOSTROPHE">
 <code class="sig-name descname">APOSTROPHE</code><em class="property"> = 75</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.APOSTROPHE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.APP_SWITCH">
 <code class="sig-name descname">APP_SWITCH</code><em class="property"> = 187</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.APP_SWITCH" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.ASSIST">
 <code class="sig-name descname">ASSIST</code><em class="property"> = 219</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.ASSIST" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.AT">
 <code class="sig-name descname">AT</code><em class="property"> = 77</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.AT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.AVR_INPUT">
 <code class="sig-name descname">AVR_INPUT</code><em class="property"> = 182</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.AVR_INPUT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.AVR_POWER">
 <code class="sig-name descname">AVR_POWER</code><em class="property"> = 181</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.AVR_POWER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.B">
 <code class="sig-name descname">B</code><em class="property"> = 30</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.B" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BACK">
 <code class="sig-name descname">BACK</code><em class="property"> = 4</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BACK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BACKSLASH">
 <code class="sig-name descname">BACKSLASH</code><em class="property"> = 73</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BACKSLASH" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BOOKMARK">
 <code class="sig-name descname">BOOKMARK</code><em class="property"> = 174</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BOOKMARK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BREAK">
 <code class="sig-name descname">BREAK</code><em class="property"> = 121</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BREAK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BRIGHTNESS_DOWN">
 <code class="sig-name descname">BRIGHTNESS_DOWN</code><em class="property"> = 220</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BRIGHTNESS_DOWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BRIGHTNESS_UP">
 <code class="sig-name descname">BRIGHTNESS_UP</code><em class="property"> = 221</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BRIGHTNESS_UP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_1">
 <code class="sig-name descname">BUTTON_1</code><em class="property"> = 188</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_10">
 <code class="sig-name descname">BUTTON_10</code><em class="property"> = 197</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_10" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_11">
 <code class="sig-name descname">BUTTON_11</code><em class="property"> = 198</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_11" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_12">
 <code class="sig-name descname">BUTTON_12</code><em class="property"> = 199</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_12" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_13">
 <code class="sig-name descname">BUTTON_13</code><em class="property"> = 200</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_13" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_14">
 <code class="sig-name descname">BUTTON_14</code><em class="property"> = 201</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_14" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_15">
 <code class="sig-name descname">BUTTON_15</code><em class="property"> = 202</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_15" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_16">
 <code class="sig-name descname">BUTTON_16</code><em class="property"> = 203</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_16" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_2">
 <code class="sig-name descname">BUTTON_2</code><em class="property"> = 189</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_3">
 <code class="sig-name descname">BUTTON_3</code><em class="property"> = 190</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_4">
 <code class="sig-name descname">BUTTON_4</code><em class="property"> = 191</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_5">
 <code class="sig-name descname">BUTTON_5</code><em class="property"> = 192</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_5" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_6">
 <code class="sig-name descname">BUTTON_6</code><em class="property"> = 193</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_6" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_7">
 <code class="sig-name descname">BUTTON_7</code><em class="property"> = 194</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_7" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_8">
 <code class="sig-name descname">BUTTON_8</code><em class="property"> = 195</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_8" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_9">
 <code class="sig-name descname">BUTTON_9</code><em class="property"> = 196</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_9" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_A">
 <code class="sig-name descname">BUTTON_A</code><em class="property"> = 96</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_A" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_B">
 <code class="sig-name descname">BUTTON_B</code><em class="property"> = 97</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_B" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_C">
 <code class="sig-name descname">BUTTON_C</code><em class="property"> = 98</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_C" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_L1">
 <code class="sig-name descname">BUTTON_L1</code><em class="property"> = 102</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_L1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_L2">
 <code class="sig-name descname">BUTTON_L2</code><em class="property"> = 104</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_L2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_MODE">
 <code class="sig-name descname">BUTTON_MODE</code><em class="property"> = 110</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_MODE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_R1">
 <code class="sig-name descname">BUTTON_R1</code><em class="property"> = 103</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_R1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_R2">
 <code class="sig-name descname">BUTTON_R2</code><em class="property"> = 105</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_R2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_SELECT">
 <code class="sig-name descname">BUTTON_SELECT</code><em class="property"> = 109</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_SELECT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_START">
 <code class="sig-name descname">BUTTON_START</code><em class="property"> = 108</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_START" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_THUMBL">
 <code class="sig-name descname">BUTTON_THUMBL</code><em class="property"> = 106</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_THUMBL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_THUMBR">
 <code class="sig-name descname">BUTTON_THUMBR</code><em class="property"> = 107</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_THUMBR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_X">
 <code class="sig-name descname">BUTTON_X</code><em class="property"> = 99</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_X" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_Y">
 <code class="sig-name descname">BUTTON_Y</code><em class="property"> = 100</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_Y" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.BUTTON_Z">
 <code class="sig-name descname">BUTTON_Z</code><em class="property"> = 101</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.BUTTON_Z" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.C">
 <code class="sig-name descname">C</code><em class="property"> = 31</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.C" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CALCULATOR">
 <code class="sig-name descname">CALCULATOR</code><em class="property"> = 210</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CALCULATOR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CALENDAR">
 <code class="sig-name descname">CALENDAR</code><em class="property"> = 208</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CALENDAR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CALL">
 <code class="sig-name descname">CALL</code><em class="property"> = 5</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CALL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CAMERA">
 <code class="sig-name descname">CAMERA</code><em class="property"> = 27</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CAMERA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CAPS_LOCK">
 <code class="sig-name descname">CAPS_LOCK</code><em class="property"> = 115</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CAPS_LOCK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CAPTIONS">
 <code class="sig-name descname">CAPTIONS</code><em class="property"> = 175</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CAPTIONS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CHANNEL_DOWN">
 <code class="sig-name descname">CHANNEL_DOWN</code><em class="property"> = 167</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CHANNEL_DOWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CHANNEL_UP">
 <code class="sig-name descname">CHANNEL_UP</code><em class="property"> = 166</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CHANNEL_UP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CLEAR">
 <code class="sig-name descname">CLEAR</code><em class="property"> = 28</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CLEAR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.COMMA">
 <code class="sig-name descname">COMMA</code><em class="property"> = 55</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.COMMA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CONTACTS">
 <code class="sig-name descname">CONTACTS</code><em class="property"> = 207</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CONTACTS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.COPY">
 <code class="sig-name descname">COPY</code><em class="property"> = 278</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.COPY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CTRL_LEFT">
 <code class="sig-name descname">CTRL_LEFT</code><em class="property"> = 113</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CTRL_LEFT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CTRL_RIGHT">
 <code class="sig-name descname">CTRL_RIGHT</code><em class="property"> = 114</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CTRL_RIGHT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.CUT">
 <code class="sig-name descname">CUT</code><em class="property"> = 277</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.CUT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.D">
 <code class="sig-name descname">D</code><em class="property"> = 32</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.D" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DEL">
 <code class="sig-name descname">DEL</code><em class="property"> = 67</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DEL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DIGIT_0">
 <code class="sig-name descname">DIGIT_0</code><em class="property"> = 7</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DIGIT_0" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DIGIT_1">
 <code class="sig-name descname">DIGIT_1</code><em class="property"> = 8</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DIGIT_1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DIGIT_2">
 <code class="sig-name descname">DIGIT_2</code><em class="property"> = 9</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DIGIT_2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DIGIT_3">
 <code class="sig-name descname">DIGIT_3</code><em class="property"> = 10</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DIGIT_3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DIGIT_4">
 <code class="sig-name descname">DIGIT_4</code><em class="property"> = 11</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DIGIT_4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DIGIT_5">
 <code class="sig-name descname">DIGIT_5</code><em class="property"> = 12</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DIGIT_5" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DIGIT_6">
 <code class="sig-name descname">DIGIT_6</code><em class="property"> = 13</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DIGIT_6" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DIGIT_7">
 <code class="sig-name descname">DIGIT_7</code><em class="property"> = 14</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DIGIT_7" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DIGIT_8">
 <code class="sig-name descname">DIGIT_8</code><em class="property"> = 15</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DIGIT_8" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DIGIT_9">
 <code class="sig-name descname">DIGIT_9</code><em class="property"> = 16</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DIGIT_9" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DPAD_CENTER">
 <code class="sig-name descname">DPAD_CENTER</code><em class="property"> = 23</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DPAD_CENTER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DPAD_DOWN">
 <code class="sig-name descname">DPAD_DOWN</code><em class="property"> = 20</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DPAD_DOWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DPAD_DOWN_LEFT">
 <code class="sig-name descname">DPAD_DOWN_LEFT</code><em class="property"> = 269</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DPAD_DOWN_LEFT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DPAD_DOWN_RIGHT">
 <code class="sig-name descname">DPAD_DOWN_RIGHT</code><em class="property"> = 271</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DPAD_DOWN_RIGHT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DPAD_LEFT">
 <code class="sig-name descname">DPAD_LEFT</code><em class="property"> = 21</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DPAD_LEFT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DPAD_RIGHT">
 <code class="sig-name descname">DPAD_RIGHT</code><em class="property"> = 22</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DPAD_RIGHT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DPAD_UP">
 <code class="sig-name descname">DPAD_UP</code><em class="property"> = 19</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DPAD_UP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DPAD_UP_LEFT">
 <code class="sig-name descname">DPAD_UP_LEFT</code><em class="property"> = 268</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DPAD_UP_LEFT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DPAD_UP_RIGHT">
 <code class="sig-name descname">DPAD_UP_RIGHT</code><em class="property"> = 270</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DPAD_UP_RIGHT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.DVR">
 <code class="sig-name descname">DVR</code><em class="property"> = 173</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.DVR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.E">
 <code class="sig-name descname">E</code><em class="property"> = 33</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.E" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.EISU">
 <code class="sig-name descname">EISU</code><em class="property"> = 212</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.EISU" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.ENDCALL">
 <code class="sig-name descname">ENDCALL</code><em class="property"> = 6</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.ENDCALL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.ENTER">
 <code class="sig-name descname">ENTER</code><em class="property"> = 66</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.ENTER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.ENVELOPE">
 <code class="sig-name descname">ENVELOPE</code><em class="property"> = 65</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.ENVELOPE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.EQUALS">
 <code class="sig-name descname">EQUALS</code><em class="property"> = 70</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.EQUALS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.ESCAPE">
 <code class="sig-name descname">ESCAPE</code><em class="property"> = 111</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.ESCAPE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.EXPLORER">
 <code class="sig-name descname">EXPLORER</code><em class="property"> = 64</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.EXPLORER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F">
 <code class="sig-name descname">F</code><em class="property"> = 34</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F1">
 <code class="sig-name descname">F1</code><em class="property"> = 131</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F10">
 <code class="sig-name descname">F10</code><em class="property"> = 140</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F10" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F11">
 <code class="sig-name descname">F11</code><em class="property"> = 141</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F11" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F12">
 <code class="sig-name descname">F12</code><em class="property"> = 142</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F12" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F2">
 <code class="sig-name descname">F2</code><em class="property"> = 132</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F3">
 <code class="sig-name descname">F3</code><em class="property"> = 133</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F4">
 <code class="sig-name descname">F4</code><em class="property"> = 134</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F5">
 <code class="sig-name descname">F5</code><em class="property"> = 135</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F5" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F6">
 <code class="sig-name descname">F6</code><em class="property"> = 136</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F6" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F7">
 <code class="sig-name descname">F7</code><em class="property"> = 137</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F7" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F8">
 <code class="sig-name descname">F8</code><em class="property"> = 138</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F8" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.F9">
 <code class="sig-name descname">F9</code><em class="property"> = 139</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.F9" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.FOCUS">
 <code class="sig-name descname">FOCUS</code><em class="property"> = 80</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.FOCUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.FORWARD">
 <code class="sig-name descname">FORWARD</code><em class="property"> = 125</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.FORWARD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.FORWARD_DEL">
 <code class="sig-name descname">FORWARD_DEL</code><em class="property"> = 112</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.FORWARD_DEL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.FUNCTION">
 <code class="sig-name descname">FUNCTION</code><em class="property"> = 119</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.FUNCTION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.G">
 <code class="sig-name descname">G</code><em class="property"> = 35</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.G" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.GRAVE">
 <code class="sig-name descname">GRAVE</code><em class="property"> = 68</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.GRAVE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.GUIDE">
 <code class="sig-name descname">GUIDE</code><em class="property"> = 172</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.GUIDE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.H">
 <code class="sig-name descname">H</code><em class="property"> = 36</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.H" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.HEADSETHOOK">
 <code class="sig-name descname">HEADSETHOOK</code><em class="property"> = 79</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.HEADSETHOOK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.HELP">
 <code class="sig-name descname">HELP</code><em class="property"> = 259</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.HELP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.HENKAN">
 <code class="sig-name descname">HENKAN</code><em class="property"> = 214</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.HENKAN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.HOME">
 <code class="sig-name descname">HOME</code><em class="property"> = 3</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.HOME" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.I">
 <code class="sig-name descname">I</code><em class="property"> = 37</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.I" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.INFO">
 <code class="sig-name descname">INFO</code><em class="property"> = 165</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.INFO" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.INSERT">
 <code class="sig-name descname">INSERT</code><em class="property"> = 124</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.INSERT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.J">
 <code class="sig-name descname">J</code><em class="property"> = 38</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.J" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.K">
 <code class="sig-name descname">K</code><em class="property"> = 39</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.K" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.KANA">
 <code class="sig-name descname">KANA</code><em class="property"> = 218</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.KANA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.KATAKANA_HIRAGANA">
 <code class="sig-name descname">KATAKANA_HIRAGANA</code><em class="property"> = 215</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.KATAKANA_HIRAGANA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.KEYCODE_ZOOM_IN">
 <code class="sig-name descname">KEYCODE_ZOOM_IN</code><em class="property"> = 168</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.KEYCODE_ZOOM_IN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.KEYCODE_ZOOM_OUT">
 <code class="sig-name descname">KEYCODE_ZOOM_OUT</code><em class="property"> = 169</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.KEYCODE_ZOOM_OUT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.KEY_11">
 <code class="sig-name descname">KEY_11</code><em class="property"> = 227</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.KEY_11" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.KEY_12">
 <code class="sig-name descname">KEY_12</code><em class="property"> = 228</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.KEY_12" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.L">
 <code class="sig-name descname">L</code><em class="property"> = 40</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.L" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.LANGUAGE_SWITCH">
 <code class="sig-name descname">LANGUAGE_SWITCH</code><em class="property"> = 204</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.LANGUAGE_SWITCH" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.LAST_CHANNEL">
 <code class="sig-name descname">LAST_CHANNEL</code><em class="property"> = 229</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.LAST_CHANNEL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.LEFT_BRACKET">
 <code class="sig-name descname">LEFT_BRACKET</code><em class="property"> = 71</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.LEFT_BRACKET" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.M">
 <code class="sig-name descname">M</code><em class="property"> = 41</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.M" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MANNER_MODE">
 <code class="sig-name descname">MANNER_MODE</code><em class="property"> = 205</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MANNER_MODE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_AUDIO_TRACK">
 <code class="sig-name descname">MEDIA_AUDIO_TRACK</code><em class="property"> = 222</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_AUDIO_TRACK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_CLOSE">
 <code class="sig-name descname">MEDIA_CLOSE</code><em class="property"> = 128</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_CLOSE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_EJECT">
 <code class="sig-name descname">MEDIA_EJECT</code><em class="property"> = 129</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_EJECT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_FAST_FORWARD">
 <code class="sig-name descname">MEDIA_FAST_FORWARD</code><em class="property"> = 90</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_FAST_FORWARD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_NEXT">
 <code class="sig-name descname">MEDIA_NEXT</code><em class="property"> = 87</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_NEXT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_PAUSE">
 <code class="sig-name descname">MEDIA_PAUSE</code><em class="property"> = 127</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_PAUSE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_PLAY">
 <code class="sig-name descname">MEDIA_PLAY</code><em class="property"> = 126</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_PLAY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_PLAY_PAUSE">
 <code class="sig-name descname">MEDIA_PLAY_PAUSE</code><em class="property"> = 85</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_PLAY_PAUSE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_PREVIOUS">
 <code class="sig-name descname">MEDIA_PREVIOUS</code><em class="property"> = 88</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_PREVIOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_RECORD">
 <code class="sig-name descname">MEDIA_RECORD</code><em class="property"> = 130</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_RECORD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_REWIND">
 <code class="sig-name descname">MEDIA_REWIND</code><em class="property"> = 89</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_REWIND" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_SKIP_BACKWARD">
 <code class="sig-name descname">MEDIA_SKIP_BACKWARD</code><em class="property"> = 273</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_SKIP_BACKWARD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_SKIP_FORWARD">
 <code class="sig-name descname">MEDIA_SKIP_FORWARD</code><em class="property"> = 272</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_SKIP_FORWARD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_STEP_BACKWARD">
 <code class="sig-name descname">MEDIA_STEP_BACKWARD</code><em class="property"> = 275</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_STEP_BACKWARD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_STEP_FORWARD">
 <code class="sig-name descname">MEDIA_STEP_FORWARD</code><em class="property"> = 274</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_STEP_FORWARD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_STOP">
 <code class="sig-name descname">MEDIA_STOP</code><em class="property"> = 86</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_STOP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MEDIA_TOP_MENU">
 <code class="sig-name descname">MEDIA_TOP_MENU</code><em class="property"> = 226</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MEDIA_TOP_MENU" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MENU">
 <code class="sig-name descname">MENU</code><em class="property"> = 82</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MENU" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.META_LEFT">
 <code class="sig-name descname">META_LEFT</code><em class="property"> = 117</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.META_LEFT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.META_RIGHT">
 <code class="sig-name descname">META_RIGHT</code><em class="property"> = 118</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.META_RIGHT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MINUS">
 <code class="sig-name descname">MINUS</code><em class="property"> = 69</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MINUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MODE_3D">
 <code class="sig-name descname">MODE_3D</code><em class="property"> = 206</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MODE_3D" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MOVE_END">
 <code class="sig-name descname">MOVE_END</code><em class="property"> = 123</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MOVE_END" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MOVE_HOME">
 <code class="sig-name descname">MOVE_HOME</code><em class="property"> = 122</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MOVE_HOME" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MUHENKAN">
 <code class="sig-name descname">MUHENKAN</code><em class="property"> = 213</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MUHENKAN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MUSIC">
 <code class="sig-name descname">MUSIC</code><em class="property"> = 209</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MUSIC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.MUTE">
 <code class="sig-name descname">MUTE</code><em class="property"> = 91</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.MUTE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.N">
 <code class="sig-name descname">N</code><em class="property"> = 42</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NAVIGATE_IN">
 <code class="sig-name descname">NAVIGATE_IN</code><em class="property"> = 262</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NAVIGATE_IN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NAVIGATE_NEXT">
 <code class="sig-name descname">NAVIGATE_NEXT</code><em class="property"> = 261</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NAVIGATE_NEXT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NAVIGATE_OUT">
 <code class="sig-name descname">NAVIGATE_OUT</code><em class="property"> = 263</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NAVIGATE_OUT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NAVIGATE_PREVIOUS">
 <code class="sig-name descname">NAVIGATE_PREVIOUS</code><em class="property"> = 260</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NAVIGATE_PREVIOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NOTIFICATION">
 <code class="sig-name descname">NOTIFICATION</code><em class="property"> = 83</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NOTIFICATION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUM">
 <code class="sig-name descname">NUM</code><em class="property"> = 78</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUM" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_0">
 <code class="sig-name descname">NUMPAD_0</code><em class="property"> = 144</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_0" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_1">
 <code class="sig-name descname">NUMPAD_1</code><em class="property"> = 145</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_2">
 <code class="sig-name descname">NUMPAD_2</code><em class="property"> = 146</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_3">
 <code class="sig-name descname">NUMPAD_3</code><em class="property"> = 147</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_4">
 <code class="sig-name descname">NUMPAD_4</code><em class="property"> = 148</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_5">
 <code class="sig-name descname">NUMPAD_5</code><em class="property"> = 149</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_5" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_6">
 <code class="sig-name descname">NUMPAD_6</code><em class="property"> = 150</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_6" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_7">
 <code class="sig-name descname">NUMPAD_7</code><em class="property"> = 151</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_7" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_8">
 <code class="sig-name descname">NUMPAD_8</code><em class="property"> = 152</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_8" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_9">
 <code class="sig-name descname">NUMPAD_9</code><em class="property"> = 153</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_9" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_ADD">
 <code class="sig-name descname">NUMPAD_ADD</code><em class="property"> = 157</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_ADD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_COMMA">
 <code class="sig-name descname">NUMPAD_COMMA</code><em class="property"> = 159</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_COMMA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_DIVIDE">
 <code class="sig-name descname">NUMPAD_DIVIDE</code><em class="property"> = 154</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_DIVIDE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_DOT">
 <code class="sig-name descname">NUMPAD_DOT</code><em class="property"> = 158</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_DOT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_ENTER">
 <code class="sig-name descname">NUMPAD_ENTER</code><em class="property"> = 160</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_ENTER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_EQUALS">
 <code class="sig-name descname">NUMPAD_EQUALS</code><em class="property"> = 161</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_EQUALS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_LEFT_PAREN">
 <code class="sig-name descname">NUMPAD_LEFT_PAREN</code><em class="property"> = 162</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_LEFT_PAREN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_MULTIPLY">
 <code class="sig-name descname">NUMPAD_MULTIPLY</code><em class="property"> = 155</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_MULTIPLY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_RIGHT_PAREN">
 <code class="sig-name descname">NUMPAD_RIGHT_PAREN</code><em class="property"> = 163</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_RIGHT_PAREN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_SUBTRACT">
 <code class="sig-name descname">NUMPAD_SUBTRACT</code><em class="property"> = 156</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUMPAD_SUBTRACT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.NUM_LOCK">
 <code class="sig-name descname">NUM_LOCK</code><em class="property"> = 143</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.NUM_LOCK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.O">
 <code class="sig-name descname">O</code><em class="property"> = 43</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.O" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.P">
 <code class="sig-name descname">P</code><em class="property"> = 44</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.P" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.PAGE_DOWN">
 <code class="sig-name descname">PAGE_DOWN</code><em class="property"> = 93</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.PAGE_DOWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.PAGE_UP">
 <code class="sig-name descname">PAGE_UP</code><em class="property"> = 92</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.PAGE_UP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.PAIRING">
 <code class="sig-name descname">PAIRING</code><em class="property"> = 225</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.PAIRING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.PERIOD">
 <code class="sig-name descname">PERIOD</code><em class="property"> = 56</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.PERIOD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.PICTSYMBOLS">
 <code class="sig-name descname">PICTSYMBOLS</code><em class="property"> = 94</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.PICTSYMBOLS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.PLUS">
 <code class="sig-name descname">PLUS</code><em class="property"> = 81</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.PLUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.POUND">
 <code class="sig-name descname">POUND</code><em class="property"> = 18</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.POUND" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.POWER">
 <code class="sig-name descname">POWER</code><em class="property"> = 26</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.POWER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.PROG_BLUE">
 <code class="sig-name descname">PROG_BLUE</code><em class="property"> = 186</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.PROG_BLUE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.PROG_GREEN">
 <code class="sig-name descname">PROG_GREEN</code><em class="property"> = 184</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.PROG_GREEN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.PROG_RED">
 <code class="sig-name descname">PROG_RED</code><em class="property"> = 183</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.PROG_RED" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.PROG_YELLOW">
 <code class="sig-name descname">PROG_YELLOW</code><em class="property"> = 185</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.PROG_YELLOW" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.Q">
 <code class="sig-name descname">Q</code><em class="property"> = 45</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.Q" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.R">
 <code class="sig-name descname">R</code><em class="property"> = 46</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.R" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.RIGHT_BRACKET">
 <code class="sig-name descname">RIGHT_BRACKET</code><em class="property"> = 72</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.RIGHT_BRACKET" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.RO">
 <code class="sig-name descname">RO</code><em class="property"> = 217</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.RO" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.S">
 <code class="sig-name descname">S</code><em class="property"> = 47</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.S" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SCROLL_LOCK">
 <code class="sig-name descname">SCROLL_LOCK</code><em class="property"> = 116</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SCROLL_LOCK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SEARCH">
 <code class="sig-name descname">SEARCH</code><em class="property"> = 84</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SEARCH" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SEMICOLON">
 <code class="sig-name descname">SEMICOLON</code><em class="property"> = 74</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SEMICOLON" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SETTINGS">
 <code class="sig-name descname">SETTINGS</code><em class="property"> = 176</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SETTINGS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SHIFT_LEFT">
 <code class="sig-name descname">SHIFT_LEFT</code><em class="property"> = 59</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SHIFT_LEFT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SHIFT_RIGHT">
 <code class="sig-name descname">SHIFT_RIGHT</code><em class="property"> = 60</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SHIFT_RIGHT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SLASH">
 <code class="sig-name descname">SLASH</code><em class="property"> = 76</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SLASH" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SLEEP">
 <code class="sig-name descname">SLEEP</code><em class="property"> = 223</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SLEEP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SOFT_LEFT">
 <code class="sig-name descname">SOFT_LEFT</code><em class="property"> = 1</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SOFT_LEFT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SOFT_RIGHT">
 <code class="sig-name descname">SOFT_RIGHT</code><em class="property"> = 2</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SOFT_RIGHT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SOFT_SLEEP">
 <code class="sig-name descname">SOFT_SLEEP</code><em class="property"> = 276</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SOFT_SLEEP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SPACE">
 <code class="sig-name descname">SPACE</code><em class="property"> = 62</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SPACE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.STAR">
 <code class="sig-name descname">STAR</code><em class="property"> = 17</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.STAR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.STB_INPUT">
 <code class="sig-name descname">STB_INPUT</code><em class="property"> = 180</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.STB_INPUT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.STB_POWER">
 <code class="sig-name descname">STB_POWER</code><em class="property"> = 179</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.STB_POWER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.STEM_1">
 <code class="sig-name descname">STEM_1</code><em class="property"> = 265</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.STEM_1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.STEM_2">
 <code class="sig-name descname">STEM_2</code><em class="property"> = 266</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.STEM_2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.STEM_3">
 <code class="sig-name descname">STEM_3</code><em class="property"> = 267</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.STEM_3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.STEM_PRIMARY">
 <code class="sig-name descname">STEM_PRIMARY</code><em class="property"> = 264</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.STEM_PRIMARY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SWITCH_CHARSET">
 <code class="sig-name descname">SWITCH_CHARSET</code><em class="property"> = 95</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SWITCH_CHARSET" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SYM">
 <code class="sig-name descname">SYM</code><em class="property"> = 63</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SYM" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.SYSRQ">
 <code class="sig-name descname">SYSRQ</code><em class="property"> = 120</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.SYSRQ" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.T">
 <code class="sig-name descname">T</code><em class="property"> = 48</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.T" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TAB">
 <code class="sig-name descname">TAB</code><em class="property"> = 61</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TAB" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV">
 <code class="sig-name descname">TV</code><em class="property"> = 170</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_ANTENNA_CABLE">
 <code class="sig-name descname">TV_ANTENNA_CABLE</code><em class="property"> = 242</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_ANTENNA_CABLE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_AUDIO_DESCRIPTION">
 <code class="sig-name descname">TV_AUDIO_DESCRIPTION</code><em class="property"> = 252</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_AUDIO_DESCRIPTION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_AUDIO_DESCRIPTION_MIX_DOWN">
 <code class="sig-name descname">TV_AUDIO_DESCRIPTION_MIX_DOWN</code><em class="property"> = 254</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_AUDIO_DESCRIPTION_MIX_DOWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_AUDIO_DESCRIPTION_MIX_UP">
 <code class="sig-name descname">TV_AUDIO_DESCRIPTION_MIX_UP</code><em class="property"> = 253</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_AUDIO_DESCRIPTION_MIX_UP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_CONTENTS_MENU">
 <code class="sig-name descname">TV_CONTENTS_MENU</code><em class="property"> = 256</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_CONTENTS_MENU" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_DATA_SERVICE">
 <code class="sig-name descname">TV_DATA_SERVICE</code><em class="property"> = 230</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_DATA_SERVICE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT">
 <code class="sig-name descname">TV_INPUT</code><em class="property"> = 178</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_COMPONENT_1">
 <code class="sig-name descname">TV_INPUT_COMPONENT_1</code><em class="property"> = 249</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_COMPONENT_1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_COMPONENT_2">
 <code class="sig-name descname">TV_INPUT_COMPONENT_2</code><em class="property"> = 250</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_COMPONENT_2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_COMPOSITE_1">
 <code class="sig-name descname">TV_INPUT_COMPOSITE_1</code><em class="property"> = 247</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_COMPOSITE_1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_COMPOSITE_2">
 <code class="sig-name descname">TV_INPUT_COMPOSITE_2</code><em class="property"> = 248</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_COMPOSITE_2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_HDMI_1">
 <code class="sig-name descname">TV_INPUT_HDMI_1</code><em class="property"> = 243</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_HDMI_1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_HDMI_2">
 <code class="sig-name descname">TV_INPUT_HDMI_2</code><em class="property"> = 244</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_HDMI_2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_HDMI_3">
 <code class="sig-name descname">TV_INPUT_HDMI_3</code><em class="property"> = 245</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_HDMI_3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_HDMI_4">
 <code class="sig-name descname">TV_INPUT_HDMI_4</code><em class="property"> = 246</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_HDMI_4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_VGA_1">
 <code class="sig-name descname">TV_INPUT_VGA_1</code><em class="property"> = 251</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_INPUT_VGA_1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_MEDIA_CONTEXT_MENU">
 <code class="sig-name descname">TV_MEDIA_CONTEXT_MENU</code><em class="property"> = 257</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_MEDIA_CONTEXT_MENU" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_NETWORK">
 <code class="sig-name descname">TV_NETWORK</code><em class="property"> = 241</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_NETWORK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_NUMBER_ENTRY">
 <code class="sig-name descname">TV_NUMBER_ENTRY</code><em class="property"> = 234</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_NUMBER_ENTRY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_POWER">
 <code class="sig-name descname">TV_POWER</code><em class="property"> = 177</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_POWER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_RADIO_SERVICE">
 <code class="sig-name descname">TV_RADIO_SERVICE</code><em class="property"> = 232</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_RADIO_SERVICE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_SATELLITE">
 <code class="sig-name descname">TV_SATELLITE</code><em class="property"> = 237</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_SATELLITE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_SATELLITE_BS">
 <code class="sig-name descname">TV_SATELLITE_BS</code><em class="property"> = 238</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_SATELLITE_BS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_SATELLITE_CS">
 <code class="sig-name descname">TV_SATELLITE_CS</code><em class="property"> = 239</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_SATELLITE_CS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_SATELLITE_SERVICE">
 <code class="sig-name descname">TV_SATELLITE_SERVICE</code><em class="property"> = 240</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_SATELLITE_SERVICE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_TELETEXT">
 <code class="sig-name descname">TV_TELETEXT</code><em class="property"> = 233</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_TELETEXT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_TERRESTRIAL_ANALOG">
 <code class="sig-name descname">TV_TERRESTRIAL_ANALOG</code><em class="property"> = 235</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_TERRESTRIAL_ANALOG" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_TERRESTRIAL_DIGITAL">
 <code class="sig-name descname">TV_TERRESTRIAL_DIGITAL</code><em class="property"> = 236</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_TERRESTRIAL_DIGITAL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_TIMER_PROGRAMMING">
 <code class="sig-name descname">TV_TIMER_PROGRAMMING</code><em class="property"> = 258</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_TIMER_PROGRAMMING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.TV_ZOOM_MODE">
 <code class="sig-name descname">TV_ZOOM_MODE</code><em class="property"> = 255</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.TV_ZOOM_MODE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.U">
 <code class="sig-name descname">U</code><em class="property"> = 49</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.U" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.UNKNOWN">
 <code class="sig-name descname">UNKNOWN</code><em class="property"> = 0</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.UNKNOWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.V">
 <code class="sig-name descname">V</code><em class="property"> = 50</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.V" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.VOICE_ASSIST">
 <code class="sig-name descname">VOICE_ASSIST</code><em class="property"> = 231</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.VOICE_ASSIST" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.VOLUME_DOWN">
 <code class="sig-name descname">VOLUME_DOWN</code><em class="property"> = 25</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.VOLUME_DOWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.VOLUME_MUTE">
 <code class="sig-name descname">VOLUME_MUTE</code><em class="property"> = 164</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.VOLUME_MUTE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.VOLUME_UP">
 <code class="sig-name descname">VOLUME_UP</code><em class="property"> = 24</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.VOLUME_UP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.W">
 <code class="sig-name descname">W</code><em class="property"> = 51</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.W" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.WAKEUP">
 <code class="sig-name descname">WAKEUP</code><em class="property"> = 224</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.WAKEUP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.WINDOW">
 <code class="sig-name descname">WINDOW</code><em class="property"> = 171</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.WINDOW" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.X">
 <code class="sig-name descname">X</code><em class="property"> = 52</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.X" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.Y">
 <code class="sig-name descname">Y</code><em class="property"> = 53</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.Y" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.YEN">
 <code class="sig-name descname">YEN</code><em class="property"> = 216</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.YEN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.Z">
 <code class="sig-name descname">Z</code><em class="property"> = 54</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.Z" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.ZENKAKU_HANKAKU">
 <code class="sig-name descname">ZENKAKU_HANKAKU</code><em class="property"> = 211</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.ZENKAKU_HANKAKU" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.confirm_buttons">
 <code class="sig-name descname">confirm_buttons</code><em class="property"> = [23, 66, 62, 160]</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.confirm_buttons" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.gamepad_buttons">
 <code class="sig-name descname">gamepad_buttons</code><em class="property"> = [96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203]</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.gamepad_buttons" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.is_confirm_key">
-<em class="property">static </em><code class="sig-name descname">is_confirm_key</code><span class="sig-paren">(</span><em class="sig-param">code: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.is_confirm_key" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">is_confirm_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.is_confirm_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the key will, by default, trigger a click on the focused view.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.is_gamepad_button">
-<em class="property">static </em><code class="sig-name descname">is_gamepad_button</code><span class="sig-paren">(</span><em class="sig-param">code: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.is_gamepad_button" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">is_gamepad_button</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.is_gamepad_button" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the specified nativekey is a gamepad button.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.is_media_key">
-<em class="property">static </em><code class="sig-name descname">is_media_key</code><span class="sig-paren">(</span><em class="sig-param">code: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.is_media_key" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">is_media_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.is_media_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if this key is a media key, which can be send to apps that are
 interested in media key events.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.is_system_key">
-<em class="property">static </em><code class="sig-name descname">is_system_key</code><span class="sig-paren">(</span><em class="sig-param">code: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.is_system_key" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">is_system_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.is_system_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the key is a system key, System keys can not be used for menu shortcuts.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.is_wake_key">
-<em class="property">static </em><code class="sig-name descname">is_wake_key</code><span class="sig-paren">(</span><em class="sig-param">code: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.is_wake_key" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">is_wake_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.is_wake_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the key is a wake key.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.media_buttons">
 <code class="sig-name descname">media_buttons</code><em class="property"> = [126, 127, 85, 91, 79, 86, 87, 88, 89, 130, 90]</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.media_buttons" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.system_buttons">
 <code class="sig-name descname">system_buttons</code><em class="property"> = [82, 2, 3, 4, 5, 6, 24, 25, 164, 91, 26, 79, 126, 127, 85, 86, 87, 88, 89, 130, 90, 27, 80, 84, 220, 221, 222]</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.system_buttons" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.wake_buttons">
 <code class="sig-name descname">wake_buttons</code><em class="property"> = [4, 82, 224, 225, 265, 266, 267]</em><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey.wake_buttons" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1963,62 +1963,62 @@ interested in media key events.</p>
 </div>
 <div class="section" id="module-webdriver.extensions.android.network">
 <span id="webdriver-extensions-android-network-module"></span><h2>webdriver.extensions.android.network module<a class="headerlink" href="#module-webdriver.extensions.android.network" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.network.NetSpeed">
 <em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.network.</code><code class="sig-name descname">NetSpeed</code><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.network.NetSpeed.EDGE">
 <code class="sig-name descname">EDGE</code><em class="property"> = 'edge'</em><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed.EDGE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.network.NetSpeed.EVDO">
 <code class="sig-name descname">EVDO</code><em class="property"> = 'evdo'</em><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed.EVDO" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.network.NetSpeed.FULL">
 <code class="sig-name descname">FULL</code><em class="property"> = 'full'</em><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed.FULL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.network.NetSpeed.GPRS">
 <code class="sig-name descname">GPRS</code><em class="property"> = 'gprs'</em><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed.GPRS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.network.NetSpeed.GSM">
 <code class="sig-name descname">GSM</code><em class="property"> = 'gsm'</em><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed.GSM" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.network.NetSpeed.HSDPA">
 <code class="sig-name descname">HSDPA</code><em class="property"> = 'hsdpa'</em><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed.HSDPA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.network.NetSpeed.LTE">
 <code class="sig-name descname">LTE</code><em class="property"> = 'lte'</em><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed.LTE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.network.NetSpeed.SCSD">
 <code class="sig-name descname">SCSD</code><em class="property"> = 'scsd'</em><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed.SCSD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.network.NetSpeed.UMTS">
 <code class="sig-name descname">UMTS</code><em class="property"> = 'umts'</em><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed.UMTS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.network.Network">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.network.</code><code class="sig-name descname">Network</code><span class="sig-paren">(</span><em class="sig-param">command_executor='http://127.0.0.1:4444/wd/hub'</em>, <em class="sig-param">desired_capabilities=None</em>, <em class="sig-param">browser_profile=None</em>, <em class="sig-param">proxy=None</em>, <em class="sig-param">keep_alive=False</em>, <em class="sig-param">file_detector=None</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.network.Network" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.network.</code><code class="sig-name descname">Network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.network.Network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.network.Network.network_connection">
 <em class="property">property </em><code class="sig-name descname">network_connection</code><a class="headerlink" href="#webdriver.extensions.android.network.Network.network_connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an integer bitmask specifying the network connection type.</p>
@@ -2026,9 +2026,9 @@ interested in media key events.</p>
 Possible values are available through the enumeration <cite>appium.webdriver.ConnectionType</cite></p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.network.Network.set_network_connection">
-<code class="sig-name descname">set_network_connection</code><span class="sig-paren">(</span><em class="sig-param">connection_type: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#webdriver.extensions.android.network.Network.set_network_connection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_network_connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">connection_type</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#webdriver.extensions.android.network.Network.set_network_connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the network connection type. Android only.</p>
 <p>Possible values:</p>
 <blockquote>
@@ -2089,9 +2089,9 @@ Possible values are available through the enumeration <cite>appium.webdriver.Con
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.network.Network.set_network_speed">
-<code class="sig-name descname">set_network_speed</code><span class="sig-paren">(</span><em class="sig-param">speed_type: str</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.network.Network.set_network_speed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_network_speed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">speed_type</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.network.Network.set_network_speed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the network speed emulation.</p>
 <p>Android Emulator only.</p>
 <dl class="field-list simple">
@@ -2111,7 +2111,7 @@ A member of the const appium.webdriver.extensions.android.network.NetSpeed.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.network.Network.toggle_wifi">
 <code class="sig-name descname">toggle_wifi</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.network.Network.toggle_wifi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Toggle the wifi on the device, Android only.</p>
@@ -2127,13 +2127,13 @@ A member of the const appium.webdriver.extensions.android.network.NetSpeed.</p>
 </div>
 <div class="section" id="module-webdriver.extensions.android.performance">
 <span id="webdriver-extensions-android-performance-module"></span><h2>webdriver.extensions.android.performance module<a class="headerlink" href="#module-webdriver.extensions.android.performance" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.performance.Performance">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.performance.</code><code class="sig-name descname">Performance</code><span class="sig-paren">(</span><em class="sig-param">command_executor='http://127.0.0.1:4444/wd/hub'</em>, <em class="sig-param">desired_capabilities=None</em>, <em class="sig-param">browser_profile=None</em>, <em class="sig-param">proxy=None</em>, <em class="sig-param">keep_alive=False</em>, <em class="sig-param">file_detector=None</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.performance.Performance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.performance.</code><code class="sig-name descname">Performance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.performance.Performance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.performance.Performance.get_performance_data">
-<code class="sig-name descname">get_performance_data</code><span class="sig-paren">(</span><em class="sig-param">package_name: str</em>, <em class="sig-param">data_type: str</em>, <em class="sig-param">data_read_timeout: int = None</em><span class="sig-paren">)</span> &#x2192; List[List[str]]<a class="headerlink" href="#webdriver.extensions.android.performance.Performance.get_performance_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_performance_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">package_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_type</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_read_timeout</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#webdriver.extensions.android.performance.Performance.get_performance_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the information of the system state
 which is supported to read as like cpu, memory, network traffic, and battery.</p>
 <p>Android only.</p>
@@ -2162,7 +2162,7 @@ Check <code class="xref py py-func docutils literal notranslate"><span class="pr
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.performance.Performance.get_performance_data_types">
 <code class="sig-name descname">get_performance_data_types</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<a class="headerlink" href="#webdriver.extensions.android.performance.Performance.get_performance_data_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the information types of the system state
@@ -2187,23 +2187,23 @@ Android only.</p>
 </div>
 <div class="section" id="module-webdriver.extensions.android.power">
 <span id="webdriver-extensions-android-power-module"></span><h2>webdriver.extensions.android.power module<a class="headerlink" href="#module-webdriver.extensions.android.power" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.power.Power">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.power.</code><code class="sig-name descname">Power</code><span class="sig-paren">(</span><em class="sig-param">command_executor='http://127.0.0.1:4444/wd/hub'</em>, <em class="sig-param">desired_capabilities=None</em>, <em class="sig-param">browser_profile=None</em>, <em class="sig-param">proxy=None</em>, <em class="sig-param">keep_alive=False</em>, <em class="sig-param">file_detector=None</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.power.Power" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.power.</code><code class="sig-name descname">Power</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.power.Power" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.power.Power.AC_OFF">
 <code class="sig-name descname">AC_OFF</code><em class="property"> = 'off'</em><a class="headerlink" href="#webdriver.extensions.android.power.Power.AC_OFF" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="webdriver.extensions.android.power.Power.AC_ON">
 <code class="sig-name descname">AC_ON</code><em class="property"> = 'on'</em><a class="headerlink" href="#webdriver.extensions.android.power.Power.AC_ON" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.power.Power.set_power_ac">
-<code class="sig-name descname">set_power_ac</code><span class="sig-paren">(</span><em class="sig-param">ac_state: str</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.power.Power.set_power_ac" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_power_ac</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ac_state</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.power.Power.set_power_ac" title="Permalink to this definition">¶</a></dt>
 <dd><p>Emulate power state change on the connected emulator.</p>
 <p>Android only.</p>
 <dl class="field-list simple">
@@ -2223,9 +2223,9 @@ Android only.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.power.Power.set_power_capacity">
-<code class="sig-name descname">set_power_capacity</code><span class="sig-paren">(</span><em class="sig-param">percent: int</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.power.Power.set_power_capacity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_power_capacity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">percent</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.power.Power.set_power_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Emulate power capacity change on the connected emulator.</p>
 <p>Android only.</p>
 <dl class="field-list simple">
@@ -2249,13 +2249,13 @@ Android only.</p>
 </div>
 <div class="section" id="module-webdriver.extensions.android.sms">
 <span id="webdriver-extensions-android-sms-module"></span><h2>webdriver.extensions.android.sms module<a class="headerlink" href="#module-webdriver.extensions.android.sms" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.sms.Sms">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.sms.</code><code class="sig-name descname">Sms</code><span class="sig-paren">(</span><em class="sig-param">command_executor='http://127.0.0.1:4444/wd/hub'</em>, <em class="sig-param">desired_capabilities=None</em>, <em class="sig-param">browser_profile=None</em>, <em class="sig-param">proxy=None</em>, <em class="sig-param">keep_alive=False</em>, <em class="sig-param">file_detector=None</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.sms.Sms" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.sms.</code><code class="sig-name descname">Sms</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.sms.Sms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.sms.Sms.send_sms">
-<code class="sig-name descname">send_sms</code><span class="sig-paren">(</span><em class="sig-param">phone_number: str</em>, <em class="sig-param">message: str</em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.sms.Sms.send_sms" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">send_sms</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">phone_number</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.android.sms.Sms.send_sms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Emulate send SMS event on the connected emulator.</p>
 <p>Android only.</p>
 <dl class="field-list simple">
@@ -2282,13 +2282,13 @@ Android only.</p>
 </div>
 <div class="section" id="module-webdriver.extensions.android.system_bars">
 <span id="webdriver-extensions-android-system-bars-module"></span><h2>webdriver.extensions.android.system_bars module<a class="headerlink" href="#module-webdriver.extensions.android.system_bars" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="webdriver.extensions.android.system_bars.SystemBars">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.system_bars.</code><code class="sig-name descname">SystemBars</code><span class="sig-paren">(</span><em class="sig-param">command_executor='http://127.0.0.1:4444/wd/hub'</em>, <em class="sig-param">desired_capabilities=None</em>, <em class="sig-param">browser_profile=None</em>, <em class="sig-param">proxy=None</em>, <em class="sig-param">keep_alive=False</em>, <em class="sig-param">file_detector=None</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.system_bars.SystemBars" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.system_bars.</code><code class="sig-name descname">SystemBars</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.system_bars.SystemBars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
-<dl class="method">
+<dl class="py method">
 <dt id="webdriver.extensions.android.system_bars.SystemBars.get_system_bars">
-<code class="sig-name descname">get_system_bars</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict[str, Dict[str, Union[int, bool]]]<a class="headerlink" href="#webdriver.extensions.android.system_bars.SystemBars.get_system_bars" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_system_bars</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>Union<span class="p">[</span>int<span class="p">, </span>bool<span class="p">]</span><span class="p">]</span><span class="p">]</span><a class="headerlink" href="#webdriver.extensions.android.system_bars.SystemBars.get_system_bars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve visibility and bounds information of the status and navigation bars.</p>
 <p>Android only.</p>
 <dl class="field-list simple">
