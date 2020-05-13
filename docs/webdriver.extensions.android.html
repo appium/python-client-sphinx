@@ -201,7 +201,7 @@
 <span id="webdriver-extensions-android-activities-module"></span><h2>webdriver.extensions.android.activities module<a class="headerlink" href="#module-webdriver.extensions.android.activities" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.android.activities.Activities">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.activities.</code><code class="sig-name descname">Activities</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.activities.Activities" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Activities</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.activities.Activities" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.android.activities.Activities.current_activity">
@@ -226,8 +226,8 @@ another application, that application is started and the activity is opened.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>app_package</strong> (<em>str</em>) – The package containing the activity to start.</p></li>
-<li><p><strong>app_activity</strong> (<em>str</em>) – The activity to start.</p></li>
+<li><p><strong>app_package</strong> – The package containing the activity to start.</p></li>
+<li><p><strong>app_activity</strong> – The activity to start.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
@@ -252,16 +252,13 @@ another application, that application is started and the activity is opened.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>activity</strong> (<em>str</em>) – target activity</p></li>
-<li><p><strong>timeout</strong> (<em>int</em>) – max wait time, in seconds</p></li>
-<li><p><strong>interval</strong> (<em>int</em>) – sleep interval between retries, in seconds</p></li>
+<li><p><strong>activity</strong> – target activity</p></li>
+<li><p><strong>timeout</strong> – max wait time, in seconds</p></li>
+<li><p><strong>interval</strong> – sleep interval between retries, in seconds</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><cite>True</cite> if the target activity is shown</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -273,7 +270,7 @@ another application, that application is started and the activity is opened.</p>
 <span id="webdriver-extensions-android-common-module"></span><h2>webdriver.extensions.android.common module<a class="headerlink" href="#module-webdriver.extensions.android.common" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.android.common.Common">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.common.</code><code class="sig-name descname">Common</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.common.Common" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Common</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.common.Common" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.android.common.Common.current_package">
@@ -290,8 +287,8 @@ See <a class="reference external" href="https://github.com/appium/appium/blob/ma
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>intent</strong> (<em>str</em>) – description of operation to be performed</p></li>
-<li><p><strong>path</strong> (<em>str</em>) – path to coverage.ec file to be pulled from the device</p></li>
+<li><p><strong>intent</strong> – description of operation to be performed</p></li>
+<li><p><strong>path</strong> – path to coverage.ec file to be pulled from the device</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -306,7 +303,10 @@ See <a class="reference external" href="https://github.com/appium/appium/blob/ma
 <dd><p>Open notification shade in Android (API Level 18 and above)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Common’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -318,7 +318,7 @@ See <a class="reference external" href="https://github.com/appium/appium/blob/ma
 <span id="webdriver-extensions-android-display-module"></span><h2>webdriver.extensions.android.display module<a class="headerlink" href="#module-webdriver.extensions.android.display" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.android.display.Display">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.display.</code><code class="sig-name descname">Display</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.display.Display" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Display</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.display.Display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.android.display.Display.get_display_density">
@@ -328,12 +328,17 @@ See <a class="reference external" href="https://github.com/appium/appium/blob/ma
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The display density of the Android device(dpi)</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
 </dl>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>self.driver.get_display_density()</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The display density</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -345,7 +350,7 @@ See <a class="reference external" href="https://github.com/appium/appium/blob/ma
 <span id="webdriver-extensions-android-gsm-module"></span><h2>webdriver.extensions.android.gsm module<a class="headerlink" href="#module-webdriver.extensions.android.gsm" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.android.gsm.Gsm">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.gsm.</code><code class="sig-name descname">Gsm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.gsm.Gsm" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Gsm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.gsm.Gsm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.android.gsm.Gsm.make_gsm_call">
@@ -355,13 +360,22 @@ See <a class="reference external" href="https://github.com/appium/appium/blob/ma
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>phone_number</strong> (<em>str</em>) – The phone number to call to.</p></li>
-<li><p><strong>action</strong> (<em>str</em>) – The call action.
+<li><p><strong>phone_number</strong> – The phone number to call to.</p></li>
+<li><p><strong>action</strong> – The call action.
 A member of the const <cite>appium.webdriver.extensions.android.gsm.GsmCallActions</cite></p></li>
 </ul>
 </dd>
-<dt class="field-even">Usage</dt>
-<dd class="field-even"><p>self.driver.make_gsm_call(‘5551234567’, GsmCallActions.CALL)</p>
+</dl>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>self.driver.make_gsm_call(‘5551234567’, GsmCallActions.CALL)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Gsm’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -373,12 +387,20 @@ A member of the const <cite>appium.webdriver.extensions.android.gsm.GsmCallActio
 <p>Android only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>strength</strong> (<em>int</em>) – Signal strength.
-A member of the enum <cite>appium.webdriver.extensions.android.gsm.GsmSignalStrength</cite></p>
+<dd class="field-odd"><p><strong>strength</strong> – Signal strength.
+A member of the enum <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.extensions.android.gsm.GsmSignalStrength</span></code></p>
 </dd>
 </dl>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>self.driver.set_gsm_signal(GsmSignalStrength.GOOD)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Gsm’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -390,12 +412,20 @@ A member of the enum <cite>appium.webdriver.extensions.android.gsm.GsmSignalStre
 <p>Android only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>state</strong> (<em>str</em>) – State of GSM voice.
+<dd class="field-odd"><p><strong>state</strong> – State of GSM voice.
 A member of the const <cite>appium.webdriver.extensions.android.gsm.GsmVoiceState</cite></p>
 </dd>
 </dl>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>self.driver.set_gsm_voice(GsmVoiceState.HOME)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Gsm’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -404,7 +434,7 @@ A member of the const <cite>appium.webdriver.extensions.android.gsm.GsmVoiceStat
 
 <dl class="py class">
 <dt id="webdriver.extensions.android.gsm.GsmCallActions">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.gsm.</code><code class="sig-name descname">GsmCallActions</code><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmCallActions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">GsmCallActions</code><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmCallActions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmCallActions.ACCEPT">
@@ -430,7 +460,7 @@ A member of the const <cite>appium.webdriver.extensions.android.gsm.GsmVoiceStat
 
 <dl class="py class">
 <dt id="webdriver.extensions.android.gsm.GsmSignalStrength">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.gsm.</code><code class="sig-name descname">GsmSignalStrength</code><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmSignalStrength" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">GsmSignalStrength</code><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmSignalStrength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmSignalStrength.GOOD">
@@ -461,7 +491,7 @@ A member of the const <cite>appium.webdriver.extensions.android.gsm.GsmVoiceStat
 
 <dl class="py class">
 <dt id="webdriver.extensions.android.gsm.GsmVoiceState">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.gsm.</code><code class="sig-name descname">GsmVoiceState</code><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmVoiceState" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">GsmVoiceState</code><a class="headerlink" href="#webdriver.extensions.android.gsm.GsmVoiceState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt id="webdriver.extensions.android.gsm.GsmVoiceState.DENIED">
@@ -505,7 +535,7 @@ A member of the const <cite>appium.webdriver.extensions.android.gsm.GsmVoiceStat
 <span id="webdriver-extensions-android-nativekey-module"></span><h2>webdriver.extensions.android.nativekey module<a class="headerlink" href="#module-webdriver.extensions.android.nativekey" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.nativekey.</code><code class="sig-name descname">AndroidKey</code><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">AndroidKey</code><a class="headerlink" href="#webdriver.extensions.android.nativekey.AndroidKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt id="webdriver.extensions.android.nativekey.AndroidKey.A">
@@ -1965,7 +1995,7 @@ interested in media key events.</p>
 <span id="webdriver-extensions-android-network-module"></span><h2>webdriver.extensions.android.network module<a class="headerlink" href="#module-webdriver.extensions.android.network" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.android.network.NetSpeed">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.network.</code><code class="sig-name descname">NetSpeed</code><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">NetSpeed</code><a class="headerlink" href="#webdriver.extensions.android.network.NetSpeed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt id="webdriver.extensions.android.network.NetSpeed.EDGE">
@@ -2016,7 +2046,7 @@ interested in media key events.</p>
 
 <dl class="py class">
 <dt id="webdriver.extensions.android.network.Network">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.network.</code><code class="sig-name descname">Network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.network.Network" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.network.Network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.android.network.Network.network_connection">
@@ -2078,7 +2108,7 @@ Possible values are available through the enumeration <cite>appium.webdriver.Con
 <p>These are available through the enumeration <cite>appium.webdriver.ConnectionType</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>connection_type</strong> (<em>int</em>) – a member of the enum appium.webdriver.ConnectionType</p>
+<dd class="field-odd"><p><strong>connection_type</strong> – a member of the enum <cite>appium.webdriver.ConnectionType</cite></p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Set network connection type</p>
@@ -2096,7 +2126,7 @@ Possible values are available through the enumeration <cite>appium.webdriver.Con
 <p>Android Emulator only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>speed_type</strong> (<em>str</em>) – The network speed type.
+<dd class="field-odd"><p><strong>speed_type</strong> – The network speed type.
 A member of the const appium.webdriver.extensions.android.network.NetSpeed.</p>
 </dd>
 </dl>
@@ -2106,7 +2136,10 @@ A member of the const appium.webdriver.extensions.android.network.NetSpeed.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Network’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2117,7 +2150,10 @@ A member of the const appium.webdriver.extensions.android.network.NetSpeed.</p>
 <dd><p>Toggle the wifi on the device, Android only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Network’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2129,7 +2165,7 @@ A member of the const appium.webdriver.extensions.android.network.NetSpeed.</p>
 <span id="webdriver-extensions-android-performance-module"></span><h2>webdriver.extensions.android.performance module<a class="headerlink" href="#module-webdriver.extensions.android.performance" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.android.performance.Performance">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.performance.</code><code class="sig-name descname">Performance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.performance.Performance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Performance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.performance.Performance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.android.performance.Performance.get_performance_data">
@@ -2140,11 +2176,11 @@ which is supported to read as like cpu, memory, network traffic, and battery.</p
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>package_name</strong> (<em>str</em>) – The package name of the application</p></li>
-<li><p><strong>data_type</strong> (<em>str</em>) – The type of system state which wants to read.
+<li><p><strong>package_name</strong> – The package name of the application</p></li>
+<li><p><strong>data_type</strong> – The type of system state which wants to read.
 It should be one of the supported performance data types.
 Check <code class="xref py py-func docutils literal notranslate"><span class="pre">get_performance_data_types()</span></code> for supported types</p></li>
-<li><p><strong>data_read_timeout</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – The number of attempts to read</p></li>
+<li><p><strong>data_read_timeout</strong> – The number of attempts to read</p></li>
 </ul>
 </dd>
 </dl>
@@ -2155,9 +2191,6 @@ Check <code class="xref py py-func docutils literal notranslate"><span class="pr
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The data along to <cite>data_type</cite></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2176,9 +2209,6 @@ Android only.</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Available data types</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list</p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -2189,7 +2219,7 @@ Android only.</p>
 <span id="webdriver-extensions-android-power-module"></span><h2>webdriver.extensions.android.power module<a class="headerlink" href="#module-webdriver.extensions.android.power" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.android.power.Power">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.power.</code><code class="sig-name descname">Power</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.power.Power" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Power</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.power.Power" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py attribute">
 <dt id="webdriver.extensions.android.power.Power.AC_OFF">
@@ -2208,17 +2238,22 @@ Android only.</p>
 <p>Android only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>ac_state</strong> (<em>str</em>) – The power ac state to be set. Use <cite>.AC_OFF</cite>, <cite>.AC_ON</cite></p>
+<dd class="field-odd"><p><strong>ac_state</strong> – The power ac state to be set. Use <cite>Power.AC_OFF</cite>, <cite>Power.AC_ON</cite></p>
 </dd>
 </dl>
 <dl>
-<dt>Usage:</dt><dd><p>self.driver.set_power_ac(Power.AC_OFF)</p>
-<p>self.driver.set_power_ac(Power.AC_ON)</p>
+<dt>Usage:</dt><dd><div class="line-block">
+<div class="line">self.driver.set_power_ac(Power.AC_OFF)</div>
+<div class="line">self.driver.set_power_ac(Power.AC_ON)</div>
+</div>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Power’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2230,7 +2265,7 @@ Android only.</p>
 <p>Android only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>percent</strong> (<em>int</em>) – The power capacity to be set. Can be set from 0 to 100</p>
+<dd class="field-odd"><p><strong>percent</strong> – The power capacity to be set. Can be set from 0 to 100</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -2239,7 +2274,10 @@ Android only.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Power’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2251,7 +2289,7 @@ Android only.</p>
 <span id="webdriver-extensions-android-sms-module"></span><h2>webdriver.extensions.android.sms module<a class="headerlink" href="#module-webdriver.extensions.android.sms" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.android.sms.Sms">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.sms.</code><code class="sig-name descname">Sms</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.sms.Sms" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Sms</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.sms.Sms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.android.sms.Sms.send_sms">
@@ -2261,8 +2299,8 @@ Android only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>phone_number</strong> (<em>str</em>) – The phone number of message sender</p></li>
-<li><p><strong>message</strong> (<em>str</em>) – The message to send</p></li>
+<li><p><strong>phone_number</strong> – The phone number of message sender</p></li>
+<li><p><strong>message</strong> – The message to send</p></li>
 </ul>
 </dd>
 </dl>
@@ -2272,7 +2310,10 @@ Android only.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Sms’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2284,7 +2325,7 @@ Android only.</p>
 <span id="webdriver-extensions-android-system-bars-module"></span><h2>webdriver.extensions.android.system_bars module<a class="headerlink" href="#module-webdriver.extensions.android.system_bars" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.android.system_bars.SystemBars">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.android.system_bars.</code><code class="sig-name descname">SystemBars</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.system_bars.SystemBars" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">SystemBars</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.android.system_bars.SystemBars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.android.system_bars.SystemBars.get_system_bars">
@@ -2295,18 +2336,28 @@ Android only.</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><dl class="simple">
 <dt>A dictionary whose keys are</dt><dd><ul class="simple">
-<li><p>statusBar
-- visible
-- x
-- y
-- width
-- height</p></li>
-<li><p>navigationBar
-- visible
-- x
-- y
-- width
-- height</p></li>
+<li><dl class="simple">
+<dt>statusBar</dt><dd><ul>
+<li><p>visible</p></li>
+<li><p>x</p></li>
+<li><p>y</p></li>
+<li><p>width</p></li>
+<li><p>height</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>navigationBar</dt><dd><ul>
+<li><p>visible</p></li>
+<li><p>x</p></li>
+<li><p>y</p></li>
+<li><p>width</p></li>
+<li><p>height</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>

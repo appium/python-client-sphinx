@@ -184,7 +184,7 @@
 <span id="webdriver-common-mobileby-module"></span><h2>webdriver.common.mobileby module<a class="headerlink" href="#module-webdriver.common.mobileby" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.common.mobileby.MobileBy">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.common.mobileby.</code><code class="sig-name descname">MobileBy</code><a class="headerlink" href="#webdriver.common.mobileby.MobileBy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">MobileBy</code><a class="headerlink" href="#webdriver.common.mobileby.MobileBy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.common.by.By</span></code></p>
 <dl class="py attribute">
 <dt id="webdriver.common.mobileby.MobileBy.ACCESSIBILITY_ID">
@@ -248,7 +248,7 @@
 <span id="webdriver-common-multi-action-module"></span><h2>webdriver.common.multi_action module<a class="headerlink" href="#module-webdriver.common.multi_action" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.common.multi_action.MultiAction">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.common.multi_action.</code><code class="sig-name descname">MultiAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">WebDriver</span></em>, <em class="sig-param"><span class="n">element</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>WebElement<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.common.multi_action.MultiAction" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">MultiAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">WebDriver</span></em>, <em class="sig-param"><span class="n">element</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>WebElement<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.common.multi_action.MultiAction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt id="webdriver.common.multi_action.MultiAction.add">
@@ -256,15 +256,25 @@
 <dd><p>Add TouchAction objects to the MultiAction, to be performed later.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>touch_actions</strong> (<cite>TouchAction</cite>) – one or more TouchAction objects describing a chain of actions to be performed by one finger</p>
+<dd class="field-odd"><p><strong>touch_actions</strong> – one or more TouchAction objects describing a chain of actions to be performed by one finger</p>
 </dd>
 </dl>
 <dl>
-<dt>Usage:</dt><dd><p>a1 = TouchAction(driver)</p>
-<p>a1.press(el1).move_to(el2).release()</p>
-<p>a2 = TouchAction(driver)</p>
-<p>a2.press(el2).move_to(el1).release()</p>
-<p>MultiAction(driver).add(a1, a2)</p>
+<dt>Usage:</dt><dd><div class="line-block">
+<div class="line">a1 = TouchAction(driver)</div>
+<div class="line">a1.press(el1).move_to(el2).release()</div>
+<div class="line">a2 = TouchAction(driver)</div>
+<div class="line">a2.press(el2).move_to(el1).release()</div>
+<div class="line">MultiAction(driver).add(a1, a2)</div>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><cite>MultiAction</cite></p>
 </dd>
 </dl>
 </dd></dl>
@@ -279,11 +289,21 @@
 <code class="sig-name descname">perform</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.common.multi_action.MultiAction.perform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform the actions stored in the object.</p>
 <dl>
-<dt>Usage:</dt><dd><p>a1 = TouchAction(driver)</p>
-<p>a1.press(el1).move_to(el2).release()</p>
-<p>a2 = TouchAction(driver)</p>
-<p>a2.press(el2).move_to(el1).release()</p>
-<p>MultiAction(driver).add(a1, a2).perform()</p>
+<dt>Usage:</dt><dd><div class="line-block">
+<div class="line">a1 = TouchAction(driver)</div>
+<div class="line">a1.press(el1).move_to(el2).release()</div>
+<div class="line">a2 = TouchAction(driver)</div>
+<div class="line">a2.press(el2).move_to(el1).release()</div>
+<div class="line">MultiAction(driver).add(a1, a2).perform()</div>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><cite>MultiAction</cite></p>
 </dd>
 </dl>
 </dd></dl>
@@ -295,7 +315,7 @@
 <span id="webdriver-common-touch-action-module"></span><h2>webdriver.common.touch_action module<a class="headerlink" href="#module-webdriver.common.touch_action" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.common.touch_action.TouchAction">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.common.touch_action.</code><code class="sig-name descname">TouchAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>WebDriver<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.common.touch_action.TouchAction" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">TouchAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">driver</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>WebDriver<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.common.touch_action.TouchAction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt id="webdriver.common.touch_action.TouchAction.json_wire_gestures">
@@ -309,14 +329,14 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>el</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code>, optional) – the element to press</p></li>
-<li><p><strong>x</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – x coordiate to press. If y is used, x must also be set</p></li>
-<li><p><strong>y</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – y coordiate to press. If x is used, y must also be set</p></li>
-<li><p><strong>duration</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – Duration to press</p></li>
+<li><p><strong>el</strong> – the element to press</p></li>
+<li><p><strong>x</strong> – x coordiate to press. If y is used, x must also be set</p></li>
+<li><p><strong>y</strong> – y coordiate to press. If x is used, y must also be set</p></li>
+<li><p><strong>duration</strong> – Duration to press</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>self instance</p>
+<dd class="field-even"><p>Self instance</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><cite>TouchAction</cite></p>
@@ -331,13 +351,13 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>el</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code>, optional) – the element to be moved to</p></li>
-<li><p><strong>x</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – x coordiate to be moved to. If y is used, x must also be set</p></li>
-<li><p><strong>y</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – y coordiate to be moved to. If x is used, y must also be set</p></li>
+<li><p><strong>el</strong> – the element to be moved to</p></li>
+<li><p><strong>x</strong> – x coordiate to be moved to. If y is used, x must also be set</p></li>
+<li><p><strong>y</strong> – y coordiate to be moved to. If x is used, y must also be set</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>self instance</p>
+<dd class="field-even"><p>Self instance</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><cite>TouchAction</cite></p>
@@ -351,7 +371,7 @@
 <dd><p>Perform the action by sending the commands to the server to be operated upon</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>self instance</p>
+<dd class="field-odd"><p>Self instance</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><cite>TouchAction</cite></p>
@@ -366,15 +386,15 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>el</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code>, optional) – the element to press</p></li>
-<li><p><strong>x</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – x coordiate to press. If y is used, x must also be set</p></li>
-<li><p><strong>y</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – y coordiate to press. If x is used, y must also be set</p></li>
-<li><p><strong>pressure</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>, optional) – [iOS Only] press as force touch. Read the description of <cite>force</cite> property on Apple’s UITouch class
+<li><p><strong>el</strong> – the element to press</p></li>
+<li><p><strong>x</strong> – x coordiate to press. If y is used, x must also be set</p></li>
+<li><p><strong>y</strong> – y coordiate to press. If x is used, y must also be set</p></li>
+<li><p><strong>pressure</strong> – [iOS Only] press as force touch. Read the description of <cite>force</cite> property on Apple’s UITouch class
 (<a class="reference external" href="https://developer.apple.com/documentation/uikit/uitouch?language=objc">https://developer.apple.com/documentation/uikit/uitouch?language=objc</a>) for more details on possible value ranges.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>self instance</p>
+<dd class="field-even"><p>Self instance</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><cite>TouchAction</cite></p>
@@ -388,7 +408,7 @@
 <dd><p>End the action by lifting the pointer off the screen</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>self instance</p>
+<dd class="field-odd"><p>Self instance</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><cite>TouchAction</cite></p>
@@ -403,13 +423,13 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>element</strong> (<cite>appium.webdriver.webelement.WebElement</cite>) – the element to tap</p></li>
-<li><p><strong>x</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – x coordinate to tap, relative to the top left corner of the element.</p></li>
-<li><p><strong>y</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – y coordinate. If y is used, x must also be set, and vice versa</p></li>
+<li><p><strong>element</strong> – the element to tap</p></li>
+<li><p><strong>x</strong> – x coordinate to tap, relative to the top left corner of the element.</p></li>
+<li><p><strong>y</strong> – y coordinate. If y is used, x must also be set, and vice versa</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>self instance</p>
+<dd class="field-even"><p>Self instance</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><cite>TouchAction</cite></p>
@@ -423,10 +443,10 @@
 <dd><p>Pause for <cite>ms</cite> milliseconds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>ms</strong> (<em>int</em>) – The time to pause</p>
+<dd class="field-odd"><p><strong>ms</strong> – The time to pause</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>self instance</p>
+<dd class="field-even"><p>Self instance</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><cite>TouchAction</cite></p>
