@@ -200,22 +200,24 @@
 <span id="webdriver-extensions-search-context-android-module"></span><h2>webdriver.extensions.search_context.android module<a class="headerlink" href="#module-webdriver.extensions.search_context.android" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.search_context.android.AndroidSearchContext">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.search_context.android.</code><code class="sig-name descname">AndroidSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.android.AndroidSearchContext" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">AndroidSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.android.AndroidSearchContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#webdriver.extensions.search_context.base_search_context.BaseSearchContext" title="webdriver.extensions.search_context.base_search_context.BaseSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.base_search_context.BaseSearchContext</span></code></a></p>
 <p>Define search context for Android</p>
 <dl class="py method">
 <dt id="webdriver.extensions.search_context.android.AndroidSearchContext.find_element_by_android_data_matcher">
 <code class="sig-name descname">find_element_by_android_data_matcher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">args</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Any<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">className</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; WebElement<a class="headerlink" href="#webdriver.extensions.search_context.android.AndroidSearchContext.find_element_by_android_data_matcher" title="Permalink to this definition">¶</a></dt>
-<dd><p>Finds element by [onData](<a class="reference external" href="https://medium.com/androiddevelopers/adapterviews-and-espresso-f4172aa853cf">https://medium.com/androiddevelopers/adapterviews-and-espresso-f4172aa853cf</a>) in Android</p>
+<dd><p>Finds element by
+[onData](<a class="reference external" href="https://medium.com/androiddevelopers/adapterviews-and-espresso-f4172aa853cf">https://medium.com/androiddevelopers/adapterviews-and-espresso-f4172aa853cf</a>) in Android</p>
 <p>It works with [Espresso Driver](<a class="reference external" href="https://github.com/appium/appium-espresso-driver">https://github.com/appium/appium-espresso-driver</a>).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The name of a method to invoke.
+<li><p><strong>name</strong> – The name of a method to invoke.
 The method must return a Hamcrest
 [Matcher](<a class="reference external" href="http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matcher.html">http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matcher.html</a>)</p></li>
-<li><p><strong>args</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code>, optional) – The args provided to the method</p></li>
-<li><p><strong>className</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The class name that the method is part of (defaults to <cite>org.hamcrest.Matchers</cite>).
+<li><p><strong>args</strong> – The args provided to the method</p></li>
+<li><p><strong>className</strong> – The class name that the method is part of
+(defaults to <cite>org.hamcrest.Matchers</cite>).
 Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.espresso.matcher</cite> package
 (e.g.: <cite>class=CursorMatchers</cite> fully qualified is <cite>class=androidx.test.espresso.matcher.CursorMatchers</cite></p></li>
 </ul>
@@ -234,8 +236,6 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 <dt>Usage:</dt><dd><p>driver.find_element_by_android_data_matcher(name=’hasEntry’, args=[‘title’, ‘Animation’])</p>
 </dd>
 </dl>
-<p># To enable auto completion in PyCharm(IDE)
-:rtype: <cite>appium.webdriver.webelement.WebElement</cite></p>
 </dd></dl>
 
 <dl class="py method">
@@ -253,7 +253,7 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>The found element</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
@@ -269,11 +269,11 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The name of a method to invoke.
+<li><p><strong>name</strong> – The name of a method to invoke.
 The method must return a Hamcrest
 [Matcher](<a class="reference external" href="http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matcher.html">http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matcher.html</a>)</p></li>
-<li><p><strong>args</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code>, optional) – The args provided to the method</p></li>
-<li><p><strong>className</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The class name that the method is part of (defaults to <cite>org.hamcrest.Matchers</cite>).
+<li><p><strong>args</strong> – The args provided to the method</p></li>
+<li><p><strong>className</strong> – The class name that the method is part of (defaults to <cite>org.hamcrest.Matchers</cite>).
 Can be fully qualified by having the androidx.test.espresso.matcher. prefix.
 If the prefix is not provided then it is going to be added implicitly.
 (e.g.: <cite>class=CursorMatchers</cite> fully qualified is <cite>class=androidx.test.espresso.matcher.CursorMatchers</cite></p></li>
@@ -293,8 +293,6 @@ If the prefix is not provided then it is going to be added implicitly.
 <dt>Usage:</dt><dd><p>driver.find_element_by_android_view_matcher(name=’withText’, args=[‘Accessibility’], className=’ViewMatchers’)</p>
 </dd>
 </dl>
-<p># To enable auto completion in PyCharm(IDE)
-:rtype: <cite>appium.webdriver.webelement.WebElement</cite></p>
 </dd></dl>
 
 <dl class="py method">
@@ -304,7 +302,7 @@ If the prefix is not provided then it is going to be added implicitly.
 <p>It works with [Espresso Driver](<a class="reference external" href="https://github.com/appium/appium-espresso-driver">https://github.com/appium/appium-espresso-driver</a>).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tag</strong> (<em>str</em>) – The tag name of the view to look for</p>
+<dd class="field-odd"><p><strong>tag</strong> – The tag name of the view to look for</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -313,7 +311,7 @@ If the prefix is not provided then it is going to be added implicitly.
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>The found element</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
@@ -324,16 +322,18 @@ If the prefix is not provided then it is going to be added implicitly.
 <dl class="py method">
 <dt id="webdriver.extensions.search_context.android.AndroidSearchContext.find_elements_by_android_data_matcher">
 <code class="sig-name descname">find_elements_by_android_data_matcher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">args</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Any<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">className</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>WebElement<span class="p">]</span><a class="headerlink" href="#webdriver.extensions.search_context.android.AndroidSearchContext.find_elements_by_android_data_matcher" title="Permalink to this definition">¶</a></dt>
-<dd><p>Finds elements by [onData](<a class="reference external" href="https://medium.com/androiddevelopers/adapterviews-and-espresso-f4172aa853cf">https://medium.com/androiddevelopers/adapterviews-and-espresso-f4172aa853cf</a>) in Android
+<dd><p>Finds elements by
+[onData](<a class="reference external" href="https://medium.com/androiddevelopers/adapterviews-and-espresso-f4172aa853cf">https://medium.com/androiddevelopers/adapterviews-and-espresso-f4172aa853cf</a>) in Android
 It works with [Espresso Driver](<a class="reference external" href="https://github.com/appium/appium-espresso-driver">https://github.com/appium/appium-espresso-driver</a>).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The name of a method to invoke.
+<li><p><strong>name</strong> – The name of a method to invoke.
 The method must return a Hamcrest
 [Matcher](<a class="reference external" href="http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matcher.html">http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matcher.html</a>)</p></li>
-<li><p><strong>args</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code>, optional) – The args provided to the method</p></li>
-<li><p><strong>className</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The class name that the method is part of (defaults to <cite>org.hamcrest.Matchers</cite>).
+<li><p><strong>args</strong> – The args provided to the method</p></li>
+<li><p><strong>className</strong> – The class name that the method is part of
+(defaults to <cite>org.hamcrest.Matchers</cite>).
 Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.espresso.matcher</cite> package
 (e.g.: <cite>class=CursorMatchers</cite> fully qualified is <cite>class=androidx.test.espresso.matcher.CursorMatchers</cite></p></li>
 </ul>
@@ -349,11 +349,6 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 <dt>Usage:</dt><dd><p>driver.find_elements_by_android_data_matcher(name=’hasEntry’, args=[‘title’, ‘Animation’])</p>
 </dd>
 </dl>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -362,7 +357,7 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 <dd><p>Finds elements by uiautomator in Android.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>uia_string</strong> (<em>str</em>) – The element name in the Android UIAutomator library</p>
+<dd class="field-odd"><p><strong>uia_string</strong> – The element name in the Android UIAutomator library</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -371,10 +366,10 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+<dd class="field-odd"><p>The found elements</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of <cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -386,7 +381,7 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 <p>It works with [Espresso Driver](<a class="reference external" href="https://github.com/appium/appium-espresso-driver">https://github.com/appium/appium-espresso-driver</a>).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tag</strong> (<em>str</em>) – The tag name of the view to look for</p>
+<dd class="field-odd"><p><strong>tag</strong> – The tag name of the view to look for</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -395,10 +390,10 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+<dd class="field-odd"><p>The found elements</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of <cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -410,7 +405,7 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 <span id="webdriver-extensions-search-context-base-search-context-module"></span><h2>webdriver.extensions.search_context.base_search_context module<a class="headerlink" href="#module-webdriver.extensions.search_context.base_search_context" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.search_context.base_search_context.BaseSearchContext">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.search_context.base_search_context.</code><code class="sig-name descname">BaseSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.base_search_context.BaseSearchContext" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">BaseSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.base_search_context.BaseSearchContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Used by each search context. Dummy find_element/s are for preventing pylint error</p>
 <dl class="py method">
@@ -430,7 +425,7 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 <span id="webdriver-extensions-search-context-custom-module"></span><h2>webdriver.extensions.search_context.custom module<a class="headerlink" href="#module-webdriver.extensions.search_context.custom" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.search_context.custom.CustomSearchContext">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.search_context.custom.</code><code class="sig-name descname">CustomSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.custom.CustomSearchContext" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">CustomSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.custom.CustomSearchContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#webdriver.extensions.search_context.base_search_context.BaseSearchContext" title="webdriver.extensions.search_context.base_search_context.BaseSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.base_search_context.BaseSearchContext</span></code></a></p>
 <p>Define search context for custom plugin</p>
 <dl class="py method">
@@ -439,7 +434,7 @@ Can be fully qualified, or simple, and simple defaults to <cite>androidx.test.es
 <dd><p>Finds an element in conjunction with a custom element finding plugin</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>selector</strong> (<em>str</em>) – a string of the form “module:selector”, where “module” is
+<dd class="field-odd"><p><strong>selector</strong> – a string of the form “module:selector”, where “module” is
 the shortcut name given in the customFindModules capability, and
 “selector” is the string that will be passed to the custom element
 finding plugin itself</p>
@@ -451,11 +446,12 @@ finding plugin itself</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>The found element</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
 </dd>
 </dl>
-<p># To enable auto completion in PyCharm(IDE)
-:rtype: <cite>appium.webdriver.webelement.WebElement</cite></p>
 </dd></dl>
 
 <dl class="py method">
@@ -476,10 +472,10 @@ finding plugin itself</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+<dd class="field-odd"><p>The found elements</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of <cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -491,7 +487,7 @@ finding plugin itself</p>
 <span id="webdriver-extensions-search-context-ios-module"></span><h2>webdriver.extensions.search_context.ios module<a class="headerlink" href="#module-webdriver.extensions.search_context.ios" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.search_context.ios.iOSSearchContext">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.search_context.ios.</code><code class="sig-name descname">iOSSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.ios.iOSSearchContext" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">iOSSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.ios.iOSSearchContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#webdriver.extensions.search_context.base_search_context.BaseSearchContext" title="webdriver.extensions.search_context.base_search_context.BaseSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.base_search_context.BaseSearchContext</span></code></a></p>
 <p>Define search context for iOS</p>
 <dl class="py method">
@@ -500,7 +496,7 @@ finding plugin itself</p>
 <dd><p>Find an element by ios class chain string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>class_chain_string</strong> (<em>str</em>) – The class chain string</p>
+<dd class="field-odd"><p><strong>class_chain_string</strong> – The class chain string</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -509,7 +505,7 @@ finding plugin itself</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>The found element</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
@@ -523,7 +519,7 @@ finding plugin itself</p>
 <dd><p>Find an element by ios predicate string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>predicate_string</strong> (<em>str</em>) – The predicate string</p>
+<dd class="field-odd"><p><strong>predicate_string</strong> – The predicate string</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -532,7 +528,7 @@ finding plugin itself</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>The found element</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
@@ -546,7 +542,7 @@ finding plugin itself</p>
 <dd><p>Finds an element by uiautomation in iOS.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>uia_string</strong> (<em>str</em>) – The element name in the iOS UIAutomation library</p>
+<dd class="field-odd"><p><strong>uia_string</strong> – The element name in the iOS UIAutomation library</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -555,11 +551,12 @@ finding plugin itself</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>The found element</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
 </dd>
 </dl>
-<p># To enable auto completion in PyCharm(IDE)
-:rtype: <cite>appium.webdriver.webelement.WebElement</cite></p>
 </dd></dl>
 
 <dl class="py method">
@@ -568,7 +565,7 @@ finding plugin itself</p>
 <dd><p>Finds elements by ios class chain string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>class_chain_string</strong> (<em>str</em>) – The class chain string</p>
+<dd class="field-odd"><p><strong>class_chain_string</strong> – The class chain string</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -577,10 +574,10 @@ finding plugin itself</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+<dd class="field-odd"><p>The found elements</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of <cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -591,7 +588,7 @@ finding plugin itself</p>
 <dd><p>Finds elements by ios predicate string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>predicate_string</strong> (<em>str</em>) – The predicate string</p>
+<dd class="field-odd"><p><strong>predicate_string</strong> – The predicate string</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -600,10 +597,10 @@ finding plugin itself</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+<dd class="field-odd"><p>The found elements</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of <cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -614,7 +611,7 @@ finding plugin itself</p>
 <dd><p>Finds elements by uiautomation in iOS.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>uia_string</strong> (<em>str</em>) – The element name in the iOS UIAutomation library</p>
+<dd class="field-odd"><p><strong>uia_string</strong> – The element name in the iOS UIAutomation library</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -623,10 +620,10 @@ finding plugin itself</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+<dd class="field-odd"><p>The found elements</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of <cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -638,7 +635,7 @@ finding plugin itself</p>
 <span id="webdriver-extensions-search-context-mobile-module"></span><h2>webdriver.extensions.search_context.mobile module<a class="headerlink" href="#module-webdriver.extensions.search_context.mobile" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.search_context.mobile.MobileSearchContext">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.search_context.mobile.</code><code class="sig-name descname">MobileSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.mobile.MobileSearchContext" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">MobileSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.mobile.MobileSearchContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#webdriver.extensions.search_context.base_search_context.BaseSearchContext" title="webdriver.extensions.search_context.base_search_context.BaseSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.base_search_context.BaseSearchContext</span></code></a></p>
 <p>Define search context for Mobile(Android, iOS)</p>
 <dl class="py method">
@@ -647,7 +644,7 @@ finding plugin itself</p>
 <dd><p>Finds an element by accessibility id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>accessibility_id</strong> (<em>str</em>) – A string corresponding to a recursive element search using the
+<dd class="field-odd"><p><strong>accessibility_id</strong> – A string corresponding to a recursive element search using the
 Id/Name that the native Accessibility options utilize</p>
 </dd>
 </dl>
@@ -657,11 +654,12 @@ Id/Name that the native Accessibility options utilize</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>The found element</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
 </dd>
 </dl>
-<p># To enable auto completion in PyCharm(IDE)
-:rtype: <cite>appium.webdriver.webelement.WebElement</cite></p>
 </dd></dl>
 
 <dl class="py method">
@@ -671,10 +669,10 @@ Id/Name that the native Accessibility options utilize</p>
 <p>Uses driver.find_image_occurrence under the hood.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>img_path</strong> (<em>str</em>) – a string corresponding to the path of a image</p>
+<dd class="field-odd"><p><strong>img_path</strong> – a string corresponding to the path of a image</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-even"><p>The found element</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
@@ -688,7 +686,7 @@ Id/Name that the native Accessibility options utilize</p>
 <dd><p>Finds elements by accessibility id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>accessibility_id</strong> (<em>str</em>) – a string corresponding to a recursive element search using the
+<dd class="field-odd"><p><strong>accessibility_id</strong> – a string corresponding to a recursive element search using the
 Id/Name that the native Accessibility options utilize</p>
 </dd>
 </dl>
@@ -698,10 +696,10 @@ Id/Name that the native Accessibility options utilize</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+<dd class="field-odd"><p>The found elements</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of <cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -714,13 +712,13 @@ Id/Name that the native Accessibility options utilize</p>
 only ever return at most one element</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>img_path</strong> (<em>str</em>) – a string corresponding to the path of a image</p>
+<dd class="field-odd"><p><strong>img_path</strong> – a string corresponding to the path of a image</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+<dd class="field-even"><p>The found elements</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>list of <cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -732,7 +730,7 @@ only ever return at most one element</p>
 <span id="webdriver-extensions-search-context-windows-module"></span><h2>webdriver.extensions.search_context.windows module<a class="headerlink" href="#module-webdriver.extensions.search_context.windows" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.search_context.windows.WindowsSearchContext">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.search_context.windows.</code><code class="sig-name descname">WindowsSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.windows.WindowsSearchContext" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">WindowsSearchContext</code><a class="headerlink" href="#webdriver.extensions.search_context.windows.WindowsSearchContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#webdriver.extensions.search_context.base_search_context.BaseSearchContext" title="webdriver.extensions.search_context.base_search_context.BaseSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.base_search_context.BaseSearchContext</span></code></a></p>
 <p>Define search context for Windows</p>
 <dl class="py method">
@@ -741,7 +739,7 @@ only ever return at most one element</p>
 <dd><p>Finds an element by windows uiautomation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>win_uiautomation</strong> (<em>str</em>) – The element name in the windows UIAutomation selector</p>
+<dd class="field-odd"><p><strong>win_uiautomation</strong> – The element name in the windows UIAutomation selector</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -750,11 +748,12 @@ only ever return at most one element</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>The found element</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
 </dd>
 </dl>
-<p># To enable auto completion in PyCharm(IDE)
-:rtype: <cite>appium.webdriver.webelement.WebElement</cite></p>
 </dd></dl>
 
 <dl class="py method">
@@ -763,7 +762,7 @@ only ever return at most one element</p>
 <dd><p>Finds elements by windows uiautomation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>win_uiautomation</strong> (<em>str</em>) – The element name in the windows UIAutomation selector</p>
+<dd class="field-odd"><p><strong>win_uiautomation</strong> – The element name in the windows UIAutomation selector</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -772,10 +771,10 @@ only ever return at most one element</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
+<dd class="field-odd"><p>The found elements</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of <cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -787,14 +786,14 @@ only ever return at most one element</p>
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-webdriver.extensions.search_context" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.search_context.AppiumSearchContext">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.search_context.</code><code class="sig-name descname">AppiumSearchContext</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.search_context.AppiumSearchContext" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">AppiumSearchContext</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.search_context.AppiumSearchContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code>, <a class="reference internal" href="#webdriver.extensions.search_context.android.AndroidSearchContext" title="webdriver.extensions.search_context.android.AndroidSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.android.AndroidSearchContext</span></code></a>, <a class="reference internal" href="#webdriver.extensions.search_context.custom.CustomSearchContext" title="webdriver.extensions.search_context.custom.CustomSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.custom.CustomSearchContext</span></code></a>, <a class="reference internal" href="#webdriver.extensions.search_context.ios.iOSSearchContext" title="webdriver.extensions.search_context.ios.iOSSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.ios.iOSSearchContext</span></code></a>, <a class="reference internal" href="#webdriver.extensions.search_context.mobile.MobileSearchContext" title="webdriver.extensions.search_context.mobile.MobileSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.mobile.MobileSearchContext</span></code></a>, <a class="reference internal" href="#webdriver.extensions.search_context.windows.WindowsSearchContext" title="webdriver.extensions.search_context.windows.WindowsSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.windows.WindowsSearchContext</span></code></a></p>
 <p>Returns appium driver search conext</p>
 </dd></dl>
 
 <dl class="py class">
 <dt id="webdriver.extensions.search_context.AppiumWebElementSearchContext">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.search_context.</code><code class="sig-name descname">AppiumWebElementSearchContext</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">id_</span></em>, <em class="sig-param"><span class="n">w3c</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.search_context.AppiumWebElementSearchContext" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">AppiumWebElementSearchContext</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">id_</span></em>, <em class="sig-param"><span class="n">w3c</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.search_context.AppiumWebElementSearchContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webelement.WebElement</span></code>, <a class="reference internal" href="#webdriver.extensions.search_context.android.AndroidSearchContext" title="webdriver.extensions.search_context.android.AndroidSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.android.AndroidSearchContext</span></code></a>, <a class="reference internal" href="#webdriver.extensions.search_context.custom.CustomSearchContext" title="webdriver.extensions.search_context.custom.CustomSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.custom.CustomSearchContext</span></code></a>, <a class="reference internal" href="#webdriver.extensions.search_context.ios.iOSSearchContext" title="webdriver.extensions.search_context.ios.iOSSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.ios.iOSSearchContext</span></code></a>, <a class="reference internal" href="#webdriver.extensions.search_context.mobile.MobileSearchContext" title="webdriver.extensions.search_context.mobile.MobileSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.mobile.MobileSearchContext</span></code></a>, <a class="reference internal" href="#webdriver.extensions.search_context.windows.WindowsSearchContext" title="webdriver.extensions.search_context.windows.WindowsSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.windows.WindowsSearchContext</span></code></a></p>
 <p>Returns appium web element search context</p>
 </dd></dl>

@@ -232,7 +232,7 @@
 <span id="webdriver-extensions-action-helpers-module"></span><h2>webdriver.extensions.action_helpers module<a class="headerlink" href="#module-webdriver.extensions.action_helpers" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.action_helpers.ActionHelpers">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.action_helpers.</code><code class="sig-name descname">ActionHelpers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.action_helpers.ActionHelpers" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ActionHelpers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.action_helpers.ActionHelpers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.action_helpers.ActionHelpers.drag_and_drop">
@@ -241,12 +241,15 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>originEl</strong> (<cite>appium.webdriver.webelement.WebElement</cite>) – the element to drag</p></li>
-<li><p><strong>destinationEl</strong> (<cite>appium.webdriver.webelement.WebElement</cite>) – the element to drag to</p></li>
+<li><p><strong>origin_el</strong> – the element to drag</p></li>
+<li><p><strong>destination_el</strong> – the element to drag to</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘ActionHelpers’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -258,10 +261,10 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>start_x</strong> (<em>int</em>) – x-coordinate at which to start</p></li>
-<li><p><strong>start_y</strong> (<em>int</em>) – y-coordinate at which to start</p></li>
-<li><p><strong>end_x</strong> (<em>int</em>) – x-coordinate at which to stop</p></li>
-<li><p><strong>end_y</strong> (<em>int</em>) – y-coordinate at which to stop</p></li>
+<li><p><strong>start_x</strong> – x-coordinate at which to start</p></li>
+<li><p><strong>start_y</strong> – y-coordinate at which to start</p></li>
+<li><p><strong>end_x</strong> – x-coordinate at which to stop</p></li>
+<li><p><strong>end_y</strong> – y-coordinate at which to stop</p></li>
 </ul>
 </dd>
 </dl>
@@ -271,7 +274,10 @@
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘ActionHelpers’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -283,9 +289,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>originalEl</strong> (<cite>appium.webdriver.webelement.WebElement</cite>) – the element from which to being scrolling</p></li>
-<li><p><strong>destinationEl</strong> (<cite>appium.webdriver.webelement.WebElement</cite>) – the element to scroll to</p></li>
-<li><p><strong>duration</strong> (<em>int</em>) – a duration after pressing originalEl and move the element to destinationEl.
+<li><p><strong>origin_el</strong> – the element from which to being scrolling</p></li>
+<li><p><strong>destination_el</strong> – the element to scroll to</p></li>
+<li><p><strong>duration</strong> – a duration after pressing originalEl and move the element to destinationEl.
 Default is 600 ms for W3C spec. Zero for MJSONWP.</p></li>
 </ul>
 </dd>
@@ -296,7 +302,10 @@ Default is 600 ms for W3C spec. Zero for MJSONWP.</p></li>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘ActionHelpers’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -308,11 +317,11 @@ Default is 600 ms for W3C spec. Zero for MJSONWP.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>start_x</strong> (<em>int</em>) – x-coordinate at which to start</p></li>
-<li><p><strong>start_y</strong> (<em>int</em>) – y-coordinate at which to start</p></li>
-<li><p><strong>end_x</strong> (<em>int</em>) – x-coordinate at which to stop</p></li>
-<li><p><strong>end_y</strong> (<em>int</em>) – y-coordinate at which to stop</p></li>
-<li><p><strong>duration</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – time to take the swipe, in ms.</p></li>
+<li><p><strong>start_x</strong> – x-coordinate at which to start</p></li>
+<li><p><strong>start_y</strong> – y-coordinate at which to start</p></li>
+<li><p><strong>end_x</strong> – x-coordinate at which to stop</p></li>
+<li><p><strong>end_y</strong> – y-coordinate at which to stop</p></li>
+<li><p><strong>duration</strong> – time to take the swipe, in ms.</p></li>
 </ul>
 </dd>
 </dl>
@@ -322,7 +331,10 @@ Default is 600 ms for W3C spec. Zero for MJSONWP.</p></li>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘ActionHelpers’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -335,9 +347,9 @@ certain time</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>positions</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code>) – an array of tuples representing the x/y coordinates of
+<li><p><strong>positions</strong> – an array of tuples representing the x/y coordinates of
 the fingers to tap. Length can be up to five.</p></li>
-<li><p><strong>duration</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – length of time to tap, in ms</p></li>
+<li><p><strong>duration</strong> – length of time to tap, in ms</p></li>
 </ul>
 </dd>
 </dl>
@@ -347,7 +359,10 @@ the fingers to tap. Length can be up to five.</p></li>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘ActionHelpers’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -359,7 +374,7 @@ the fingers to tap. Length can be up to five.</p></li>
 <span id="webdriver-extensions-applications-module"></span><h2>webdriver.extensions.applications module<a class="headerlink" href="#module-webdriver.extensions.applications" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.applications.Applications">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.applications.</code><code class="sig-name descname">Applications</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.applications.Applications" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Applications</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.applications.Applications" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.applications.Applications.activate_app">
@@ -368,10 +383,13 @@ the fingers to tap. Length can be up to five.</p></li>
 or is running in the background.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>app_id</strong> (<em>str</em>) – the application id to be activated</p>
+<dd class="field-odd"><p><strong>app_id</strong> – the application id to be activated</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘Applications’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -384,15 +402,12 @@ language.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>language</strong> (<em>str</em>) – strings language code</p></li>
-<li><p><strong>string_file</strong> (<em>str</em>) – the name of the string file to query</p></li>
+<li><p><strong>language</strong> – strings language code</p></li>
+<li><p><strong>string_file</strong> – the name of the string file to query</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The key is string id and the value is the content.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Dict[str, str]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -403,10 +418,13 @@ language.</p>
 <dd><p>Puts the application in the background on the device for a certain duration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>seconds</strong> (<em>int</em>) – the duration for the application to remain in the background</p>
+<dd class="field-odd"><p><strong>seconds</strong> – the duration for the application to remain in the background</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘Applications’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -418,7 +436,10 @@ language.</p>
 the device.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Applications’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -429,7 +450,7 @@ the device.</p>
 <dd><p>Install the application found at <cite>app_path</cite> on the device.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>app_path</strong> (<em>str</em>) – the local or remote path to the application to install</p>
+<dd class="field-odd"><p><strong>app_path</strong> – the local or remote path to the application to install</p>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><ul class="simple">
@@ -445,7 +466,10 @@ on Android 6+ after the installation completes. False by default</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Applications’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -456,13 +480,10 @@ on Android 6+ after the installation completes. False by default</p></li>
 <dd><p>Checks whether the application specified by <cite>bundle_id</cite> is installed on the device.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>bundle_id</strong> (<em>str</em>) – the id of the application to query</p>
+<dd class="field-odd"><p><strong>bundle_id</strong> – the id of the application to query</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><cite>True</cite> if app is installed</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -473,7 +494,10 @@ on Android 6+ after the installation completes. False by default</p></li>
 <dd><p>Start on the device the application specified in the desired capabilities.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Applications’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -484,7 +508,7 @@ on Android 6+ after the installation completes. False by default</p></li>
 <dd><p>Queries the state of the application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>app_id</strong> (<em>str</em>) – the application id to be queried</p>
+<dd class="field-odd"><p><strong>app_id</strong> – the application id to be queried</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>One of possible application state constants. See ApplicationState
@@ -499,7 +523,7 @@ class for more details.</p>
 <dd><p>Remove the specified application from the device.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>app_id</strong> (<em>str</em>) – the application id to be removed</p>
+<dd class="field-odd"><p><strong>app_id</strong> – the application id to be removed</p>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><ul class="simple">
@@ -510,7 +534,10 @@ False by default</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Applications’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -519,6 +546,14 @@ False by default</p></li>
 <dt id="webdriver.extensions.applications.Applications.reset">
 <code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.applications.Applications.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets the current application on the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Applications’]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -527,7 +562,7 @@ False by default</p></li>
 <dd><p>Terminates the application if it is running.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>app_id</strong> (<em>str</em>) – the application id to be terminates</p>
+<dd class="field-odd"><p><strong>app_id</strong> – the application id to be terminates</p>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><p><strong>timeout</strong> (<em>int</em>) – [Android only] how much time to wait for the uninstall to complete.
@@ -535,9 +570,6 @@ False by default</p></li>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>True if the app has been successfully terminated</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -549,7 +581,7 @@ False by default</p></li>
 <span id="webdriver-extensions-clipboard-module"></span><h2>webdriver.extensions.clipboard module<a class="headerlink" href="#module-webdriver.extensions.clipboard" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.clipboard.Clipboard">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.clipboard.</code><code class="sig-name descname">Clipboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.clipboard.Clipboard" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Clipboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.clipboard.Clipboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.clipboard.Clipboard.get_clipboard">
@@ -557,7 +589,7 @@ False by default</p></li>
 <dd><p>Receives the content of the system clipboard</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>content_type</strong> (<em>str</em>) – One of ClipboardContentType items. Only ClipboardContentType.PLAINTEXT
+<dd class="field-odd"><p><strong>content_type</strong> – One of ClipboardContentType items. Only ClipboardContentType.PLAINTEXT
 is supported on Android</p>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -577,9 +609,6 @@ is supported on Android</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The actual clipboard text or an empty string if the clipboard is empty</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -590,14 +619,17 @@ is supported on Android</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>content</strong> (<em>bytes</em>) – The content to be set as bytearray string</p></li>
-<li><p><strong>content_type</strong> (<em>str</em>) – One of ClipboardContentType items. Only ClipboardContentType.PLAINTEXT
+<li><p><strong>content</strong> – The content to be set as bytearray string</p></li>
+<li><p><strong>content_type</strong> – One of ClipboardContentType items. Only ClipboardContentType.PLAINTEXT
 is supported on Android</p></li>
-<li><p><strong>label</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – label argument, which only works for Android</p></li>
+<li><p><strong>label</strong> – label argument, which only works for Android</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘Clipboard’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -609,12 +641,15 @@ is supported on Android</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>text</strong> (<em>str</em>) – The text to be set</p></li>
-<li><p><strong>label</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – label argument, which only works for Android</p></li>
+<li><p><strong>text</strong> – The text to be set</p></li>
+<li><p><strong>label</strong> – label argument, which only works for Android</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘Clipboard’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -626,7 +661,7 @@ is supported on Android</p></li>
 <span id="webdriver-extensions-context-module"></span><h2>webdriver.extensions.context module<a class="headerlink" href="#module-webdriver.extensions.context" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.context.Context">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.context.</code><code class="sig-name descname">Context</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.context.Context" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Context</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.context.Context" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.context.Context.context">
@@ -689,7 +724,7 @@ is supported on Android</p></li>
 <span id="webdriver-extensions-device-time-module"></span><h2>webdriver.extensions.device_time module<a class="headerlink" href="#module-webdriver.extensions.device_time" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.device_time.DeviceTime">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.device_time.</code><code class="sig-name descname">DeviceTime</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.device_time.DeviceTime" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">DeviceTime</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.device_time.DeviceTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.device_time.DeviceTime.device_time">
@@ -711,15 +746,17 @@ is supported on Android</p></li>
 <dd><p>Returns the date and time from the device.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>format</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The set of format specifiers. Read <a class="reference external" href="https://momentjs.com/docs/">https://momentjs.com/docs/</a>
+<dd class="field-odd"><p><strong>format</strong> – The set of format specifiers. Read <a class="reference external" href="https://momentjs.com/docs/">https://momentjs.com/docs/</a>
 to get the full list of supported datetime format specifiers.
 If unset, return <code class="xref py py-func docutils literal notranslate"><span class="pre">device_time()</span></code> as default format is <cite>YYYY-MM-DDTHH:mm:ssZ</cite>,
 which complies to ISO-8601</p>
 </dd>
 </dl>
 <dl>
-<dt>Usage:</dt><dd><p>self.driver.get_device_time()</p>
-<p>self.driver.get_device_time(“YYYY-MM-DD”)</p>
+<dt>Usage:</dt><dd><div class="line-block">
+<div class="line">self.driver.get_device_time()</div>
+<div class="line">self.driver.get_device_time(“YYYY-MM-DD”)</div>
+</div>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -739,7 +776,7 @@ which complies to ISO-8601</p>
 <span id="webdriver-extensions-execute-driver-module"></span><h2>webdriver.extensions.execute_driver module<a class="headerlink" href="#module-webdriver.extensions.execute_driver" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.execute_driver.ExecuteDriver">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.execute_driver.</code><code class="sig-name descname">ExecuteDriver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.execute_driver.ExecuteDriver" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ExecuteDriver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.execute_driver.ExecuteDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.execute_driver.ExecuteDriver.execute_driver">
@@ -750,16 +787,19 @@ scripts and the output format.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>script</strong> (<em>str</em>) – The string consisting of the script itself</p></li>
-<li><p><strong>script_type</strong> (<em>str</em>) – The name of the script type. Defaults to ‘webdriverio’.</p></li>
-<li><p><strong>timeout_ms</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – The number of <cite>ms</cite> Appium should wait for the script to finish before killing it due to timeout_ms.</p></li>
+<li><p><strong>script</strong> – The string consisting of the script itself</p></li>
+<li><p><strong>script_type</strong> – The name of the script type. Defaults to ‘webdriverio’.</p></li>
+<li><p><strong>timeout_ms</strong> – The number of <cite>ms</cite> Appium should wait for the script to finish before
+killing it due to timeout_ms.</p></li>
 </ul>
 </dd>
 </dl>
 <dl>
-<dt>Usage:</dt><dd><p>self.driver.execute_driver(script=’return [];’)</p>
-<p>self.driver.execute_driver(script=’return [];’, script_type=’webdriverio’)</p>
-<p>self.driver.execute_driver(script=’return [];’, script_type=’webdriverio’, timeout_ms=10000)</p>
+<dt>Usage:</dt><dd><div class="line-block">
+<div class="line">self.driver.execute_driver(script=’return [];’)</div>
+<div class="line">self.driver.execute_driver(script=’return [];’, script_type=’webdriverio’)</div>
+<div class="line">self.driver.execute_driver(script=’return [];’, script_type=’webdriverio’, timeout_ms=10000)</div>
+</div>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -782,7 +822,7 @@ scripts and the output format.</p>
 <span id="webdriver-extensions-execute-mobile-command-module"></span><h2>webdriver.extensions.execute_mobile_command module<a class="headerlink" href="#module-webdriver.extensions.execute_mobile_command" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.execute_mobile_command.ExecuteMobileCommand">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.execute_mobile_command.</code><code class="sig-name descname">ExecuteMobileCommand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.execute_mobile_command.ExecuteMobileCommand" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ExecuteMobileCommand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.execute_mobile_command.ExecuteMobileCommand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.execute_mobile_command.ExecuteMobileCommand.battery_info">
@@ -828,10 +868,13 @@ Possible button names can be found in
 <a class="reference external" href="https://github.com/appium/WebDriverAgent/blob/master/WebDriverAgentLib/Categories/XCUIDevice%2BFBHelpers.h">https://github.com/appium/WebDriverAgent/blob/master/WebDriverAgentLib/Categories/XCUIDevice%2BFBHelpers.h</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>button_name</strong> (<em>str</em>) – the button name to be sent to the device</p>
+<dd class="field-odd"><p><strong>button_name</strong> – the button name to be sent to the device</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘ExecuteMobileCommand’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -843,7 +886,7 @@ Possible button names can be found in
 <span id="webdriver-extensions-hw-actions-module"></span><h2>webdriver.extensions.hw_actions module<a class="headerlink" href="#module-webdriver.extensions.hw_actions" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.hw_actions.HardwareActions">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.hw_actions.</code><code class="sig-name descname">HardwareActions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.hw_actions.HardwareActions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">HardwareActions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.hw_actions.HardwareActions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.hw_actions.HardwareActions.finger_print">
@@ -851,7 +894,7 @@ Possible button names can be found in
 <dd><p>Authenticate users by using their finger print scans on supported Android emulators.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>finger_id</strong> (<em>int</em>) – Finger prints stored in Android Keystore system (from 1 to 10)</p>
+<dd class="field-odd"><p><strong>finger_id</strong> – Finger prints stored in Android Keystore system (from 1 to 10)</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>TODO</p>
@@ -867,9 +910,6 @@ Possible button names can be found in
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><cite>True</cite> if the device is locked</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -879,13 +919,16 @@ Possible button names can be found in
 <dd><p>Lock the device. No changes are made if the device is already unlocked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>seconds</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – The duration to lock the device, in seconds.
+<dd class="field-odd"><p><strong>seconds</strong> – The duration to lock the device, in seconds.
 The device is going to be locked forever until <cite>unlock</cite> is called
 if it equals or is less than zero, otherwise this call blocks until
 the timeout expires and unlocks the screen automatically.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘HardwareActions’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -896,7 +939,10 @@ the timeout expires and unlocks the screen automatically.</p>
 <dd><p>Shake the device.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘HardwareActions’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -907,7 +953,10 @@ the timeout expires and unlocks the screen automatically.</p>
 <dd><p>Toggle enroll touchId on iOS Simulator</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘HardwareActions’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -918,10 +967,13 @@ the timeout expires and unlocks the screen automatically.</p>
 <dd><p>Simulate touchId on iOS Simulator</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>match</strong> (<em>bool</em>) – Simulates a successful touch (<cite>True</cite>) or a failed touch (<cite>False</cite>)</p>
+<dd class="field-odd"><p><strong>match</strong> – Simulates a successful touch (<cite>True</cite>) or a failed touch (<cite>False</cite>)</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘HardwareActions’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -932,7 +984,10 @@ the timeout expires and unlocks the screen automatically.</p>
 <dd><p>Unlock the device. No changes are made if the device is already locked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘HardwareActions’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -944,7 +999,7 @@ the timeout expires and unlocks the screen automatically.</p>
 <span id="webdriver-extensions-images-comparison-module"></span><h2>webdriver.extensions.images_comparison module<a class="headerlink" href="#module-webdriver.extensions.images_comparison" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.images_comparison.ImagesComparison">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.images_comparison.</code><code class="sig-name descname">ImagesComparison</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.images_comparison.ImagesComparison" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ImagesComparison</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.images_comparison.ImagesComparison" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.images_comparison.ImagesComparison.find_image_occurrence">
@@ -958,8 +1013,8 @@ The method supports all image formats, which are supported by OpenCV itself.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>base64_full_image</strong> (<em>bytes</em>) – base64-encoded content of the full image</p></li>
-<li><p><strong>base64_partial_image</strong> (<em>bytes</em>) – base64-encoded content of the partial image</p></li>
+<li><p><strong>base64_full_image</strong> – base64-encoded content of the full image</p></li>
+<li><p><strong>base64_partial_image</strong> – base64-encoded content of the partial image</p></li>
 </ul>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
@@ -991,12 +1046,12 @@ The method supports all image formats, which are supported by OpenCV itself.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>base64_image1</strong> (<em>bytes</em>) – base64-encoded content of the first image</p></li>
-<li><p><strong>base64_image2</strong> (<em>bytes</em>) – base64-encoded content of the second image</p></li>
+<li><p><strong>base64_image1</strong> – base64-encoded content of the first image</p></li>
+<li><p><strong>base64_image2</strong> – base64-encoded content of the second image</p></li>
 </ul>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
-<dd class="field-even"><p><strong>visualize</strong> (<em>bool</em>) – Set it to True in order to return the visualization of the matching operation.
+<dd class="field-even"><p><strong>visualize</strong> (<em>boo</em>) – Set it to True in order to return the visualization of the matching operation.
 False by default</p>
 </dd>
 <dt class="field-odd">Returns</dt>
@@ -1025,8 +1080,8 @@ The method supports all image formats, which are supported by OpenCV itself.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>base64_image1</strong> (<em>bytes</em>) – base64-encoded content of the first image</p></li>
-<li><p><strong>base64_image2</strong> (<em>bytes</em>) – base64-encoded content of the second image</p></li>
+<li><p><strong>base64_image1</strong> – base64-encoded content of the first image</p></li>
+<li><p><strong>base64_image2</strong> – base64-encoded content of the second image</p></li>
 </ul>
 </dd>
 <dt class="field-even">Keyword Arguments</dt>
@@ -1055,7 +1110,7 @@ This count is unlimited by default.</p></li>
 otherwise it contains the total count of matches before <cite>goodMatchesFactor</cite> is
 applied.</p>
 </dd>
-<dt>points1 (dict)): The array of matching points on the first image. Each point is a dictionary</dt><dd><p>with ‘x’ and ‘y’ keys</p>
+<dt>points1 (dict): The array of matching points on the first image. Each point is a dictionary</dt><dd><p>with ‘x’ and ‘y’ keys</p>
 </dd>
 <dt>rect1 (dict): The bounding rect for the <cite>points1</cite> array or a zero rect if not enough matching points</dt><dd><p>were found. The rect is represented by a dictionary with ‘x’, ‘y’, ‘width’ and ‘height’ keys</p>
 </dd>
@@ -1079,7 +1134,7 @@ applied.</p>
 <span id="webdriver-extensions-ime-module"></span><h2>webdriver.extensions.ime module<a class="headerlink" href="#module-webdriver.extensions.ime" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.ime.IME">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.ime.</code><code class="sig-name descname">IME</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.ime.IME" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">IME</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.ime.IME" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.ime.IME.activate_ime_engine">
@@ -1088,11 +1143,14 @@ applied.</p>
 <p>Android only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>engine</strong> (<em>str</em>) – the package and activity of the IME engine to activate
+<dd class="field-odd"><p><strong>engine</strong> – the package and activity of the IME engine to activate
 (e.g., ‘com.android.inputmethod.latin/.LatinIME’)</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘IME’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1100,7 +1158,8 @@ applied.</p>
 <dl class="py method">
 <dt id="webdriver.extensions.ime.IME.active_ime_engine">
 <em class="property">property </em><code class="sig-name descname">active_ime_engine</code><a class="headerlink" href="#webdriver.extensions.ime.IME.active_ime_engine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the activity and package of the currently active IME engine(e.g., ‘com.android.inputmethod.latin/.LatinIME’).</p>
+<dd><p>Returns the activity and package of the currently active IME engine
+(e.g., ‘com.android.inputmethod.latin/.LatinIME’).</p>
 <p>Android only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1135,7 +1194,10 @@ Android only.</p>
 <p>Android only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘IME’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1149,9 +1211,6 @@ Android only.</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><cite>True</cite> if IME service is active</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -1162,7 +1221,7 @@ Android only.</p>
 <span id="webdriver-extensions-keyboard-module"></span><h2>webdriver.extensions.keyboard module<a class="headerlink" href="#module-webdriver.extensions.keyboard" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.keyboard.Keyboard">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.keyboard.</code><code class="sig-name descname">Keyboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.keyboard.Keyboard" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Keyboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.keyboard.Keyboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.keyboard.Keyboard.hide_keyboard">
@@ -1173,10 +1232,16 @@ a particular key, or <cite>strategy</cite>. In Android, no parameters are used.<
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>key_name</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – key to press</p></li>
-<li><p><strong>key</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – </p></li>
-<li><p><strong>strategy</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – strategy for closing the keyboard (e.g., <cite>tapOutside</cite>)</p></li>
+<li><p><strong>key_name</strong> – key to press</p></li>
+<li><p><strong>key</strong> – </p></li>
+<li><p><strong>strategy</strong> – strategy for closing the keyboard (e.g., <cite>tapOutside</cite>)</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘Keyboard’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1188,9 +1253,6 @@ a particular key, or <cite>strategy</cite>. In Android, no parameters are used.<
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><cite>True</cite> if keyboard is shown</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1204,12 +1266,15 @@ Possible keycodes can be found in <a class="reference external" href="http://dev
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>keycode</strong> (<em>int</em>) – the keycode to be sent to the device</p></li>
-<li><p><strong>metastate</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – meta information about the keycode being sent</p></li>
+<li><p><strong>keycode</strong> – the keycode to be sent to the device</p></li>
+<li><p><strong>metastate</strong> – meta information about the keycode being sent</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘Keyboard’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1218,17 +1283,21 @@ Possible keycodes can be found in <a class="reference external" href="http://dev
 <dt id="webdriver.extensions.keyboard.Keyboard.long_press_keycode">
 <code class="sig-name descname">long_press_keycode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">keycode</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">metastate</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flags</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.keyboard.Keyboard.long_press_keycode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sends a long press of keycode to the device.</p>
-<p>Android only. Possible keycodes can be found in <a class="reference external" href="http://developer.android.com/reference/android/view/KeyEvent.html">http://developer.android.com/reference/android/view/KeyEvent.html</a>.</p>
+<p>Android only. Possible keycodes can be found in
+<a class="reference external" href="http://developer.android.com/reference/android/view/KeyEvent.html">http://developer.android.com/reference/android/view/KeyEvent.html</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>keycode</strong> (<em>int</em>) – the keycode to be sent to the device</p></li>
-<li><p><strong>metastate</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – meta information about the keycode being sent</p></li>
-<li><p><strong>flags</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – the set of key event flags</p></li>
+<li><p><strong>keycode</strong> – the keycode to be sent to the device</p></li>
+<li><p><strong>metastate</strong> – meta information about the keycode being sent</p></li>
+<li><p><strong>flags</strong> – the set of key event flags</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘Keyboard’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1237,17 +1306,21 @@ Possible keycodes can be found in <a class="reference external" href="http://dev
 <dt id="webdriver.extensions.keyboard.Keyboard.press_keycode">
 <code class="sig-name descname">press_keycode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">keycode</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">metastate</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flags</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.keyboard.Keyboard.press_keycode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sends a keycode to the device.</p>
-<p>Android only. Possible keycodes can be found in <a class="reference external" href="http://developer.android.com/reference/android/view/KeyEvent.html">http://developer.android.com/reference/android/view/KeyEvent.html</a>.</p>
+<p>Android only. Possible keycodes can be found
+in <a class="reference external" href="http://developer.android.com/reference/android/view/KeyEvent.html">http://developer.android.com/reference/android/view/KeyEvent.html</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>keycode</strong> (<em>int</em>) – the keycode to be sent to the device</p></li>
-<li><p><strong>metastate</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – meta information about the keycode being sent</p></li>
-<li><p><strong>flags</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – the set of key event flags</p></li>
+<li><p><strong>keycode</strong> – the keycode to be sent to the device</p></li>
+<li><p><strong>metastate</strong> – meta information about the keycode being sent</p></li>
+<li><p><strong>flags</strong> – the set of key event flags</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘Keyboard’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1259,7 +1332,7 @@ Possible keycodes can be found in <a class="reference external" href="http://dev
 <span id="webdriver-extensions-location-module"></span><h2>webdriver.extensions.location module<a class="headerlink" href="#module-webdriver.extensions.location" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.location.Location">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.location.</code><code class="sig-name descname">Location</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.location.Location" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Location</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.location.Location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.location.Location.location">
@@ -1287,13 +1360,16 @@ Possible keycodes can be found in <a class="reference external" href="http://dev
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>latitude</strong> (<em>Union</em><em>[</em><em>float</em><em>, </em><em>str</em><em>]</em>) – String or numeric value between -90.0 and 90.00</p></li>
-<li><p><strong>longitude</strong> (<em>Union</em><em>[</em><em>float</em><em>, </em><em>str</em><em>]</em>) – String or numeric value between -180.0 and 180.0</p></li>
-<li><p><strong>altitude</strong> (<em>Union</em><em>[</em><em>float</em><em>, </em><em>str</em><em>]</em><em>, </em><em>optional</em>) – String or numeric value (Android real device only)</p></li>
+<li><p><strong>latitude</strong> – String or numeric value between -90.0 and 90.00</p></li>
+<li><p><strong>longitude</strong> – String or numeric value between -180.0 and 180.0</p></li>
+<li><p><strong>altitude</strong> – String or numeric value (Android real device only)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘Location’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1305,7 +1381,10 @@ Possible keycodes can be found in <a class="reference external" href="http://dev
 <p>Android only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘Location’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1317,7 +1396,7 @@ Possible keycodes can be found in <a class="reference external" href="http://dev
 <span id="webdriver-extensions-log-event-module"></span><h2>webdriver.extensions.log_event module<a class="headerlink" href="#module-webdriver.extensions.log_event" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.log_event.LogEvent">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.log_event.</code><code class="sig-name descname">LogEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.log_event.LogEvent" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">LogEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.log_event.LogEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.log_event.LogEvent.get_events">
@@ -1326,23 +1405,25 @@ Possible keycodes can be found in <a class="reference external" href="http://dev
 (Since Appium 1.16.0)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>type</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>) – The event type to filter with</p>
+<dd class="field-odd"><p><strong>type</strong> – The event type to filter with</p>
 </dd>
 </dl>
 <dl>
-<dt>Usage:</dt><dd><p>events = driver.get_events()</p>
-<p>events = driver.get_events([‘appium:funEvent’])</p>
+<dt>Usage:</dt><dd><div class="line-block">
+<div class="line">events = driver.get_events()</div>
+<div class="line">events = driver.get_events([‘appium:funEvent’])</div>
+</div>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><dl class="simple">
-<dt>A dictionary of events timing information containing the following entries</dt><dd><dl class="simple">
-<dt>commands: (<cite>list</cite> of <cite>dict</cite>) List of dictionaries containing the following entries</dt><dd><p>cmd: (str) The command name that has been sent to the appium server
-startTime: (int) Received time
-endTime: (int) Response time</p>
-</dd>
-</dl>
+<dd class="field-odd"><p><dl>
+<dt>A dictionary of events timing information containing the following entries</dt><dd><div class="line-block">
+<div class="line">commands: (<cite>list</cite> of <cite>dict</cite>) List of dictionaries containing the following entries</div>
+<div class="line">cmd: The command name that has been sent to the appium server</div>
+<div class="line">startTime: Received time</div>
+<div class="line">endTime: Response time</div>
+</div>
 </dd>
 </dl>
 </p>
@@ -1361,8 +1442,8 @@ endTime: (int) Response time</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>vendor</strong> (<em>str</em>) – The vendor to log</p></li>
-<li><p><strong>event</strong> (<em>str</em>) – The event to log</p></li>
+<li><p><strong>vendor</strong> – The vendor to log</p></li>
+<li><p><strong>event</strong> – The event to log</p></li>
 </ul>
 </dd>
 </dl>
@@ -1372,7 +1453,10 @@ endTime: (int) Response time</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-odd"><p>Self instance</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Union[‘WebDriver’, ‘LogEvent’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1384,7 +1468,7 @@ endTime: (int) Response time</p>
 <span id="webdriver-extensions-remote-fs-module"></span><h2>webdriver.extensions.remote_fs module<a class="headerlink" href="#module-webdriver.extensions.remote_fs" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.remote_fs.RemoteFS">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.remote_fs.</code><code class="sig-name descname">RemoteFS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.remote_fs.RemoteFS" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">RemoteFS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.remote_fs.RemoteFS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.remote_fs.RemoteFS.pull_file">
@@ -1392,13 +1476,10 @@ endTime: (int) Response time</p>
 <dd><p>Retrieves the file at <cite>path</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – the path to the file on the device</p>
+<dd class="field-odd"><p><strong>path</strong> – the path to the file on the device</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The file’s contents encoded as Base64.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1409,13 +1490,10 @@ endTime: (int) Response time</p>
 <dd><p>Retrieves a folder at <cite>path</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – the path to the folder on the device</p>
+<dd class="field-odd"><p><strong>path</strong> – the path to the folder on the device</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The folder’s contents zipped and encoded as Base64.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1428,13 +1506,17 @@ endTime: (int) Response time</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>destination_path</strong> (<em>str</em>) – the location on the device/simulator where the local file contents should be saved</p></li>
-<li><p><strong>base64data</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – file contents, encoded as Base64, to be written to the file on the device/simulator</p></li>
-<li><p><strong>source_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – local file path for the file to be loaded on device</p></li>
+<li><p><strong>destination_path</strong> – the location on the device/simulator where the local file contents should be saved</p></li>
+<li><p><strong>base64data</strong> – file contents, encoded as Base64, to be written</p></li>
+<li><p><strong>the file on the device/simulator</strong> (<em>to</em>) – </p></li>
+<li><p><strong>source_path</strong> – local file path for the file to be loaded on device</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
+<dd class="field-even"><p>Self instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[‘WebDriver’, ‘RemoteFS’]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1446,7 +1528,7 @@ endTime: (int) Response time</p>
 <span id="webdriver-extensions-screen-record-module"></span><h2>webdriver.extensions.screen_record module<a class="headerlink" href="#module-webdriver.extensions.screen_record" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.screen_record.ScreenRecord">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.screen_record.</code><code class="sig-name descname">ScreenRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.screen_record.ScreenRecord" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">ScreenRecord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.screen_record.ScreenRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.screen_record.ScreenRecord.start_recording_screen">
@@ -1475,23 +1557,24 @@ The default value for both iOS and Android is 180 seconds (3 minutes).
 The maximum value for Android is 3 minutes.
 The maximum value for iOS is 10 minutes.</p></li>
 <li><p><strong>forcedRestart</strong> (<em>bool</em>) – Whether to ignore the result of previous capture and start a new recording
-immediately (<cite>True</cite> value). By default  (<cite>False</cite>) the endpoint will try to catch and return the result of
-the previous capture if it’s still available.</p></li>
+immediately (<cite>True</cite> value). By default  (<cite>False</cite>) the endpoint will try to catch and
+return the result of the previous capture if it’s still available.</p></li>
 <li><p><strong>bugReport</strong> (<em>str</em>) – Makes the recorder to display an additional information on the video overlay,
 such as a timestamp, that is helpful in videos captured to illustrate bugs.
 This option is only supported since API level 27 (Android P).</p></li>
-<li><p><strong>videoQuality</strong> (<em>str</em>) – [iOS only] The video encoding quality: ‘low’, ‘medium’, ‘high’, ‘photo’. Defaults to ‘medium’.</p></li>
+<li><p><strong>videoQuality</strong> (<em>str</em>) – [iOS only] The video encoding quality: ‘low’, ‘medium’, ‘high’, ‘photo’. Defaults
+to ‘medium’.</p></li>
 <li><p><strong>videoType</strong> (<em>str</em>) – [iOS only] The format of the screen capture to be recorded.
 Available formats: Execute <cite>ffmpeg -codecs</cite> in the terminal to see the list of supported video codecs.
 ‘mjpeg’ by default. (Since Appium 1.10.0)</p></li>
-<li><p><strong>videoFps</strong> (<em>int</em>) – [iOS only] The Frames Per Second rate of the recorded video. Change this value if the resulting video
-is too slow or too fast. Defaults to 10. This can decrease the resulting file size.</p></li>
+<li><p><strong>videoFps</strong> (<em>int</em>) – [iOS only] The Frames Per Second rate of the recorded video. Change this value if the
+resulting video is too slow or too fast. Defaults to 10. This can decrease the resulting file size.</p></li>
 <li><p><strong>videoFilters</strong> (<em>str</em>) – [iOS only] The FFMPEG video filters to apply. These filters allow to scale,
-flip, rotate and do many other useful transformations on the source video stream. The format of the property
-must comply with <a class="reference external" href="https://ffmpeg.org/ffmpeg-filters.html">https://ffmpeg.org/ffmpeg-filters.html</a>. (Since Appium 1.15)</p></li>
-<li><p><strong>videoScale</strong> (<em>str</em>) – [iOS only] The scaling value to apply. Read <a class="reference external" href="https://trac.ffmpeg.org/wiki/Scaling">https://trac.ffmpeg.org/wiki/Scaling</a> for possible values.
-No scale is applied by default. If videoFilters are set then the scale setting is effectively ignored.
-(Since Appium 1.10.0)</p></li>
+flip, rotate and do many other useful transformations on the source video stream. The format of the
+property must comply with <a class="reference external" href="https://ffmpeg.org/ffmpeg-filters.html">https://ffmpeg.org/ffmpeg-filters.html</a>. (Since Appium 1.15)</p></li>
+<li><p><strong>videoScale</strong> (<em>str</em>) – [iOS only] The scaling value to apply. Read <a class="reference external" href="https://trac.ffmpeg.org/wiki/Scaling">https://trac.ffmpeg.org/wiki/Scaling</a> for
+possible values. No scale is applied by default. If videoFilters are set then the scale setting is
+effectively ignored. (Since Appium 1.10.0)</p></li>
 <li><p><strong>pixelFormat</strong> (<em>str</em>) – [iOS only] Output pixel format. Run <cite>ffmpeg -pix_fmts</cite> to list possible values.
 For Quicktime compatibility, set to “yuv420p” along with videoType: “libx264”. (Since Appium 1.12.0)</p></li>
 <li><p><strong>videoSize</strong> (<em>str</em>) – [Android only] The video size of the generated media file. The format is WIDTHxHEIGHT.
@@ -1560,7 +1643,7 @@ Only has an effect if <cite>remotePath</cite> is set.</p></li>
 <span id="webdriver-extensions-session-module"></span><h2>webdriver.extensions.session module<a class="headerlink" href="#module-webdriver.extensions.session" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.session.Session">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.session.</code><code class="sig-name descname">Session</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.session.Session" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Session</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.session.Session" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.session.Session.all_sessions">
@@ -1623,7 +1706,7 @@ Only has an effect if <cite>remotePath</cite> is set.</p></li>
 <span id="webdriver-extensions-settings-module"></span><h2>webdriver.extensions.settings module<a class="headerlink" href="#module-webdriver.extensions.settings" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="webdriver.extensions.settings.Settings">
-<em class="property">class </em><code class="sig-prename descclassname">webdriver.extensions.settings.</code><code class="sig-name descname">Settings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.settings.Settings" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-name descname">Settings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command_executor</span><span class="o">=</span><span class="default_value">'http://127.0.0.1:4444/wd/hub'</span></em>, <em class="sig-param"><span class="n">desired_capabilities</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">browser_profile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">proxy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_alive</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">file_detector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.extensions.settings.Settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.settings.Settings.get_settings">
@@ -1635,9 +1718,6 @@ separate concepts. See <a class="reference external" href="https://github.com/ap
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Current settings</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict</p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -1648,7 +1728,7 @@ separate concepts. See <a class="reference external" href="https://github.com/ap
 <p>For more on settings, see: <a class="reference external" href="https://github.com/appium/appium/blob/master/docs/en/advanced-concepts/settings.md">https://github.com/appium/appium/blob/master/docs/en/advanced-concepts/settings.md</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>settings</strong> (<em>dict</em>) – dictionary of settings to apply to the current test session</p>
+<dd class="field-odd"><p><strong>settings</strong> – dictionary of settings to apply to the current test session</p>
 </dd>
 </dl>
 </dd></dl>
