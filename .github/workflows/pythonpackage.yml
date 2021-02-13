@@ -1,6 +1,6 @@
 name: Python CI
 
-on: [push]  # Weekly trigger && Diff exists
+on: [push, pull_request]  # TODO Weekly trigger && Diff exists
 
 jobs:
   build:
