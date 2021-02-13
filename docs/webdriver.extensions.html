@@ -1,38 +1,41 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>webdriver.extensions package &mdash; Python client 1.0 1.0 documentation</title>
   
 
   
-  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="webdriver.extensions.android package" href="webdriver.extensions.android.html" />
@@ -73,6 +76,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -129,6 +133,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -163,11 +168,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="webdriver.html">webdriver package</a> &raquo;</li>
         
@@ -176,7 +183,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/webdriver.extensions.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -396,7 +403,7 @@ or is running in the background.</p>
 
 <dl class="py method">
 <dt id="webdriver.extensions.applications.Applications.app_strings">
-<code class="sig-name descname">app_strings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">language</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">string_file</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><a class="headerlink" href="#webdriver.extensions.applications.Applications.app_strings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">app_strings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">language</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">string_file</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><a class="headerlink" href="#webdriver.extensions.applications.Applications.app_strings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the application strings from the device for the specified
 language.</p>
 <dl class="field-list simple">
@@ -1355,7 +1362,7 @@ in <a class="reference external" href="http://developer.android.com/reference/an
 
 <dl class="py method">
 <dt id="webdriver.extensions.location.Location.set_location">
-<code class="sig-name descname">set_location</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">latitude</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>float<span class="p">, </span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">longitude</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>float<span class="p">, </span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">altitude</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>float<span class="p">, </span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.location.Location.set_location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_location</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">latitude</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>float<span class="p">, </span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">longitude</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>float<span class="p">, </span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">altitude</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>float<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; T<a class="headerlink" href="#webdriver.extensions.location.Location.set_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the location of the device</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1400,7 +1407,7 @@ in <a class="reference external" href="http://developer.android.com/reference/an
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.webdriver.WebDriver</span></code></p>
 <dl class="py method">
 <dt id="webdriver.extensions.log_event.LogEvent.get_events">
-<code class="sig-name descname">get_events</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Union<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#webdriver.extensions.log_event.LogEvent.get_events" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_events</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Union<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#webdriver.extensions.log_event.LogEvent.get_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves events information from the current session
 (Since Appium 1.16.0)</p>
 <dl class="field-list simple">
@@ -1534,6 +1541,169 @@ in <a class="reference external" href="http://developer.android.com/reference/an
 <dt id="webdriver.extensions.screen_record.ScreenRecord.start_recording_screen">
 <code class="sig-name descname">start_recording_screen</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">options</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> &#x2192; Union<span class="p">[</span>bytes<span class="p">, </span>str<span class="p">]</span><a class="headerlink" href="#webdriver.extensions.screen_record.ScreenRecord.start_recording_screen" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start asynchronous screen recording process.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 13%" />
+<col style="width: 23%" />
+<col style="width: 13%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Keyword Args</p></th>
+<th class="head"><p>iOS</p></th>
+<th class="head"><p>Android</p></th>
+<th class="head"><p>Win</p></th>
+<th class="head"><p>macOS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>remotePath</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-odd"><td><p>user</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-even"><td><p>password</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-odd"><td><p>method</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-even"><td><p>timeLimit</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-odd"><td><p>forceRestart</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-even"><td><p>fileFieldName</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-odd"><td><p>formFields</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-even"><td><p>headers</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-odd"><td><p>videoQuality</p></td>
+<td><p>O</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>videoType</p></td>
+<td><p>O</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>videoFps</p></td>
+<td><p>O</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>videoFilter</p></td>
+<td><p>O</p></td>
+<td></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-odd"><td><p>videoScale</p></td>
+<td><p>O</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>pixelFormat</p></td>
+<td><p>O</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>videoSize</p></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>bitRate</p></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>bugReport</p></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>fps</p></td>
+<td></td>
+<td></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-odd"><td><p>captureCursor</p></td>
+<td></td>
+<td></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-even"><td><p>captureClicks</p></td>
+<td></td>
+<td></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-odd"><td><p>deviceId</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-even"><td><p>preset</p></td>
+<td></td>
+<td></td>
+<td><p>O</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-odd"><td><p>audioInput</p></td>
+<td></td>
+<td></td>
+<td><p>O</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <dl class="field-list simple">
 <dt class="field-odd">Keyword Arguments</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1554,36 +1724,60 @@ Only has an effect if both <cite>remotePath</cite> and <cite>user</cite> are set
 Only has an effect if <cite>remotePath</cite> is set.</p></li>
 <li><p><strong>timeLimit</strong> (<em>int</em>) – The actual time limit of the recorded video in seconds.
 The default value for both iOS and Android is 180 seconds (3 minutes).
+The default value for macOS is 600 seconds (10 minutes).
 The maximum value for Android is 3 minutes.
-The maximum value for iOS is 10 minutes.</p></li>
+The maximum value for iOS is 10 minutes.
+The maximum value for macOS is 10000 seconds (166 minutes).</p></li>
 <li><p><strong>forcedRestart</strong> (<em>bool</em>) – Whether to ignore the result of previous capture and start a new recording
 immediately (<cite>True</cite> value). By default  (<cite>False</cite>) the endpoint will try to catch and
 return the result of the previous capture if it’s still available.</p></li>
-<li><p><strong>bugReport</strong> (<em>str</em>) – Makes the recorder to display an additional information on the video overlay,
-such as a timestamp, that is helpful in videos captured to illustrate bugs.
-This option is only supported since API level 27 (Android P).</p></li>
-<li><p><strong>videoQuality</strong> (<em>str</em>) – [iOS only] The video encoding quality: ‘low’, ‘medium’, ‘high’, ‘photo’. Defaults
+<li><p><strong>fileFieldName</strong> (<em>str</em>) – [multipart/form-data requests] The name of the form field
+containing the binary payload. “file” by default. (Since Appium 1.18.0)</p></li>
+<li><p><strong>formFields</strong> (<em>dict</em>) – [multipart/form-data requests] Additional form fields mapping. If any entry has
+the same key as <cite>fileFieldName</cite> then it is going to be ignored. (Since Appium 1.18.0)</p></li>
+<li><p><strong>headers</strong> (<em>dict</em>) – [multipart/form-data requests] Headers mapping (Since Appium 1.18.0)</p></li>
+<li><p><strong>videoQuality</strong> (<em>str</em>) – [iOS] The video encoding quality: ‘low’, ‘medium’, ‘high’, ‘photo’. Defaults
 to ‘medium’.</p></li>
-<li><p><strong>videoType</strong> (<em>str</em>) – [iOS only] The format of the screen capture to be recorded.
+<li><p><strong>videoType</strong> (<em>str</em>) – [iOS] The format of the screen capture to be recorded.
 Available formats: Execute <cite>ffmpeg -codecs</cite> in the terminal to see the list of supported video codecs.
 ‘mjpeg’ by default. (Since Appium 1.10.0)</p></li>
-<li><p><strong>videoFps</strong> (<em>int</em>) – [iOS only] The Frames Per Second rate of the recorded video. Change this value if the
+<li><p><strong>videoFps</strong> (<em>int</em>) – [iOS] The Frames Per Second rate of the recorded video. Change this value if the
 resulting video is too slow or too fast. Defaults to 10. This can decrease the resulting file size.</p></li>
-<li><p><strong>videoFilters</strong> (<em>str</em>) – [iOS only] The FFMPEG video filters to apply. These filters allow to scale,
+<li><p><strong>videoFilters</strong> (<em>str</em>) – [iOS, Win, macOS] The FFMPEG video filters to apply. These filters allow to scale,
 flip, rotate and do many other useful transformations on the source video stream. The format of the
 property must comply with <a class="reference external" href="https://ffmpeg.org/ffmpeg-filters.html">https://ffmpeg.org/ffmpeg-filters.html</a>. (Since Appium 1.15)</p></li>
-<li><p><strong>videoScale</strong> (<em>str</em>) – [iOS only] The scaling value to apply. Read <a class="reference external" href="https://trac.ffmpeg.org/wiki/Scaling">https://trac.ffmpeg.org/wiki/Scaling</a> for
+<li><p><strong>videoScale</strong> (<em>str</em>) – [iOS] The scaling value to apply. Read <a class="reference external" href="https://trac.ffmpeg.org/wiki/Scaling">https://trac.ffmpeg.org/wiki/Scaling</a> for
 possible values. No scale is applied by default. If videoFilters are set then the scale setting is
 effectively ignored. (Since Appium 1.10.0)</p></li>
-<li><p><strong>pixelFormat</strong> (<em>str</em>) – [iOS only] Output pixel format. Run <cite>ffmpeg -pix_fmts</cite> to list possible values.
+<li><p><strong>pixelFormat</strong> (<em>str</em>) – [iOS] Output pixel format. Run <cite>ffmpeg -pix_fmts</cite> to list possible values.
 For Quicktime compatibility, set to “yuv420p” along with videoType: “libx264”. (Since Appium 1.12.0)</p></li>
-<li><p><strong>videoSize</strong> (<em>str</em>) – [Android only] The video size of the generated media file. The format is WIDTHxHEIGHT.
+<li><p><strong>videoSize</strong> (<em>str</em>) – [Android] The video size of the generated media file. The format is WIDTHxHEIGHT.
 The default value is the device’s native display resolution (if supported),
 1280x720 if not. For best results, use a size supported by your device’s
 Advanced Video Coding (AVC) encoder.</p></li>
-<li><p><strong>bitRate</strong> (<em>int</em>) – [Android only] The video bit rate for the video, in megabits per second.
+<li><p><strong>bitRate</strong> (<em>int</em>) – [Android] The video bit rate for the video, in megabits per second.
 The default value is 4. You can increase the bit rate to improve video quality,
 but doing so results in larger movie files.</p></li>
+<li><p><strong>bugReport</strong> (<em>str</em>) – [Android] Makes the recorder to display an additional information on the video overlay,
+such as a timestamp, that is helpful in videos captured to illustrate bugs.
+This option is only supported since API level 27 (Android P).</p></li>
+<li><p><strong>fps</strong> (<em>int</em>) – [Win, macOS] The count of frames per second in the resulting video.
+Increasing fps value also increases the size of the resulting video file and the CPU usage.</p></li>
+<li><p><strong>captureCursor</strong> (<em>bool</em>) – [Win, macOS] Whether to capture the mouse cursor while recording the screen.
+Disabled by default.</p></li>
+<li><p><strong>captureClick</strong> (<em>bool</em>) – [Win, macOS] Whether to capture the click gestures while recording the screen.
+Disabled by default.</p></li>
+<li><p><strong>deviceId</strong> (<em>int</em>) – [macOS] Screen device index to use for the recording.
+The list of available devices could be retrieved using
+<cite>ffmpeg -f avfoundation -list_devices true -i</cite> command.
+This option is mandatory and must be always provided.</p></li>
+<li><p><strong>preset</strong> (<em>str</em>) – [Win, macOS] A preset is a collection of options that will provide a certain encoding
+speed to compression ratio. A slower preset will provide better compression
+(compression is quality per filesize). This means that, for example, if you target a certain file size
+or constant bit rate, you will achieve better quality with a slower preset.
+Read <a class="reference external" href="https://trac.ffmpeg.org/wiki/Encode/H.264">https://trac.ffmpeg.org/wiki/Encode/H.264</a> for more details.
+Possible values are ‘ultrafast’, ‘superfast’, ‘veryfast’(default), ‘faster’, ‘fast’, ‘medium’, ‘slow’,
+‘slower’, ‘veryslow’</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -1620,6 +1814,11 @@ Only has an effect if both <cite>remotePath</cite> and <cite>password</cite> are
 Only has an effect if both <cite>remotePath</cite> and <cite>user</cite> are set.</p></li>
 <li><p><strong>method</strong> (<em>str</em>) – The HTTP method name (‘PUT’/’POST’). PUT method is used by default.
 Only has an effect if <cite>remotePath</cite> is set.</p></li>
+<li><p><strong>fileFieldName</strong> (<em>str</em>) – [multipart/form-data requests] The name of the form field
+containing the binary payload. “file” by default. (Since Appium 1.18.0)</p></li>
+<li><p><strong>formFields</strong> (<em>dict</em>) – [multipart/form-data requests] Additional form fields mapping. If any entry has
+the same key as <cite>fileFieldName</cite> then it is going to be ignored. (Since Appium 1.18.0)</p></li>
+<li><p><strong>headers</strong> (<em>dict</em>) – [multipart/form-data requests] Headers mapping (Since Appium 1.18.0)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -1746,29 +1945,29 @@ separate concepts. See <a class="reference external" href="https://github.com/ap
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="webdriver.extensions.android.html" class="btn btn-neutral float-right" title="webdriver.extensions.android package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="webdriver.common.html" class="btn btn-neutral float-left" title="webdriver.common package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="webdriver.extensions.android.html" class="btn btn-neutral float-right" title="webdriver.extensions.android package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="webdriver.common.html" class="btn btn-neutral float-left" title="webdriver.common package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Appium
+        &#169; Copyright 2021, Appium.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -1776,7 +1975,6 @@ separate concepts. See <a class="reference external" href="https://github.com/ap
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
