@@ -29,6 +29,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
         bash generate.sh
+        exit 1
         echo "hoge"
       working-directory: python-client/docs
     - name: Git diff (Create PR?)
@@ -36,6 +37,6 @@ jobs:
       run: |
         rm -r docs
         cp -r ../python-client/docs/_build/html ./docs
-        num=`git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l`
-        echo $(num)
+        num=`git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l | sed 's/ //'`
+        echo $num
       working-directory: python-client-sphinx
