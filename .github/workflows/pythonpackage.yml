@@ -39,10 +39,11 @@ jobs:
         # no_change == 0 -> Has changes, no_change == 1 -> No changes
         git --no-pager diff --stat
         no_change=`git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l | sed 's/ //'`
-        if [ $no_change = 1 ]; then
-            echo "No change"
-        else
-            echo "Has change"
-        fi
         echo "NO_CHANGE=$no_change" >> $GITHUB_ENV
       working-directory: python-client-sphinx
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        path: ./python-client-sphinx
+        draft: true
+      if: ${{ env.NO_CHANGE == 0 }}
