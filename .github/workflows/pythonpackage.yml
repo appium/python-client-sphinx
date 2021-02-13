@@ -25,6 +25,7 @@ jobs:
         python -m pip install pipenv
         python -m pipenv lock --clear
         python -m pipenv install --system
+        python -m setup.py install
       working-directory: python-client
     - name: Build doc
       shell: bash -xe {0}
