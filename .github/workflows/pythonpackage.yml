@@ -37,7 +37,7 @@ jobs:
         cp -r ../python-client/docs/_build/html ./docs
         # has_change == 0 -> No changes, has_change == 1 -> Has changes
         has_change=`git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l | sed 's/ //'`
-        echo $has_change
-        if: ${{ $has_change == 0 }}
+        export HAS_CHANGE=$has_change
+        if: ${{ env.HAS_CHANGE == 0 }}
         echo "foo"
       working-directory: python-client-sphinx
