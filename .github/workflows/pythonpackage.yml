@@ -1,0 +1,37 @@
+name: Python CI
+
+on: [push]  # Weekly trigger && Diff exists
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: ./python-client-sphinx
+    - uses: actions/checkout@v2
+      with:
+        repository: appium/python-client
+        path: ./python-client
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Build doc
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        bash generate.sh
+      working-directory: python-client/docs
+    - name: Git diff (Create PR?)
+      run: |
+        rm -r docs
+        cp -r ../python-client/docs/_build/html ./docs
+        git diff
+      working-directory: python-client-sphinx
