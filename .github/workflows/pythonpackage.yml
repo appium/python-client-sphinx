@@ -1,6 +1,8 @@
 name: Python CI
 
-on: [push, pull_request, workflow_dispatch]  # TODO Weekly trigger && Diff exists
+on:
+  schedule:
+    - cron: '0 0 * * sun'
 
 jobs:
   build:
@@ -31,7 +33,7 @@ jobs:
         python -m pip install -r requirements.txt
         bash generate.sh
       working-directory: python-client/docs
-    - name: Git diff (Create PR?)
+    - name: Check if PR needs to be created
       shell: bash -xe {0}
       run: |
         rm -r docs
@@ -45,5 +47,4 @@ jobs:
       uses: peter-evans/create-pull-request@v3
       with:
         path: ./python-client-sphinx
-        draft: true
       if: ${{ env.NO_CHANGE == 0 }}
