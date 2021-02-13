@@ -24,14 +24,18 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Build doc
+      shell: bash -xe {0}
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        python -m pip install -r requirements.txt
         bash generate.sh
+        echo "hoge"
       working-directory: python-client/docs
     - name: Git diff (Create PR?)
+      shell: bash -xe {0}
       run: |
         rm -r docs
         cp -r ../python-client/docs/_build/html ./docs
-        git diff
+        num=`git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l`
+        echo $(num)
       working-directory: python-client-sphinx
