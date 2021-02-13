@@ -39,6 +39,7 @@ jobs:
         has_change=`git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l | sed 's/ //'`
         if [ $has_change = 0 ]; then
             echo "No change"
-        else:
+        else
             echo "Changes exist"
+        fi
       working-directory: python-client-sphinx
