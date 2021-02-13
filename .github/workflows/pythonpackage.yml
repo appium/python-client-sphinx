@@ -35,11 +35,18 @@ jobs:
       run: |
         rm -r docs
         cp -r ../python-client/docs/_build/html ./docs
-        # has_change == 0 -> No changes, has_change == 1 -> Has changes
-        has_change=`git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l | sed 's/ //'`
-        if [ $has_change = 0 ]; then
+        # no_change == 0 -> Has changes, no_change == 1 -> No changes
+        no_change=`git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l | sed 's/ //'`
+        if [ $no_change = 1 ]; then
             echo "No change"
         else
-            echo "Changes exist"
+            echo "Has change"
         fi
+        echo "::set-env name=NO_CHANGE::$no_change"
       working-directory: python-client-sphinx
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        path: ./python-client-sphinx
+        draft: true
+      if: ${{ env.NO_CHANGE == 0 }}
