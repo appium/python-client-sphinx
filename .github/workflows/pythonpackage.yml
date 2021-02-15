@@ -41,7 +41,7 @@ jobs:
         cp -r ../python-client/docs/_build/html ./docs
         git --no-pager diff --stat
         # no_change == 0 -> Has changes, no_change == 1 -> No changes
-        no_change=$(git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l | sed 's/ //g'`)
+        no_change=$(git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l | sed 's/ //g')
         echo "::set-output name=no_change::$no_change"
       working-directory: python-client-sphinx
     - name: Create Pull Request
