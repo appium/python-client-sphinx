@@ -38,12 +38,9 @@ jobs:
         rm -r docs
         cp -r ../python-client/docs/_build/html ./docs
         git --no-pager diff --stat
-        # no_change == 0 -> Has changes, no_change == 1 -> No changes
-        no_change=$(git --no-pager diff --stat | grep "2 files changed, 2 insertions(+), 2 deletions(-)" | wc -l | sed 's/ //g')
-        echo "::set-output name=no_change::$no_change"
+        if (git --no-pager diff --stat | grep -q "2 files changed, 2 insertions(+), 2 deletions(-)"); then exit 1; fi
       working-directory: python-client-sphinx
     - name: Create Pull Request
-      if: ${{ steps.check_if_pr_needed.outputs.no_change == 0 }}
       uses: peter-evans/create-pull-request@v3
       with:
         path: ./python-client-sphinx
