@@ -924,8 +924,9 @@ object.</p></li>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.remote.switch_to.SwitchTo</span></code></p>
 <dl class="py method">
 <dt id="webdriver.switch_to.MobileSwitchTo.context">
-<code class="sig-name descname"><span class="pre">context</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#webdriver.switch_to.MobileSwitchTo.context" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the context for the current session.</p>
+<code class="sig-name descname"><span class="pre">context</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#webdriver.switch_to.MobileSwitchTo.context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the context for the current session.
+Passing <cite>None</cite> is equal to switching to native context.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>context_name</strong> – The name of the context to switch to.</p>
@@ -1035,6 +1036,18 @@ Appium WebElement</p>
 Read <a class="reference external" href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md</a> for more details.</p></li>
 <li><p><strong>browser_profile</strong> – Browser profile</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.webdriver.WebDriver.switch_to">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">switch_to</span></code><a class="headerlink" href="#webdriver.webdriver.WebDriver.switch_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an object containing all options to switch focus into</p>
+<p>Override for appium</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>appium.webdriver.switch_to.MobileSwitchTo</cite></p>
 </dd>
 </dl>
 </dd></dl>
