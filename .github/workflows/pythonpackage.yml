@@ -38,8 +38,7 @@ jobs:
         rm -r docs
         cp -r ../python-client/docs/_build/html ./docs
         git --no-pager diff --stat
-        if [ -z "$(git --no-pager diff --stat -- . ':(exclude)docs/_sources/index.rst.txt')" ]; then git checkout .; fi
-        if (git --no-pager diff --stat | grep -q "2 files changed, 2 insertions(+), 2 deletions(-)"); then exit 1; fi
+        if (git --no-pager diff --stat | grep -q "docs/_sources/index.rst.txt | 2 +-"); then exit 1; fi
       working-directory: python-client-sphinx
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
