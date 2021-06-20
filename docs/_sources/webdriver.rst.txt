@@ -45,6 +45,14 @@ webdriver.clipboard\_content\_type module
    :undoc-members:
    :show-inheritance:
 
+webdriver.command\_method module
+--------------------------------
+
+.. automodule:: webdriver.command_method
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 webdriver.connectiontype module
 -------------------------------
 
