@@ -1000,47 +1000,133 @@ Passing <cite>None</cite> is equal to switching to native context.</p>
 <div class="section" id="module-webdriver.webdriver">
 <span id="webdriver-webdriver-module"></span><h2>webdriver.webdriver module<a class="headerlink" href="#module-webdriver.webdriver" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="webdriver.webdriver.WebDriver">
-<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">WebDriver</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command_executor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'http://127.0.0.1:4444/wd/hub'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_capabilities</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">browser_profile</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_alive</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct_connection</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.webdriver.WebDriver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.AppiumSearchContext" title="webdriver.extensions.search_context.AppiumSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.AppiumSearchContext</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.action_helpers.ActionHelpers" title="webdriver.extensions.action_helpers.ActionHelpers"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.action_helpers.ActionHelpers</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.activities.Activities" title="webdriver.extensions.android.activities.Activities"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.activities.Activities</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.applications.Applications" title="webdriver.extensions.applications.Applications"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.applications.Applications</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.clipboard.Clipboard" title="webdriver.extensions.clipboard.Clipboard"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.clipboard.Clipboard</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.context.Context" title="webdriver.extensions.context.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.context.Context</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.common.Common" title="webdriver.extensions.android.common.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.common.Common</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.device_time.DeviceTime" title="webdriver.extensions.device_time.DeviceTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.device_time.DeviceTime</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.display.Display" title="webdriver.extensions.android.display.Display"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.display.Display</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.execute_driver.ExecuteDriver" title="webdriver.extensions.execute_driver.ExecuteDriver"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.execute_driver.ExecuteDriver</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.execute_mobile_command.ExecuteMobileCommand" title="webdriver.extensions.execute_mobile_command.ExecuteMobileCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.execute_mobile_command.ExecuteMobileCommand</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.gsm.Gsm" title="webdriver.extensions.android.gsm.Gsm"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.gsm.Gsm</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.hw_actions.HardwareActions" title="webdriver.extensions.hw_actions.HardwareActions"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.hw_actions.HardwareActions</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.images_comparison.ImagesComparison" title="webdriver.extensions.images_comparison.ImagesComparison"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.images_comparison.ImagesComparison</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.ime.IME" title="webdriver.extensions.ime.IME"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.ime.IME</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.keyboard.Keyboard" title="webdriver.extensions.keyboard.Keyboard"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.keyboard.Keyboard</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.location.Location" title="webdriver.extensions.location.Location"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.location.Location</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.log_event.LogEvent" title="webdriver.extensions.log_event.LogEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.log_event.LogEvent</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.network.Network" title="webdriver.extensions.android.network.Network"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.network.Network</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.performance.Performance" title="webdriver.extensions.android.performance.Performance"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.performance.Performance</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.power.Power" title="webdriver.extensions.android.power.Power"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.power.Power</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.remote_fs.RemoteFS" title="webdriver.extensions.remote_fs.RemoteFS"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.remote_fs.RemoteFS</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.screen_record.ScreenRecord" title="webdriver.extensions.screen_record.ScreenRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.screen_record.ScreenRecord</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.session.Session" title="webdriver.extensions.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.session.Session</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.settings.Settings" title="webdriver.extensions.settings.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.settings.Settings</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.sms.Sms" title="webdriver.extensions.android.sms.Sms"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.sms.Sms</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.system_bars.SystemBars" title="webdriver.extensions.android.system_bars.SystemBars"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.system_bars.SystemBars</span></code></a></p>
-<dl class="py method">
-<dt id="webdriver.webdriver.WebDriver.add_command">
-<code class="sig-name descname"><span class="pre">add_command</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">appium.webdriver.command_method.CommandMethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">T</span><a class="headerlink" href="#webdriver.webdriver.WebDriver.add_command" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a custom command as ‘name’</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>method</strong> – The method of HTTP request. Available methods are CommandMethod.</p></li>
-<li><p><strong>url</strong> – The url is URL template as <a class="reference external" href="https://www.w3.org/TR/webdriver/#endpoints">https://www.w3.org/TR/webdriver/#endpoints</a>.
-<cite>$sessionId</cite> is a placeholder of current session id.
-Other placeholders can be specified with <cite>$</cite> prefix like <cite>$id</cite>.
-Then, <cite>{‘id’: ‘some id’}</cite> argument in <cite>execute_custom_command</cite> replaces
-the <cite>$id</cite> with the value, <cite>some id</cite>, in the request.</p></li>
-<li><p><strong>name</strong> – The name of a command to call in <cite>execute_custom_command</cite>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Self instance</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webdriver.WebDriver</cite></p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>ValueError</strong> – </p>
+<dt id="webdriver.webdriver.ExtensionBase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">ExtensionBase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">execute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.webdriver.ExtensionBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Used to define an extension command as driver’s methods.</p>
+<p class="rubric">Example</p>
+<p>When you want to add <cite>example_command</cite> which calls a get request to
+<cite>session/$sessionId/path/to/your/custom/url</cite>.</p>
+<ol class="arabic">
+<li><dl>
+<dt>Defines an extension as a subclass of <cite>ExtensionBase</cite></dt><dd><dl>
+<dt>class YourCustomCommand(ExtensionBase):</dt><dd><dl class="simple">
+<dt>def method_name(self):</dt><dd><p>return ‘custom_method_name’</p>
 </dd>
 </dl>
-<p class="rubric">Examples</p>
-<p>Define ‘test_command’ as GET and ‘session/$sessionId/path/to/custom/url’</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">appium.webdriver.command_method</span> <span class="kn">import</span> <span class="n">CommandMethod</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">driver</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span>
-<span class="go">        method=CommandMethod.GET,</span>
-<span class="go">        url=&#39;session/$sessionId/path/to/custom/url&#39;,</span>
-<span class="go">        name=&#39;test_command&#39;</span>
-<span class="go">    )</span>
-</pre></div>
-</div>
+<p># Define a method with the name of <cite>method_name</cite>
+def custom_method_name(self):</p>
+<blockquote>
+<div><p># Generally the response of Appium follows <cite>{ ‘value’: { data } }</cite>
+# format.
+return self.execute()[‘value’]</p>
+</div></blockquote>
+<p># Used to register the command pair as “Appium command” in this driver.
+def add_command(self):</p>
+<blockquote>
+<div><p>return (‘GET’, ‘session/$sessionId/path/to/your/custom/url’)</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Creates a session with the extension.</dt><dd><p># Appium capabilities
+desired_caps = { … }
+driver = webdriver.Remote(‘<a class="reference external" href="http://localhost:4723/wd/hub">http://localhost:4723/wd/hub</a>’, desired_caps,</p>
+<blockquote>
+<div><p>extensions=[YourCustomCommand])</p>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Calls the custom command</dt><dd><p># Then, the driver calls a get request against
+# <cite>session/$sessionId/path/to/your/custom/url</cite>. <cite>$sessionId</cite> will be
+# replaced properly in the driver. Then, the method returns
+# the <cite>value</cite> part of the response.
+driver.custom_method_name()</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Remove added commands (if needed)</dt><dd><p># New commands are added by <cite>setattr</cite>. They remain in the module,
+# so you should explicitly delete them to define the same name method
+# with different arguments or process in the method.
+driver.delete_extensions()</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>You can give arbitrary arguments for the command like the below.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>class YourCustomCommand(ExtensionBase):</dt><dd><dl class="simple">
+<dt>def method_name(self):</dt><dd><p>return ‘custom_method_name’</p>
+</dd>
+<dt>def test_command(self, argument):</dt><dd><p>return self.execute(argument)[‘value’]</p>
+</dd>
+<dt>def add_command(self):</dt><dd><p>return (‘post’, ‘session/$sessionId/path/to/your/custom/url’)</p>
+</dd>
+</dl>
+</dd>
+<dt>driver = webdriver.Remote(‘<a class="reference external" href="http://localhost:4723/wd/hub">http://localhost:4723/wd/hub</a>’, desired_caps,</dt><dd><p>extensions=[YourCustomCommand])</p>
+</dd>
+</dl>
+<p># Then, the driver sends a post request to <cite>session/$sessionId/path/to/your/custom/url</cite>
+# with <cite>{‘dummy_arg’: ‘as a value’}</cite> JSON body.
+driver.custom_method_name({‘dummy_arg’: ‘as a value’})</p>
+</div></blockquote>
+<p>When you customize the URL dinamically with element id.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>class CustomURLCommand(ExtensionBase):</dt><dd><dl class="simple">
+<dt>def method_name(self):</dt><dd><p>return ‘custom_method_name’</p>
+</dd>
+<dt>def custom_method_name(self, element_id):</dt><dd><p>return self.execute({‘id’: element_id})[‘value’]</p>
+</dd>
+<dt>def add_command(self):</dt><dd><p>return (‘GET’, ‘session/$sessionId/path/to/your/custom/$id/url’)</p>
+</dd>
+</dl>
+</dd>
+<dt>driver = webdriver.Remote(‘<a class="reference external" href="http://localhost:4723/wd/hub">http://localhost:4723/wd/hub</a>’, desired_caps,</dt><dd><p>extensions=[YourCustomCommand])</p>
+</dd>
+</dl>
+<p>element = driver.find_element_by_accessibility_id(‘id’)</p>
+<p># Then, the driver calls a get request to <cite>session/$sessionId/path/to/your/custom/$id/url</cite>
+# with replacing the <cite>$id</cite> with the given <cite>element.id</cite>
+driver.custom_method_name(element.id)</p>
+</div></blockquote>
+<dl class="py method">
+<dt id="webdriver.webdriver.ExtensionBase.add_command">
+<code class="sig-name descname"><span class="pre">add_command</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#webdriver.webdriver.ExtensionBase.add_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expected to define the pair of HTTP method and its URL.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt id="webdriver.webdriver.ExtensionBase.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Any</span><a class="headerlink" href="#webdriver.webdriver.ExtensionBase.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="webdriver.webdriver.ExtensionBase.method_name">
+<code class="sig-name descname"><span class="pre">method_name</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#webdriver.webdriver.ExtensionBase.method_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expected to return a method name.
+This name will be available as a driver method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>‘str’ The method name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="webdriver.webdriver.WebDriver">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">WebDriver</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command_executor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'http://127.0.0.1:4444/wd/hub'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_capabilities</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">browser_profile</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_alive</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct_connection</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extensions</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.webdriver.WebDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.AppiumSearchContext" title="webdriver.extensions.search_context.AppiumSearchContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.search_context.AppiumSearchContext</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.action_helpers.ActionHelpers" title="webdriver.extensions.action_helpers.ActionHelpers"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.action_helpers.ActionHelpers</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.activities.Activities" title="webdriver.extensions.android.activities.Activities"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.activities.Activities</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.applications.Applications" title="webdriver.extensions.applications.Applications"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.applications.Applications</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.clipboard.Clipboard" title="webdriver.extensions.clipboard.Clipboard"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.clipboard.Clipboard</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.context.Context" title="webdriver.extensions.context.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.context.Context</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.common.Common" title="webdriver.extensions.android.common.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.common.Common</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.device_time.DeviceTime" title="webdriver.extensions.device_time.DeviceTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.device_time.DeviceTime</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.display.Display" title="webdriver.extensions.android.display.Display"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.display.Display</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.execute_driver.ExecuteDriver" title="webdriver.extensions.execute_driver.ExecuteDriver"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.execute_driver.ExecuteDriver</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.execute_mobile_command.ExecuteMobileCommand" title="webdriver.extensions.execute_mobile_command.ExecuteMobileCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.execute_mobile_command.ExecuteMobileCommand</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.gsm.Gsm" title="webdriver.extensions.android.gsm.Gsm"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.gsm.Gsm</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.hw_actions.HardwareActions" title="webdriver.extensions.hw_actions.HardwareActions"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.hw_actions.HardwareActions</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.images_comparison.ImagesComparison" title="webdriver.extensions.images_comparison.ImagesComparison"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.images_comparison.ImagesComparison</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.ime.IME" title="webdriver.extensions.ime.IME"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.ime.IME</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.keyboard.Keyboard" title="webdriver.extensions.keyboard.Keyboard"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.keyboard.Keyboard</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.location.Location" title="webdriver.extensions.location.Location"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.location.Location</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.log_event.LogEvent" title="webdriver.extensions.log_event.LogEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.log_event.LogEvent</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.network.Network" title="webdriver.extensions.android.network.Network"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.network.Network</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.performance.Performance" title="webdriver.extensions.android.performance.Performance"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.performance.Performance</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.power.Power" title="webdriver.extensions.android.power.Power"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.power.Power</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.remote_fs.RemoteFS" title="webdriver.extensions.remote_fs.RemoteFS"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.remote_fs.RemoteFS</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.screen_record.ScreenRecord" title="webdriver.extensions.screen_record.ScreenRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.screen_record.ScreenRecord</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.session.Session" title="webdriver.extensions.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.session.Session</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.settings.Settings" title="webdriver.extensions.settings.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.settings.Settings</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.sms.Sms" title="webdriver.extensions.android.sms.Sms"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.sms.Sms</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.system_bars.SystemBars" title="webdriver.extensions.android.system_bars.SystemBars"><code class="xref py py-class docutils literal notranslate"><span class="pre">webdriver.extensions.android.system_bars.SystemBars</span></code></a></p>
 <dl class="py method">
 <dt id="webdriver.webdriver.WebDriver.create_web_element">
 <code class="sig-name descname"><span class="pre">create_web_element</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w3c</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#webdriver.webelement.WebElement" title="webdriver.webelement.WebElement"><span class="pre">webdriver.webelement.WebElement</span></a><a class="headerlink" href="#webdriver.webdriver.WebDriver.create_web_element" title="Permalink to this definition">¶</a></dt>
@@ -1061,55 +1147,9 @@ Appium WebElement</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="webdriver.webdriver.WebDriver.execute_custom_command">
-<code class="sig-name descname"><span class="pre">execute_custom_command</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Any</span><a class="headerlink" href="#webdriver.webdriver.WebDriver.execute_custom_command" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute a custom command defined as ‘name’ with args command.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – The name of command defined by <cite>add_command</cite>.</p></li>
-<li><p><strong>args</strong> – The argument as this command body</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>‘value’ JSON object field in the response body.</p>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>ValueError</strong><strong>, </strong><strong>selenium.common.exceptions.WebDriverException</strong> – </p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<p>Calls ‘test_command’ command without arguments.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">appium.webdriver.command_method</span> <span class="kn">import</span> <span class="n">CommandMethod</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">driver</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span>
-<span class="go">        method=CommandMethod.GET,</span>
-<span class="go">        url=&#39;session/$sessionId/path/to/custom/url&#39;,</span>
-<span class="go">        name=&#39;test_command&#39;</span>
-<span class="go">    )</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">execute_custom_command</span><span class="p">(</span><span class="s1">&#39;test_command&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Calls ‘test_command’ command with arguments.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">appium.webdriver.command_method</span> <span class="kn">import</span> <span class="n">CommandMethod</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">driver</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span>
-<span class="go">        method=CommandMethod.POST,</span>
-<span class="go">        url=&#39;session/$sessionId/path/to/custom/url&#39;,</span>
-<span class="go">        name=&#39;test_command&#39;</span>
-<span class="go">    )</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">execute_custom_command</span><span class="p">(</span><span class="s1">&#39;test_command&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;dummy&#39;</span><span class="p">:</span> <span class="s1">&#39;test argument&#39;</span><span class="p">})</span>
-</pre></div>
-</div>
-<p>Calls ‘test_command’ command with arguments, and the path has ‘element id’.
-The ‘$id’ will be ‘element id’ by ‘id’ key in the given argument.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">appium.webdriver.command_method</span> <span class="kn">import</span> <span class="n">CommandMethod</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">driver</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span>
-<span class="go">        method=CommandMethod.POST,</span>
-<span class="go">        url=&#39;session/$sessionId/path/to/$id/url&#39;,</span>
-<span class="go">        name=&#39;test_command&#39;</span>
-<span class="go">    )</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">execute_custom_command</span><span class="p">(</span><span class="s1">&#39;test_command&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;element id&#39;</span><span class="p">,</span> <span class="s1">&#39;dummy&#39;</span><span class="p">:</span> <span class="s1">&#39;test argument&#39;</span><span class="p">})</span>
-</pre></div>
-</div>
+<dt id="webdriver.webdriver.WebDriver.delete_extensions">
+<code class="sig-name descname"><span class="pre">delete_extensions</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#webdriver.webdriver.WebDriver.delete_extensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete extensions added in the class with ‘setattr’</p>
 </dd></dl>
 
 <dl class="py method">
