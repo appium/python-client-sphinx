@@ -94,6 +94,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="webdriver.common.html">webdriver.common package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="webdriver.common.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webdriver.common.html#module-webdriver.common.appiumby">webdriver.common.appiumby module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webdriver.common.html#module-webdriver.common.mobileby">webdriver.common.mobileby module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webdriver.common.html#module-webdriver.common.multi_action">webdriver.common.multi_action module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webdriver.common.html#module-webdriver.common.touch_action">webdriver.common.touch_action module</a></li>
@@ -1074,10 +1075,17 @@ Appium WebElement</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="webdriver.webdriver.WebDriver.find_element">
 <span class="sig-name descname"><span class="pre">find_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#webdriver.webelement.WebElement" title="webdriver.webelement.WebElement"><span class="pre">webdriver.webelement.WebElement</span></a></span></span><a class="headerlink" href="#webdriver.webdriver.WebDriver.find_element" title="Permalink to this definition"></a></dt>
-<dd><p>‘Private’ method used by the find_element_by_* methods.</p>
-<p>Override for Appium</p>
+<dd><p>Find an element given a AppiumBy strategy and locator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>by</strong> – The strategy</p></li>
+<li><p><strong>value</strong> – The locator</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="simple">
-<dt>Usage:</dt><dd><p>Use the corresponding find_element_by_* instead of this.</p>
+<dt>Usage:</dt><dd><p>driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value=’accessibility_id’)</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1093,10 +1101,17 @@ Appium WebElement</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="webdriver.webdriver.WebDriver.find_elements">
 <span class="sig-name descname"><span class="pre">find_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#webdriver.webelement.WebElement" title="webdriver.webelement.WebElement"><span class="pre">webdriver.webelement.WebElement</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#webdriver.webdriver.WebDriver.find_elements" title="Permalink to this definition"></a></dt>
-<dd><p>‘Private’ method used by the find_elements_by_* methods.</p>
-<p>Override for Appium</p>
+<dd><p>Find elements given a AppiumBy strategy and locator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>by</strong> – The strategy</p></li>
+<li><p><strong>value</strong> – The locator</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="simple">
-<dt>Usage:</dt><dd><p>Use the corresponding find_elements_by_* instead of this.</p>
+<dt>Usage:</dt><dd><p>driver.find_elements(by=AppiumBy.ACCESSIBILITY_ID, value=’accessibility_id’)</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1181,7 +1196,7 @@ Read <a class="reference external" href="https://github.com/appium/appium/blob/m
 <dl class="py method">
 <dt class="sig sig-object py" id="webdriver.webelement.WebElement.find_element">
 <span class="sig-name descname"><span class="pre">find_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">webdriver.webelement.T</span></span></span><a class="headerlink" href="#webdriver.webelement.WebElement.find_element" title="Permalink to this definition"></a></dt>
-<dd><p>Find an element given a By strategy and locator</p>
+<dd><p>Find an element given a AppiumBy strategy and locator</p>
 <p>Override for Appium</p>
 <p>Prefer the find_element_by_* methods when possible.</p>
 <dl class="field-list simple">
@@ -1193,7 +1208,7 @@ Read <a class="reference external" href="https://github.com/appium/appium/blob/m
 </dd>
 </dl>
 <dl class="simple">
-<dt>Usage:</dt><dd><p>element = element.find_element(By.ID, ‘foo’)</p>
+<dt>Usage:</dt><dd><p>element = element.find_element(AppiumBy.ID, ‘foo’)</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1206,9 +1221,7 @@ Read <a class="reference external" href="https://github.com/appium/appium/blob/m
 <dl class="py method">
 <dt class="sig sig-object py" id="webdriver.webelement.WebElement.find_elements">
 <span class="sig-name descname"><span class="pre">find_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">webdriver.webelement.T</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#webdriver.webelement.WebElement.find_elements" title="Permalink to this definition"></a></dt>
-<dd><p>Find elements given a By strategy and locator</p>
-<p>Override for Appium</p>
-<p>Prefer the find_elements_by_* methods when possible.</p>
+<dd><p>Find elements given a AppiumBy strategy and locator</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1218,7 +1231,7 @@ Read <a class="reference external" href="https://github.com/appium/appium/blob/m
 </dd>
 </dl>
 <dl class="simple">
-<dt>Usage:</dt><dd><p>element = element.find_elements(By.CLASS_NAME, ‘foo’)</p>
+<dt>Usage:</dt><dd><p>element = element.find_elements(AppiumBy.CLASS_NAME, ‘foo’)</p>
 </dd>
 </dl>
 <dl class="field-list simple">

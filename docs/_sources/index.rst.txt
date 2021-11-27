@@ -1,5 +1,5 @@
 .. Appium python client documentation master file, created by
-   sphinx-quickstart on Sun Nov 14 00:06:01 2021.
+   sphinx-quickstart on Sat Nov 27 02:45:09 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
