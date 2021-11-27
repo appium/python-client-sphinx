@@ -43,6 +43,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="webdriver.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">webdriver.common package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-webdriver.common.appiumby">webdriver.common.appiumby module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-webdriver.common.mobileby">webdriver.common.mobileby module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-webdriver.common.multi_action">webdriver.common.multi_action module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-webdriver.common.touch_action">webdriver.common.touch_action module</a></li>
@@ -99,67 +100,80 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
 </section>
+<section id="module-webdriver.common.appiumby">
+<span id="webdriver-common-appiumby-module"></span><h2>webdriver.common.appiumby module<a class="headerlink" href="#module-webdriver.common.appiumby" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AppiumBy</span></span><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.common.by.By</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.ACCESSIBILITY_ID">
+<span class="sig-name descname"><span class="pre">ACCESSIBILITY_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'accessibility</span> <span class="pre">id'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.ACCESSIBILITY_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.ANDROID_DATA_MATCHER">
+<span class="sig-name descname"><span class="pre">ANDROID_DATA_MATCHER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-android</span> <span class="pre">datamatcher'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.ANDROID_DATA_MATCHER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.ANDROID_UIAUTOMATOR">
+<span class="sig-name descname"><span class="pre">ANDROID_UIAUTOMATOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-android</span> <span class="pre">uiautomator'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.ANDROID_UIAUTOMATOR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.ANDROID_VIEWTAG">
+<span class="sig-name descname"><span class="pre">ANDROID_VIEWTAG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-android</span> <span class="pre">viewtag'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.ANDROID_VIEWTAG" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.ANDROID_VIEW_MATCHER">
+<span class="sig-name descname"><span class="pre">ANDROID_VIEW_MATCHER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-android</span> <span class="pre">viewmatcher'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.ANDROID_VIEW_MATCHER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.CUSTOM">
+<span class="sig-name descname"><span class="pre">CUSTOM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-custom'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.CUSTOM" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.IMAGE">
+<span class="sig-name descname"><span class="pre">IMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-image'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.IMAGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.IOS_CLASS_CHAIN">
+<span class="sig-name descname"><span class="pre">IOS_CLASS_CHAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-ios</span> <span class="pre">class</span> <span class="pre">chain'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.IOS_CLASS_CHAIN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.IOS_PREDICATE">
+<span class="sig-name descname"><span class="pre">IOS_PREDICATE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-ios</span> <span class="pre">predicate</span> <span class="pre">string'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.IOS_PREDICATE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.IOS_UIAUTOMATION">
+<span class="sig-name descname"><span class="pre">IOS_UIAUTOMATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-ios</span> <span class="pre">uiautomation'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.IOS_UIAUTOMATION" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.common.appiumby.AppiumBy.WINDOWS_UI_AUTOMATION">
+<span class="sig-name descname"><span class="pre">WINDOWS_UI_AUTOMATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-windows</span> <span class="pre">uiautomation'</span></em><a class="headerlink" href="#webdriver.common.appiumby.AppiumBy.WINDOWS_UI_AUTOMATION" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-webdriver.common.mobileby">
 <span id="webdriver-common-mobileby-module"></span><h2>webdriver.common.mobileby module<a class="headerlink" href="#module-webdriver.common.mobileby" title="Permalink to this headline"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MobileBy</span></span><a class="headerlink" href="#webdriver.common.mobileby.MobileBy" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">selenium.webdriver.common.by.By</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.ACCESSIBILITY_ID">
-<span class="sig-name descname"><span class="pre">ACCESSIBILITY_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'accessibility</span> <span class="pre">id'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.ACCESSIBILITY_ID" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.ANDROID_DATA_MATCHER">
-<span class="sig-name descname"><span class="pre">ANDROID_DATA_MATCHER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-android</span> <span class="pre">datamatcher'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.ANDROID_DATA_MATCHER" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.ANDROID_UIAUTOMATOR">
-<span class="sig-name descname"><span class="pre">ANDROID_UIAUTOMATOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-android</span> <span class="pre">uiautomator'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.ANDROID_UIAUTOMATOR" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.ANDROID_VIEWTAG">
-<span class="sig-name descname"><span class="pre">ANDROID_VIEWTAG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-android</span> <span class="pre">viewtag'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.ANDROID_VIEWTAG" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.ANDROID_VIEW_MATCHER">
-<span class="sig-name descname"><span class="pre">ANDROID_VIEW_MATCHER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-android</span> <span class="pre">viewmatcher'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.ANDROID_VIEW_MATCHER" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.CUSTOM">
-<span class="sig-name descname"><span class="pre">CUSTOM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-custom'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.CUSTOM" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.IMAGE">
-<span class="sig-name descname"><span class="pre">IMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-image'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.IMAGE" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.IOS_CLASS_CHAIN">
-<span class="sig-name descname"><span class="pre">IOS_CLASS_CHAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-ios</span> <span class="pre">class</span> <span class="pre">chain'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.IOS_CLASS_CHAIN" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.IOS_PREDICATE">
-<span class="sig-name descname"><span class="pre">IOS_PREDICATE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-ios</span> <span class="pre">predicate</span> <span class="pre">string'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.IOS_PREDICATE" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.IOS_UIAUTOMATION">
-<span class="sig-name descname"><span class="pre">IOS_UIAUTOMATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-ios</span> <span class="pre">uiautomation'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.IOS_UIAUTOMATION" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webdriver.common.mobileby.MobileBy.WINDOWS_UI_AUTOMATION">
-<span class="sig-name descname"><span class="pre">WINDOWS_UI_AUTOMATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'-windows</span> <span class="pre">uiautomation'</span></em><a class="headerlink" href="#webdriver.common.mobileby.MobileBy.WINDOWS_UI_AUTOMATION" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">appium.webdriver.common.appiumby.AppiumBy</span></code></p>
+<dl class="simple">
+<dt>deprecated:: 2.1.0</dt><dd><p>Please use ‘from appium.webdriver.common.appiumby import AppiumBy’ instead of ‘MobileBy’.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -169,8 +183,10 @@
 <dt class="sig sig-object py" id="webdriver.common.multi_action.MultiAction">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultiAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">WebDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">WebElement</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.common.multi_action.MultiAction" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Deprecated.
-Please use W3C actions instead: <a class="reference external" href="http://appium.io/docs/en/commands/interactions/actions/">http://appium.io/docs/en/commands/interactions/actions/</a></p>
+<dl class="simple">
+<dt>deprecated:: 2.0.0</dt><dd><p>Please use W3C actions instead: <a class="reference external" href="http://appium.io/docs/en/commands/interactions/actions/">http://appium.io/docs/en/commands/interactions/actions/</a></p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="webdriver.common.multi_action.MultiAction.add">
 <span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">touch_actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">TouchAction</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#webdriver.common.multi_action.MultiAction.add" title="Permalink to this definition"></a></dt>
@@ -238,8 +254,10 @@ Please use W3C actions instead: <a class="reference external" href="http://appiu
 <dt class="sig sig-object py" id="webdriver.common.touch_action.TouchAction">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TouchAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">WebDriver</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.common.touch_action.TouchAction" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Deprecated.
-Please use W3C actions instead: <a class="reference external" href="http://appium.io/docs/en/commands/interactions/actions/">http://appium.io/docs/en/commands/interactions/actions/</a></p>
+<dl class="simple">
+<dt>deprecated:: 2.0.0</dt><dd><p>Please use W3C actions instead: <a class="reference external" href="http://appium.io/docs/en/commands/interactions/actions/">http://appium.io/docs/en/commands/interactions/actions/</a></p>
+</dd>
+</dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="webdriver.common.touch_action.TouchAction.json_wire_gestures">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">json_wire_gestures</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#webdriver.common.touch_action.TouchAction.json_wire_gestures" title="Permalink to this definition"></a></dt>
