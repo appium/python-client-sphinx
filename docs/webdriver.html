@@ -1016,7 +1016,7 @@ driver.custom_method_name({‘dummy_arg’: ‘as a value’})</p>
 <dt>driver = webdriver.Remote(’<a class="reference external" href="http://localhost:4723/wd/hub">http://localhost:4723/wd/hub</a>’, desired_caps,</dt><dd><p>extensions=[YourCustomCommand])</p>
 </dd>
 </dl>
-<p>element = driver.find_element_by_accessibility_id(‘id’)</p>
+<p>element = driver.find_elemeent(by=AppiumBy.ACCESSIBILITY_ID, value=’id’)</p>
 <p># Then, the driver calls a get request to <cite>session/$sessionId/path/to/your/custom/$id/url</cite>
 # with replacing the <cite>$id</cite> with the given <cite>element.id</cite>
 driver.custom_method_name(element.id)</p>
