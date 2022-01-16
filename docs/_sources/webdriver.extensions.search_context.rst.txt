@@ -12,14 +12,6 @@ webdriver.extensions.search\_context.android module
    :undoc-members:
    :show-inheritance:
 
-webdriver.extensions.search\_context.base\_search\_context module
------------------------------------------------------------------
-
-.. automodule:: webdriver.extensions.search_context.base_search_context
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 webdriver.extensions.search\_context.custom module
 --------------------------------------------------
 
