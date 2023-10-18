@@ -12,14 +12,6 @@ webdriver.common.appiumby module
    :undoc-members:
    :show-inheritance:
 
-webdriver.common.mobileby module
---------------------------------
-
-.. automodule:: webdriver.common.mobileby
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 webdriver.common.multi\_action module
 -------------------------------------
 

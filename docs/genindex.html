@@ -10,10 +10,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -24,11 +25,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Python client 1.0
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Python client 1.0
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -52,8 +57,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Index</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Index</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -113,12 +118,6 @@
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.applications.Applications.activate_app">activate_app() (Applications method)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.ACTIVATE_IME_ENGINE">ACTIVATE_IME_ENGINE (MobileCommand attribute)</a>
-</li>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.ime.IME.activate_ime_engine">activate_ime_engine() (IME method)</a>
-</li>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.ime.IME.active_ime_engine">active_ime_engine (IME property)</a>
-</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.activities.Activities">Activities (class in webdriver.extensions.android.activities)</a>
 </li>
       <li><a href="webdriver.common.html#webdriver.common.multi_action.MultiAction.add">add() (MultiAction method)</a>
@@ -126,10 +125,12 @@
       <li><a href="webdriver.html#webdriver.webdriver.ExtensionBase.add_command">add_command() (ExtensionBase method)</a>
 </li>
       <li><a href="webdriver.html#webdriver.connectiontype.ConnectionType.AIRPLANE_MODE">AIRPLANE_MODE (ConnectionType attribute)</a>
+
+      <ul>
+        <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.network.NetworkMask.AIRPLANE_MODE">(NetworkMask attribute)</a>
 </li>
+      </ul></li>
       <li><a href="webdriver.html#webdriver.connectiontype.ConnectionType.ALL_NETWORK_ON">ALL_NETWORK_ON (ConnectionType attribute)</a>
-</li>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.session.Session.all_sessions">all_sessions (Session property)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.ALT_LEFT">ALT_LEFT (AndroidKey attribute)</a>
 </li>
@@ -137,17 +138,15 @@
 </li>
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy.ANDROID_DATA_MATCHER">ANDROID_DATA_MATCHER (AppiumBy attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy.ANDROID_UIAUTOMATOR">ANDROID_UIAUTOMATOR (AppiumBy attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy.ANDROID_VIEW_MATCHER">ANDROID_VIEW_MATCHER (AppiumBy attribute)</a>
 </li>
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy.ANDROID_VIEWTAG">ANDROID_VIEWTAG (AppiumBy attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey">AndroidKey (class in webdriver.extensions.android.nativekey)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.android.AndroidSearchContext">AndroidSearchContext (class in webdriver.extensions.search_context.android)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.APOSTROPHE">APOSTROPHE (AndroidKey attribute)</a>
 </li>
@@ -159,23 +158,21 @@
 </li>
       <li><a href="webdriver.html#webdriver.appium_connection.AppiumConnection">AppiumConnection (class in webdriver.appium_connection)</a>
 </li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.AppiumSearchContext">AppiumSearchContext (class in webdriver.extensions.search_context)</a>
-</li>
       <li><a href="webdriver.html#webdriver.appium_service.AppiumService">AppiumService (class in webdriver.appium_service)</a>
 </li>
       <li><a href="webdriver.html#webdriver.appium_service.AppiumServiceError">AppiumServiceError</a>
 </li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.AppiumWebElementSearchContext">AppiumWebElementSearchContext (class in webdriver.extensions.search_context)</a>
+      <li><a href="webdriver.html#webdriver.appium_service.AppiumStartupError">AppiumStartupError</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.applications.Applications">Applications (class in webdriver.extensions.applications)</a>
 </li>
       <li><a href="webdriver.html#webdriver.applicationstate.ApplicationState">ApplicationState (class in webdriver.applicationstate)</a>
 </li>
+      <li><a href="webdriver.html#webdriver.webdriver.WebDriver.assert_extension_exists">assert_extension_exists() (WebDriver method)</a>
+</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.ASSIST">ASSIST (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.AT">AT (AndroidKey attribute)</a>
-</li>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.ime.IME.available_ime_engines">available_ime_engines (IME property)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.AVR_INPUT">AVR_INPUT (AndroidKey attribute)</a>
 </li>
@@ -315,10 +312,6 @@
 </li>
       <li><a href="webdriver.html#webdriver.clipboard_content_type.ClipboardContentType">ClipboardContentType (class in webdriver.clipboard_content_type)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.CLOSE_APP">CLOSE_APP (MobileCommand attribute)</a>
-</li>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.applications.Applications.close_app">close_app() (Applications method)</a>
-</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.COMMA">COMMA (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.html#webdriver.command_method.CommandMethod">CommandMethod (class in webdriver.command_method)</a>
@@ -363,8 +356,6 @@
 </li>
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy.CUSTOM">CUSTOM (AppiumBy attribute)</a>
 </li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.custom.CustomSearchContext">CustomSearchContext (class in webdriver.extensions.search_context.custom)</a>
-</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.CUT">CUT (AndroidKey attribute)</a>
 </li>
   </ul></td>
@@ -375,11 +366,9 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.D">D (AndroidKey attribute)</a>
 </li>
+      <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.network.NetworkMask.DATA">DATA (NetworkMask attribute)</a>
+</li>
       <li><a href="webdriver.html#webdriver.connectiontype.ConnectionType.DATA_ONLY">DATA_ONLY (ConnectionType attribute)</a>
-</li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.DEACTIVATE_IME_ENGINE">DEACTIVATE_IME_ENGINE (MobileCommand attribute)</a>
-</li>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.ime.IME.deactivate_ime_engine">deactivate_ime_engine() (IME method)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.DEL">DEL (AndroidKey attribute)</a>
 </li>
@@ -451,10 +440,6 @@
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.EISU">EISU (AndroidKey attribute)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.END_TEST_COVERAGE">END_TEST_COVERAGE (MobileCommand attribute)</a>
-</li>
-      <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.common.Common.end_test_coverage">end_test_coverage() (Common method)</a>
-</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.ENDCALL">ENDCALL (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.ENTER">ENTER (AndroidKey attribute)</a>
@@ -463,10 +448,10 @@
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.EQUALS">EQUALS (AndroidKey attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.ESCAPE">ESCAPE (AndroidKey attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.network.NetSpeed.EVDO">EVDO (NetSpeed attribute)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.session.Session.events">events (Session property)</a>
@@ -523,56 +508,14 @@
         <li><a href="webdriver.html#webdriver.webelement.WebElement.find_element">(WebElement method)</a>
 </li>
       </ul></li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.mobile.MobileSearchContext.find_element_by_accessibility_id">find_element_by_accessibility_id() (MobileSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.android.AndroidSearchContext.find_element_by_android_data_matcher">find_element_by_android_data_matcher() (AndroidSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.android.AndroidSearchContext.find_element_by_android_uiautomator">find_element_by_android_uiautomator() (AndroidSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.android.AndroidSearchContext.find_element_by_android_view_matcher">find_element_by_android_view_matcher() (AndroidSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.android.AndroidSearchContext.find_element_by_android_viewtag">find_element_by_android_viewtag() (AndroidSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.custom.CustomSearchContext.find_element_by_custom">find_element_by_custom() (CustomSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.mobile.MobileSearchContext.find_element_by_image">find_element_by_image() (MobileSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.ios.iOSSearchContext.find_element_by_ios_class_chain">find_element_by_ios_class_chain() (iOSSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.ios.iOSSearchContext.find_element_by_ios_predicate">find_element_by_ios_predicate() (iOSSearchContext method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.ios.iOSSearchContext.find_element_by_ios_uiautomation">find_element_by_ios_uiautomation() (iOSSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.windows.WindowsSearchContext.find_element_by_windows_uiautomation">find_element_by_windows_uiautomation() (WindowsSearchContext method)</a>
-</li>
       <li><a href="webdriver.html#webdriver.webdriver.WebDriver.find_elements">find_elements() (WebDriver method)</a>
 
       <ul>
         <li><a href="webdriver.html#webdriver.webelement.WebElement.find_elements">(WebElement method)</a>
 </li>
       </ul></li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.mobile.MobileSearchContext.find_elements_by_accessibility_id">find_elements_by_accessibility_id() (MobileSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.android.AndroidSearchContext.find_elements_by_android_data_matcher">find_elements_by_android_data_matcher() (AndroidSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.android.AndroidSearchContext.find_elements_by_android_uiautomator">find_elements_by_android_uiautomator() (AndroidSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.android.AndroidSearchContext.find_elements_by_android_viewtag">find_elements_by_android_viewtag() (AndroidSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.custom.CustomSearchContext.find_elements_by_custom">find_elements_by_custom() (CustomSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.mobile.MobileSearchContext.find_elements_by_image">find_elements_by_image() (MobileSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.ios.iOSSearchContext.find_elements_by_ios_class_chain">find_elements_by_ios_class_chain() (iOSSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.ios.iOSSearchContext.find_elements_by_ios_predicate">find_elements_by_ios_predicate() (iOSSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.ios.iOSSearchContext.find_elements_by_ios_uiautomation">find_elements_by_ios_uiautomation() (iOSSearchContext method)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.windows.WindowsSearchContext.find_elements_by_windows_uiautomation">find_elements_by_windows_uiautomation() (WindowsSearchContext method)</a>
-</li>
       <li><a href="webdriver.html#webdriver.appium_service.find_executable">find_executable() (in module webdriver.appium_service)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.images_comparison.ImagesComparison.find_image_occurrence">find_image_occurrence() (ImagesComparison method)</a>
@@ -584,6 +527,8 @@
       <li><a href="webdriver.extensions.html#webdriver.extensions.action_helpers.ActionHelpers.flick">flick() (ActionHelpers method)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.FOCUS">FOCUS (AndroidKey attribute)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.errorhandler.format_stacktrace">format_stacktrace() (in module webdriver.errorhandler)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.FORWARD">FORWARD (AndroidKey attribute)</a>
 </li>
@@ -605,17 +550,13 @@
 </li>
       <li><a href="webdriver.html#webdriver.command_method.CommandMethod.GET">GET (CommandMethod attribute)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_ACTIVE_IME_ENGINE">GET_ACTIVE_IME_ENGINE (MobileCommand attribute)</a>
-</li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_ALL_SESSIONS">GET_ALL_SESSIONS (MobileCommand attribute)</a>
-</li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_APP_STRINGS">GET_APP_STRINGS (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.html#webdriver.webelement.WebElement.get_attribute">get_attribute() (WebElement method)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_AVAILABLE_IME_ENGINES">GET_AVAILABLE_IME_ENGINES (MobileCommand attribute)</a>
-</li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_AVAILABLE_LOG_TYPES">GET_AVAILABLE_LOG_TYPES (MobileCommand attribute)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_CAPABILITIES">GET_CAPABILITIES (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_CLIPBOARD">GET_CLIPBOARD (MobileCommand attribute)</a>
 </li>
@@ -645,13 +586,19 @@
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.images_comparison.ImagesComparison.get_images_similarity">get_images_similarity() (ImagesComparison method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_LOCATION">GET_LOCATION (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_LOG">GET_LOG (MobileCommand attribute)</a>
 </li>
+      <li><a href="webdriver.html#webdriver.appium_service.get_main_script">get_main_script() (in module webdriver.appium_service)</a>
+</li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_NETWORK_CONNECTION">GET_NETWORK_CONNECTION (MobileCommand attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="webdriver.html#webdriver.appium_service.get_node">get_node() (in module webdriver.appium_service)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.appium_service.get_npm">get_npm() (in module webdriver.appium_service)</a>
 </li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_PERFORMANCE_DATA">GET_PERFORMANCE_DATA (MobileCommand attribute)</a>
 </li>
@@ -663,11 +610,17 @@
 </li>
       <li><a href="webdriver.html#webdriver.appium_connection.AppiumConnection.get_remote_connection_headers">get_remote_connection_headers() (AppiumConnection class method)</a>
 </li>
+      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_SCREEN_ORIENTATION">GET_SCREEN_ORIENTATION (MobileCommand attribute)</a>
+</li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_SESSION">GET_SESSION (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_SETTINGS">GET_SETTINGS (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.settings.Settings.get_settings">get_settings() (Settings method)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_STATUS">GET_STATUS (MobileCommand attribute)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.webdriver.WebDriver.get_status">get_status() (WebDriver method)</a>
 </li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.GET_SYSTEM_BARS">GET_SYSTEM_BARS (MobileCommand attribute)</a>
 </li>
@@ -703,16 +656,18 @@
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.hw_actions.HardwareActions">HardwareActions (class in webdriver.extensions.hw_actions)</a>
 </li>
+      <li><a href="webdriver.html#webdriver.switch_to.HasDriver">HasDriver (class in webdriver.switch_to)</a>
+</li>
       <li><a href="webdriver.html#webdriver.command_method.CommandMethod.HEAD">HEAD (CommandMethod attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.HEADSETHOOK">HEADSETHOOK (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.HELP">HELP (AndroidKey attribute)</a>
 </li>
-      <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.HENKAN">HENKAN (AndroidKey attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.HENKAN">HENKAN (AndroidKey attribute)</a>
+</li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.HIDE_KEYBOARD">HIDE_KEYBOARD (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.keyboard.Keyboard.hide_keyboard">hide_keyboard() (Keyboard method)</a>
@@ -743,8 +698,6 @@
       </ul></li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.images_comparison.ImagesComparison">ImagesComparison (class in webdriver.extensions.images_comparison)</a>
 </li>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.ime.IME">IME (class in webdriver.extensions.ime)</a>
-</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.INFO">INFO (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.INSERT">INSERT (AndroidKey attribute)</a>
@@ -759,23 +712,19 @@
 </li>
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy.IOS_UIAUTOMATION">IOS_UIAUTOMATION (AppiumBy attribute)</a>
 </li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.ios.iOSSearchContext">iOSSearchContext (class in webdriver.extensions.search_context.ios)</a>
-</li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.IS_APP_INSTALLED">IS_APP_INSTALLED (MobileCommand attribute)</a>
+</li>
+      <li><a href="webdriver.extensions.html#webdriver.extensions.applications.Applications.is_app_installed">is_app_installed() (Applications method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.applications.Applications.is_app_installed">is_app_installed() (Applications method)</a>
-</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.is_confirm_key">is_confirm_key() (AndroidKey static method)</a>
 </li>
       <li><a href="webdriver.html#webdriver.webelement.WebElement.is_displayed">is_displayed() (WebElement method)</a>
 </li>
+      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.IS_ELEMENT_DISPLAYED">IS_ELEMENT_DISPLAYED (MobileCommand attribute)</a>
+</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.is_gamepad_button">is_gamepad_button() (AndroidKey static method)</a>
-</li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.IS_IME_ACTIVE">IS_IME_ACTIVE (MobileCommand attribute)</a>
-</li>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.ime.IME.is_ime_active">is_ime_active() (IME method)</a>
 </li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.IS_KEYBOARD_SHOWN">IS_KEYBOARD_SHOWN (MobileCommand attribute)</a>
 </li>
@@ -851,10 +800,6 @@
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.LAST_CHANNEL">LAST_CHANNEL (AndroidKey attribute)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.LAUNCH_APP">LAUNCH_APP (MobileCommand attribute)</a>
-</li>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.applications.Applications.launch_app">launch_app() (Applications method)</a>
-</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.LEFT_BRACKET">LEFT_BRACKET (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.location.Location">Location (class in webdriver.extensions.location)</a>
@@ -863,10 +808,10 @@
 </li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.LOCATION_IN_VIEW">LOCATION_IN_VIEW (MobileCommand attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.html#webdriver.webelement.WebElement.location_in_view">location_in_view (WebElement property)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.LOCK">LOCK (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.hw_actions.HardwareActions.lock">lock() (HardwareActions method)</a>
@@ -897,7 +842,11 @@
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.gsm.Gsm.make_gsm_call">make_gsm_call() (Gsm method)</a>
 </li>
+      <li><a href="webdriver.html#webdriver.appium_service.make_status_url">make_status_url() (in module webdriver.appium_service)</a>
+</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.MANNER_MODE">MANNER_MODE (AndroidKey attribute)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.webdriver.WebDriver.mark_extension_absence">mark_extension_absence() (WebDriver method)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.images_comparison.ImagesComparison.match_images_features">match_images_features() (ImagesComparison method)</a>
 </li>
@@ -947,13 +896,9 @@
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.MINUS">MINUS (AndroidKey attribute)</a>
 </li>
-      <li><a href="webdriver.common.html#webdriver.common.mobileby.MobileBy">MobileBy (class in webdriver.common.mobileby)</a>
-</li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand">MobileCommand (class in webdriver.mobilecommand)</a>
 </li>
       <li><a href="webdriver.html#webdriver.errorhandler.MobileErrorHandler">MobileErrorHandler (class in webdriver.errorhandler)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.mobile.MobileSearchContext">MobileSearchContext (class in webdriver.extensions.search_context.mobile)</a>
 </li>
       <li><a href="webdriver.html#webdriver.switch_to.MobileSwitchTo">MobileSwitchTo (class in webdriver.switch_to)</a>
 </li>
@@ -980,8 +925,6 @@
         <li><a href="webdriver.common.html#module-webdriver.common">webdriver.common</a>
 </li>
         <li><a href="webdriver.common.html#module-webdriver.common.appiumby">webdriver.common.appiumby</a>
-</li>
-        <li><a href="webdriver.common.html#module-webdriver.common.mobileby">webdriver.common.mobileby</a>
 </li>
         <li><a href="webdriver.common.html#module-webdriver.common.multi_action">webdriver.common.multi_action</a>
 </li>
@@ -1033,8 +976,6 @@
 </li>
         <li><a href="webdriver.extensions.html#module-webdriver.extensions.images_comparison">webdriver.extensions.images_comparison</a>
 </li>
-        <li><a href="webdriver.extensions.html#module-webdriver.extensions.ime">webdriver.extensions.ime</a>
-</li>
         <li><a href="webdriver.extensions.html#module-webdriver.extensions.keyboard">webdriver.extensions.keyboard</a>
 </li>
         <li><a href="webdriver.extensions.html#module-webdriver.extensions.location">webdriver.extensions.location</a>
@@ -1044,18 +985,6 @@
         <li><a href="webdriver.extensions.html#module-webdriver.extensions.remote_fs">webdriver.extensions.remote_fs</a>
 </li>
         <li><a href="webdriver.extensions.html#module-webdriver.extensions.screen_record">webdriver.extensions.screen_record</a>
-</li>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context">webdriver.extensions.search_context</a>
-</li>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.android">webdriver.extensions.search_context.android</a>
-</li>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.custom">webdriver.extensions.search_context.custom</a>
-</li>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.ios">webdriver.extensions.search_context.ios</a>
-</li>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.mobile">webdriver.extensions.search_context.mobile</a>
-</li>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.windows">webdriver.extensions.search_context.windows</a>
 </li>
         <li><a href="webdriver.extensions.html#module-webdriver.extensions.session">webdriver.extensions.session</a>
 </li>
@@ -1109,6 +1038,8 @@
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.network.Network">Network (class in webdriver.extensions.android.network)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.network.Network.network_connection">network_connection (Network property)</a>
+</li>
+      <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.network.NetworkMask">NetworkMask (class in webdriver.extensions.android.network)</a>
 </li>
       <li><a href="webdriver.html#webdriver.connectiontype.ConnectionType.NO_CONNECTION">NO_CONNECTION (ConnectionType attribute)</a>
 </li>
@@ -1186,6 +1117,8 @@
 </li>
       <li><a href="webdriver.html#webdriver.command_method.CommandMethod.OPTIONS">OPTIONS (CommandMethod attribute)</a>
 </li>
+      <li><a href="webdriver.html#webdriver.webdriver.WebDriver.orientation">orientation (WebDriver property)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -1199,6 +1132,14 @@
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.PAGE_UP">PAGE_UP (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.PAIRING">PAIRING (AndroidKey attribute)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.appium_service.parse_arg_value">parse_arg_value() (in module webdriver.appium_service)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.appium_service.parse_base_path">parse_base_path() (in module webdriver.appium_service)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.appium_service.parse_host">parse_host() (in module webdriver.appium_service)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.appium_service.parse_port">parse_port() (in module webdriver.appium_service)</a>
 </li>
       <li><a href="webdriver.html#webdriver.command_method.CommandMethod.PATCH">PATCH (CommandMethod attribute)</a>
 </li>
@@ -1218,16 +1159,14 @@
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.PLUS">PLUS (AndroidKey attribute)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.appium_service.poll_url">poll_url() (in module webdriver.appium_service)</a>
-</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.gsm.GsmSignalStrength.POOR">POOR (GsmSignalStrength attribute)</a>
 </li>
       <li><a href="webdriver.html#webdriver.command_method.CommandMethod.POST">POST (CommandMethod attribute)</a>
 </li>
-      <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.POUND">POUND (AndroidKey attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.POUND">POUND (AndroidKey attribute)</a>
+</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.POWER">POWER (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.power.Power">Power (class in webdriver.extensions.android.power)</a>
@@ -1292,14 +1231,8 @@
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.applications.Applications.remove_app">remove_app() (Applications method)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.REPLACE_KEYS">REPLACE_KEYS (MobileCommand attribute)</a>
-</li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.RESET">RESET (MobileCommand attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.applications.Applications.reset">reset() (Applications method)</a>
-</li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.RIGHT_BRACKET">RIGHT_BRACKET (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.RO">RO (AndroidKey attribute)</a>
@@ -1342,8 +1275,6 @@
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.session.Session">Session (class in webdriver.extensions.session)</a>
 </li>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.session.Session.session">session (Session property)</a>
-</li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.SET_CLIPBOARD">SET_CLIPBOARD (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.clipboard.Clipboard.set_clipboard">set_clipboard() (Clipboard method)</a>
@@ -1357,8 +1288,6 @@
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.SET_GSM_VOICE">SET_GSM_VOICE (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.gsm.Gsm.set_gsm_voice">set_gsm_voice() (Gsm method)</a>
-</li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.SET_IMMEDIATE_VALUE">SET_IMMEDIATE_VALUE (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.SET_LOCATION">SET_LOCATION (MobileCommand attribute)</a>
 </li>
@@ -1380,20 +1309,14 @@
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.power.Power.set_power_capacity">set_power_capacity() (Power method)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.webelement.WebElement.set_text">set_text() (WebElement method)</a>
+      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.SET_SCREEN_ORIENTATION">SET_SCREEN_ORIENTATION (MobileCommand attribute)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.webdriver.WebDriver.set_value">set_value() (WebDriver method)</a>
-
-      <ul>
-        <li><a href="webdriver.html#webdriver.webelement.WebElement.set_value">(WebElement method)</a>
-</li>
-      </ul></li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.SETTINGS">SETTINGS (AndroidKey attribute)</a>
+</li>
+      <li><a href="webdriver.extensions.html#webdriver.extensions.settings.Settings">Settings (class in webdriver.extensions.settings)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="webdriver.extensions.html#webdriver.extensions.settings.Settings">Settings (class in webdriver.extensions.settings)</a>
-</li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.SHAKE">SHAKE (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.hw_actions.HardwareActions.shake">shake() (HardwareActions method)</a>
@@ -1419,10 +1342,6 @@
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.STAR">STAR (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.html#webdriver.appium_service.AppiumService.start">start() (AppiumService method)</a>
-</li>
-      <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.START_ACTIVITY">START_ACTIVITY (MobileCommand attribute)</a>
-</li>
-      <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.activities.Activities.start_activity">start_activity() (Activities method)</a>
 </li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.START_RECORDING_SCREEN">START_RECORDING_SCREEN (MobileCommand attribute)</a>
 </li>
@@ -1689,13 +1608,6 @@
 </li>
       </ul></li>
       <li>
-    webdriver.common.mobileby
-
-      <ul>
-        <li><a href="webdriver.common.html#module-webdriver.common.mobileby">module</a>
-</li>
-      </ul></li>
-      <li>
     webdriver.common.multi_action
 
       <ul>
@@ -1793,6 +1705,8 @@
         <li><a href="webdriver.extensions.android.html#module-webdriver.extensions.android.performance">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     webdriver.extensions.android.power
 
@@ -1814,8 +1728,6 @@
         <li><a href="webdriver.extensions.android.html#module-webdriver.extensions.android.system_bars">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     webdriver.extensions.applications
 
@@ -1873,13 +1785,6 @@
 </li>
       </ul></li>
       <li>
-    webdriver.extensions.ime
-
-      <ul>
-        <li><a href="webdriver.extensions.html#module-webdriver.extensions.ime">module</a>
-</li>
-      </ul></li>
-      <li>
     webdriver.extensions.keyboard
 
       <ul>
@@ -1912,48 +1817,6 @@
 
       <ul>
         <li><a href="webdriver.extensions.html#module-webdriver.extensions.screen_record">module</a>
-</li>
-      </ul></li>
-      <li>
-    webdriver.extensions.search_context
-
-      <ul>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context">module</a>
-</li>
-      </ul></li>
-      <li>
-    webdriver.extensions.search_context.android
-
-      <ul>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.android">module</a>
-</li>
-      </ul></li>
-      <li>
-    webdriver.extensions.search_context.custom
-
-      <ul>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.custom">module</a>
-</li>
-      </ul></li>
-      <li>
-    webdriver.extensions.search_context.ios
-
-      <ul>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.ios">module</a>
-</li>
-      </ul></li>
-      <li>
-    webdriver.extensions.search_context.mobile
-
-      <ul>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.mobile">module</a>
-</li>
-      </ul></li>
-      <li>
-    webdriver.extensions.search_context.windows
-
-      <ul>
-        <li><a href="webdriver.extensions.search_context.html#module-webdriver.extensions.search_context.windows">module</a>
 </li>
       </ul></li>
       <li>
@@ -2000,13 +1863,13 @@
       </ul></li>
       <li><a href="webdriver.html#webdriver.webelement.WebElement">WebElement (class in webdriver.webelement)</a>
 </li>
+      <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.network.NetworkMask.WIFI">WIFI (NetworkMask attribute)</a>
+</li>
       <li><a href="webdriver.html#webdriver.connectiontype.ConnectionType.WIFI_ONLY">WIFI_ONLY (ConnectionType attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.WINDOW">WINDOW (AndroidKey attribute)</a>
 </li>
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy.WINDOWS_UI_AUTOMATION">WINDOWS_UI_AUTOMATION (AppiumBy attribute)</a>
-</li>
-      <li><a href="webdriver.extensions.search_context.html#webdriver.extensions.search_context.windows.WindowsSearchContext">WindowsSearchContext (class in webdriver.extensions.search_context.windows)</a>
 </li>
   </ul></td>
 </tr></table>
