@@ -8,7 +8,6 @@ Subpackages
    :maxdepth: 4
 
    webdriver.extensions.android
-   webdriver.extensions.search_context
 
 Submodules
 ----------
@@ -81,14 +80,6 @@ webdriver.extensions.images\_comparison module
 ----------------------------------------------
 
 .. automodule:: webdriver.extensions.images_comparison
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-webdriver.extensions.ime module
--------------------------------
-
-.. automodule:: webdriver.extensions.ime
    :members:
    :undoc-members:
    :show-inheritance:
