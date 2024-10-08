@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    webdriver.extensions.android
+   webdriver.extensions.flutter_integration
 
 Submodules
 ----------
