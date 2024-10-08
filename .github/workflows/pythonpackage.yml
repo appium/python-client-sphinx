@@ -11,15 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         path: ./python-client-sphinx
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         repository: appium/python-client
         path: ./python-client
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version: '3.x'
     - name: Setup python-client
@@ -30,6 +30,7 @@ jobs:
     - name: Build doc
       shell: bash -xe {0}
       run: |
+        python -m pip install setuptools
         python -m pip install -r requirements.txt
         bash generate.sh
       working-directory: python-client/docs
