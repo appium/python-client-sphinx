@@ -24,13 +24,12 @@ jobs:
         python-version: '3.x'
     - name: Setup python-client
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install setuptools
         python setup.py install
       working-directory: python-client
     - name: Build doc
       shell: bash -xe {0}
       run: |
-        python -m pip install setuptools
         python -m pip install -r requirements.txt
         bash generate.sh
       working-directory: python-client/docs
