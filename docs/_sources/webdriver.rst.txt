@@ -69,6 +69,14 @@ webdriver.errorhandler module
    :undoc-members:
    :show-inheritance:
 
+webdriver.locator\_converter module
+-----------------------------------
+
+.. automodule:: webdriver.locator_converter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 webdriver.mobilecommand module
 ------------------------------
 

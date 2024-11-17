@@ -140,10 +140,10 @@
 </li>
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy.ANDROID_UIAUTOMATOR">ANDROID_UIAUTOMATOR (AppiumBy attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy.ANDROID_VIEW_MATCHER">ANDROID_VIEW_MATCHER (AppiumBy attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy.ANDROID_VIEWTAG">ANDROID_VIEWTAG (AppiumBy attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey">AndroidKey (class in webdriver.extensions.android.nativekey)</a>
@@ -157,6 +157,8 @@
       <li><a href="webdriver.common.html#webdriver.common.appiumby.AppiumBy">AppiumBy (class in webdriver.common.appiumby)</a>
 </li>
       <li><a href="webdriver.html#webdriver.appium_connection.AppiumConnection">AppiumConnection (class in webdriver.appium_connection)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.locator_converter.AppiumLocatorConverter">AppiumLocatorConverter (class in webdriver.locator_converter)</a>
 </li>
       <li><a href="webdriver.html#webdriver.appium_service.AppiumService">AppiumService (class in webdriver.appium_service)</a>
 </li>
@@ -328,10 +330,10 @@
 </li>
       <li><a href="webdriver.html#webdriver.command_method.CommandMethod">CommandMethod (class in webdriver.command_method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.common.Common">Common (class in webdriver.extensions.android.common)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.COMPARE_IMAGES">COMPARE_IMAGES (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.confirm_buttons">confirm_buttons (AndroidKey attribute)</a>
@@ -351,6 +353,8 @@
       <li><a href="webdriver.extensions.html#webdriver.extensions.context.Context.contexts">contexts (Context property)</a>
 </li>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.CONTEXTS">CONTEXTS (MobileCommand attribute)</a>
+</li>
+      <li><a href="webdriver.html#webdriver.locator_converter.AppiumLocatorConverter.convert">convert() (AppiumLocatorConverter method)</a>
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.COPY">COPY (AndroidKey attribute)</a>
 </li>
@@ -486,6 +490,8 @@
 </li>
       <li><a href="webdriver.html#webdriver.webdriver.ExtensionBase">ExtensionBase (class in webdriver.webdriver)</a>
 </li>
+      <li><a href="webdriver.html#webdriver.appium_connection.AppiumConnection.extra_headers">extra_headers (AppiumConnection attribute)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -518,24 +524,12 @@
 </li>
       <li><a href="webdriver.extensions.android.html#webdriver.extensions.android.nativekey.AndroidKey.F9">F9 (AndroidKey attribute)</a>
 </li>
-      <li><a href="webdriver.html#webdriver.webdriver.WebDriver.find_element">find_element() (WebDriver method)</a>
-
-      <ul>
-        <li><a href="webdriver.html#webdriver.webelement.WebElement.find_element">(WebElement method)</a>
-</li>
-      </ul></li>
-      <li><a href="webdriver.html#webdriver.webdriver.WebDriver.find_elements">find_elements() (WebDriver method)</a>
-
-      <ul>
-        <li><a href="webdriver.html#webdriver.webelement.WebElement.find_elements">(WebElement method)</a>
-</li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.html#webdriver.appium_service.find_executable">find_executable() (in module webdriver.appium_service)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.images_comparison.ImagesComparison.find_image_occurrence">find_image_occurrence() (ImagesComparison method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="webdriver.html#webdriver.mobilecommand.MobileCommand.FINGER_PRINT">FINGER_PRINT (MobileCommand attribute)</a>
 </li>
       <li><a href="webdriver.extensions.html#webdriver.extensions.hw_actions.HardwareActions.finger_print">finger_print() (HardwareActions method)</a>
@@ -1013,6 +1007,8 @@
         <li><a href="webdriver.extensions.html#module-webdriver.extensions.session">webdriver.extensions.session</a>
 </li>
         <li><a href="webdriver.extensions.html#module-webdriver.extensions.settings">webdriver.extensions.settings</a>
+</li>
+        <li><a href="webdriver.html#module-webdriver.locator_converter">webdriver.locator_converter</a>
 </li>
         <li><a href="webdriver.html#module-webdriver.mobilecommand">webdriver.mobilecommand</a>
 </li>
@@ -1525,6 +1521,8 @@
 </li>
       <li><a href="webdriver.html#webdriver.clipboard_content_type.ClipboardContentType.URL">URL (ClipboardContentType attribute)</a>
 </li>
+      <li><a href="webdriver.html#webdriver.appium_connection.AppiumConnection.user_agent">user_agent (AppiumConnection attribute)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -1717,8 +1715,6 @@
         <li><a href="webdriver.extensions.android.html#module-webdriver.extensions.android.sms">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     webdriver.extensions.android.system_bars
 
@@ -1726,6 +1722,8 @@
         <li><a href="webdriver.extensions.android.html#module-webdriver.extensions.android.system_bars">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     webdriver.extensions.applications
 
@@ -1857,6 +1855,13 @@
 
       <ul>
         <li><a href="webdriver.extensions.html#module-webdriver.extensions.settings">module</a>
+</li>
+      </ul></li>
+      <li>
+    webdriver.locator_converter
+
+      <ul>
+        <li><a href="webdriver.html#module-webdriver.locator_converter">module</a>
 </li>
       </ul></li>
       <li>

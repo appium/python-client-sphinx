@@ -53,7 +53,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-webdriver.appium_connection">webdriver.appium_connection module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#webdriver.appium_connection.AppiumConnection"><code class="docutils literal notranslate"><span class="pre">AppiumConnection</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#webdriver.appium_connection.AppiumConnection.extra_headers"><code class="docutils literal notranslate"><span class="pre">AppiumConnection.extra_headers</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.appium_connection.AppiumConnection.get_remote_connection_headers"><code class="docutils literal notranslate"><span class="pre">AppiumConnection.get_remote_connection_headers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#webdriver.appium_connection.AppiumConnection.user_agent"><code class="docutils literal notranslate"><span class="pre">AppiumConnection.user_agent</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -127,6 +129,13 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#webdriver.errorhandler.format_stacktrace"><code class="docutils literal notranslate"><span class="pre">format_stacktrace()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-webdriver.locator_converter">webdriver.locator_converter module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#webdriver.locator_converter.AppiumLocatorConverter"><code class="docutils literal notranslate"><span class="pre">AppiumLocatorConverter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#webdriver.locator_converter.AppiumLocatorConverter.convert"><code class="docutils literal notranslate"><span class="pre">AppiumLocatorConverter.convert()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#module-webdriver.mobilecommand">webdriver.mobilecommand module</a><ul>
@@ -224,8 +233,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.webdriver.WebDriver.assert_extension_exists"><code class="docutils literal notranslate"><span class="pre">WebDriver.assert_extension_exists()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.webdriver.WebDriver.create_web_element"><code class="docutils literal notranslate"><span class="pre">WebDriver.create_web_element()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.webdriver.WebDriver.delete_extensions"><code class="docutils literal notranslate"><span class="pre">WebDriver.delete_extensions()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#webdriver.webdriver.WebDriver.find_element"><code class="docutils literal notranslate"><span class="pre">WebDriver.find_element()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#webdriver.webdriver.WebDriver.find_elements"><code class="docutils literal notranslate"><span class="pre">WebDriver.find_elements()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.webdriver.WebDriver.get_status"><code class="docutils literal notranslate"><span class="pre">WebDriver.get_status()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.webdriver.WebDriver.mark_extension_absence"><code class="docutils literal notranslate"><span class="pre">WebDriver.mark_extension_absence()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.webdriver.WebDriver.orientation"><code class="docutils literal notranslate"><span class="pre">WebDriver.orientation</span></code></a></li>
@@ -238,8 +245,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-webdriver.webelement">webdriver.webelement module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#webdriver.webelement.WebElement"><code class="docutils literal notranslate"><span class="pre">WebElement</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.webelement.WebElement.clear"><code class="docutils literal notranslate"><span class="pre">WebElement.clear()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#webdriver.webelement.WebElement.find_element"><code class="docutils literal notranslate"><span class="pre">WebElement.find_element()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#webdriver.webelement.WebElement.find_elements"><code class="docutils literal notranslate"><span class="pre">WebElement.find_elements()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.webelement.WebElement.get_attribute"><code class="docutils literal notranslate"><span class="pre">WebElement.get_attribute()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.webelement.WebElement.is_displayed"><code class="docutils literal notranslate"><span class="pre">WebElement.is_displayed()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webdriver.webelement.WebElement.location_in_view"><code class="docutils literal notranslate"><span class="pre">WebElement.location_in_view</span></code></a></li>
@@ -498,13 +503,39 @@
 <span id="webdriver-appium-connection-module"></span><h2>webdriver.appium_connection module<a class="headerlink" href="#module-webdriver.appium_connection" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="webdriver.appium_connection.AppiumConnection">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AppiumConnection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_server_addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_alive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_proxy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_args_for_pool_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.appium_connection.AppiumConnection" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AppiumConnection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_server_addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_alive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_proxy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_certificates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_args_for_pool_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ClientConfig</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.appium_connection.AppiumConnection" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RemoteConnection</span></code></p>
+<p>A subclass of selenium.webdriver.remote.remote_connection.Remoteconnection.</p>
+<dl>
+<dt>The changes are:</dt><dd><ul>
+<li><p>The default user agent</p></li>
+<li><p>Adds ‘X-Idempotency-Key’ header in a new session request to avoid proceeding
+the same request multiple times in the Appium server side.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/appium/appium-base-driver/pull/400">https://github.com/appium/appium-base-driver/pull/400</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.appium_connection.AppiumConnection.extra_headers">
+<span class="sig-name descname"><span class="pre">extra_headers</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#webdriver.appium_connection.AppiumConnection.extra_headers" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="webdriver.appium_connection.AppiumConnection.get_remote_connection_headers">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_remote_connection_headers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parsed_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ParseResult</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_alive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#webdriver.appium_connection.AppiumConnection.get_remote_connection_headers" title="Link to this definition"></a></dt>
-<dd><p>Override get_remote_connection_headers in RemoteConnection</p>
+<dd><p>Override get_remote_connection_headers in RemoteConnection to control the extra headers.
+This method will be used in sending a request method in this class.</p>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webdriver.appium_connection.AppiumConnection.user_agent">
+<span class="sig-name descname"><span class="pre">user_agent</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'appium/4.3.0</span> <span class="pre">(selenium/4.26.1</span> <span class="pre">(python</span> <span class="pre">linux))'</span></em><a class="headerlink" href="#webdriver.appium_connection.AppiumConnection.user_agent" title="Link to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -853,6 +884,24 @@ or has been already stopped.</p>
 <dt class="sig sig-object py" id="webdriver.errorhandler.format_stacktrace">
 <span class="sig-name descname"><span class="pre">format_stacktrace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Sequence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#webdriver.errorhandler.format_stacktrace" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+</section>
+<section id="module-webdriver.locator_converter">
+<span id="webdriver-locator-converter-module"></span><h2>webdriver.locator_converter module<a class="headerlink" href="#module-webdriver.locator_converter" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="webdriver.locator_converter.AppiumLocatorConverter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AppiumLocatorConverter</span></span><a class="headerlink" href="#webdriver.locator_converter.AppiumLocatorConverter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">LocatorConverter</span></code></p>
+<p>A custom locator converter in Appium.</p>
+<p>Appium supports locators which are not defined in W3C WebDriver,
+so Appium Python client wants to keep the given locators
+to the Appium server as-is.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="webdriver.locator_converter.AppiumLocatorConverter.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#webdriver.locator_converter.AppiumLocatorConverter.convert" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
 
 </section>
 <section id="module-webdriver.mobilecommand">
@@ -1373,7 +1422,7 @@ This name will be available as a driver method.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="webdriver.webdriver.WebDriver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WebDriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command_executor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#webdriver.appium_connection.AppiumConnection" title="webdriver.appium_connection.AppiumConnection"><span class="pre">AppiumConnection</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'http://127.0.0.1:4444/wd/hub'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_alive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct_connection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#webdriver.webdriver.WebDriver" title="webdriver.webdriver.WebDriver"><span class="pre">WebDriver</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict_ssl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AppiumOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">AppiumOptions</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.webdriver.WebDriver" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WebDriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command_executor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#webdriver.appium_connection.AppiumConnection" title="webdriver.appium_connection.AppiumConnection"><span class="pre">AppiumConnection</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'http://127.0.0.1:4444/wd/hub'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_alive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct_connection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extensions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#webdriver.webdriver.WebDriver" title="webdriver.webdriver.WebDriver"><span class="pre">WebDriver</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict_ssl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AppiumOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">AppiumOptions</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ClientConfig</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webdriver.webdriver.WebDriver" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">WebDriver</span></code>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.action_helpers.ActionHelpers" title="webdriver.extensions.action_helpers.ActionHelpers"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionHelpers</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.activities.Activities" title="webdriver.extensions.android.activities.Activities"><code class="xref py py-class docutils literal notranslate"><span class="pre">Activities</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.applications.Applications" title="webdriver.extensions.applications.Applications"><code class="xref py py-class docutils literal notranslate"><span class="pre">Applications</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.clipboard.Clipboard" title="webdriver.extensions.clipboard.Clipboard"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clipboard</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.context.Context" title="webdriver.extensions.context.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.common.Common" title="webdriver.extensions.android.common.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">Common</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.device_time.DeviceTime" title="webdriver.extensions.device_time.DeviceTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceTime</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.display.Display" title="webdriver.extensions.android.display.Display"><code class="xref py py-class docutils literal notranslate"><span class="pre">Display</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.execute_driver.ExecuteDriver" title="webdriver.extensions.execute_driver.ExecuteDriver"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExecuteDriver</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.execute_mobile_command.ExecuteMobileCommand" title="webdriver.extensions.execute_mobile_command.ExecuteMobileCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExecuteMobileCommand</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.gsm.Gsm" title="webdriver.extensions.android.gsm.Gsm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gsm</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.hw_actions.HardwareActions" title="webdriver.extensions.hw_actions.HardwareActions"><code class="xref py py-class docutils literal notranslate"><span class="pre">HardwareActions</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.images_comparison.ImagesComparison" title="webdriver.extensions.images_comparison.ImagesComparison"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImagesComparison</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.keyboard.Keyboard" title="webdriver.extensions.keyboard.Keyboard"><code class="xref py py-class docutils literal notranslate"><span class="pre">Keyboard</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.location.Location" title="webdriver.extensions.location.Location"><code class="xref py py-class docutils literal notranslate"><span class="pre">Location</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.log_event.LogEvent" title="webdriver.extensions.log_event.LogEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogEvent</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.network.Network" title="webdriver.extensions.android.network.Network"><code class="xref py py-class docutils literal notranslate"><span class="pre">Network</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.performance.Performance" title="webdriver.extensions.android.performance.Performance"><code class="xref py py-class docutils literal notranslate"><span class="pre">Performance</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.power.Power" title="webdriver.extensions.android.power.Power"><code class="xref py py-class docutils literal notranslate"><span class="pre">Power</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.remote_fs.RemoteFS" title="webdriver.extensions.remote_fs.RemoteFS"><code class="xref py py-class docutils literal notranslate"><span class="pre">RemoteFS</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.screen_record.ScreenRecord" title="webdriver.extensions.screen_record.ScreenRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScreenRecord</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.session.Session" title="webdriver.extensions.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></a>, <a class="reference internal" href="webdriver.extensions.html#webdriver.extensions.settings.Settings" title="webdriver.extensions.settings.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">Settings</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.sms.Sms" title="webdriver.extensions.android.sms.Sms"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sms</span></code></a>, <a class="reference internal" href="webdriver.extensions.android.html#webdriver.extensions.android.system_bars.SystemBars" title="webdriver.extensions.android.system_bars.SystemBars"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemBars</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="webdriver.webdriver.WebDriver.assert_extension_exists">
@@ -1414,58 +1463,6 @@ Appium WebElement</p>
 <dt class="sig sig-object py" id="webdriver.webdriver.WebDriver.delete_extensions">
 <span class="sig-name descname"><span class="pre">delete_extensions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#webdriver.webdriver.WebDriver.delete_extensions" title="Link to this definition"></a></dt>
 <dd><p>Delete extensions added in the class with ‘setattr’</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="webdriver.webdriver.WebDriver.find_element">
-<span class="sig-name descname"><span class="pre">find_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#webdriver.webelement.WebElement" title="webdriver.webelement.WebElement"><span class="pre">WebElement</span></a></span></span><a class="headerlink" href="#webdriver.webdriver.WebDriver.find_element" title="Link to this definition"></a></dt>
-<dd><p>Find an element given a AppiumBy strategy and locator</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>by</strong> – The strategy</p></li>
-<li><p><strong>value</strong> – The locator</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Usage:</dt><dd><p>driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value=’accessibility_id’)</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The found element</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="webdriver.webdriver.WebDriver.find_elements">
-<span class="sig-name descname"><span class="pre">find_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#webdriver.webelement.WebElement" title="webdriver.webelement.WebElement"><span class="pre">WebElement</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span></span></span><a class="headerlink" href="#webdriver.webdriver.WebDriver.find_elements" title="Link to this definition"></a></dt>
-<dd><p>Find elements given a AppiumBy strategy and locator</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>by</strong> – The strategy</p></li>
-<li><p><strong>value</strong> – The locator</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Usage:</dt><dd><p>driver.find_elements(by=AppiumBy.ACCESSIBILITY_ID, value=’accessibility_id’)</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The found elements</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1559,54 +1556,6 @@ for more details.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="webdriver.webelement.WebElement.find_element">
-<span class="sig-name descname"><span class="pre">find_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#webdriver.webelement.WebElement" title="webdriver.webelement.WebElement"><span class="pre">WebElement</span></a></span></span><a class="headerlink" href="#webdriver.webelement.WebElement.find_element" title="Link to this definition"></a></dt>
-<dd><p>Find an element given a AppiumBy strategy and locator</p>
-<p>Override for Appium</p>
-<p>Prefer the find_element_by_* methods when possible.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>by</strong> – The strategy</p></li>
-<li><p><strong>value</strong> – The locator</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Usage:</dt><dd><p>element = element.find_element(AppiumBy.ID, ‘foo’)</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><cite>appium.webdriver.webelement.WebElement</cite></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="webdriver.webelement.WebElement.find_elements">
-<span class="sig-name descname"><span class="pre">find_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'id'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#webdriver.webelement.WebElement" title="webdriver.webelement.WebElement"><span class="pre">WebElement</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#webdriver.webelement.WebElement.find_elements" title="Link to this definition"></a></dt>
-<dd><p>Find elements given a AppiumBy strategy and locator</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>by</strong> – The strategy</p></li>
-<li><p><strong>value</strong> – The locator</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Usage:</dt><dd><p>element = element.find_elements(AppiumBy.CLASS_NAME, ‘foo’)</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">appium.webdriver.webelement.WebElement</span></code></p>
 </dd>
 </dl>
 </dd></dl>
