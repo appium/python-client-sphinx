@@ -9,13 +9,13 @@ webdriver.common.appiumby module
 
 .. automodule:: webdriver.common.appiumby
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: webdriver.common
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
