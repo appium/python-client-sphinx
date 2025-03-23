@@ -37,6 +37,14 @@ webdriver.applicationstate module
    :show-inheritance:
    :undoc-members:
 
+webdriver.client\_config module
+-------------------------------
+
+.. automodule:: webdriver.client_config
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 webdriver.clipboard\_content\_type module
 -----------------------------------------
 
