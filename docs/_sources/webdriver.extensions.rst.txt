@@ -109,6 +109,14 @@ webdriver.extensions.log\_event module
    :show-inheritance:
    :undoc-members:
 
+webdriver.extensions.logs module
+--------------------------------
+
+.. automodule:: webdriver.extensions.logs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 webdriver.extensions.remote\_fs module
 --------------------------------------
 
