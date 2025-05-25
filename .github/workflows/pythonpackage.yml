@@ -1,4 +1,4 @@
-pname: Python CI
+name: Python CI
 
 on:
   schedule:
