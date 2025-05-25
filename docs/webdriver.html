@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>webdriver package &mdash; Python client 1.1 1.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
@@ -545,7 +545,7 @@ This method will be used in sending a request method in this class.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="webdriver.appium_connection.AppiumConnection.user_agent">
-<span class="sig-name descname"><span class="pre">user_agent</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'appium/4.3.0</span> <span class="pre">(selenium/4.27.1</span> <span class="pre">(python</span> <span class="pre">mac))'</span></em><a class="headerlink" href="#webdriver.appium_connection.AppiumConnection.user_agent" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">user_agent</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'appium/5.1.1</span> <span class="pre">(selenium/4.32.0</span> <span class="pre">(python</span> <span class="pre">linux))'</span></em><a class="headerlink" href="#webdriver.appium_connection.AppiumConnection.user_agent" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1341,18 +1341,18 @@ Passing <cite>None</cite> is equal to switching to native context.</p>
 <cite>session/$sessionId/path/to/your/custom/url</cite>.</p>
 <ol class="arabic">
 <li><dl>
-<dt>Defines an extension as a subclass of <cite>ExtensionBase</cite></dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">YourCustomCommand</span><span class="p">(</span><span class="n">ExtensionBase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<dt>Defines an extension as a subclass of <cite>ExtensionBase</cite></dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">YourCustomCommand</span><span class="p">(</span><span class="n">ExtensionBase</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">&#39;custom_method_name&#39;</span>
 
     <span class="c1"># Define a method with the name of `method_name`</span>
-    <span class="k">def</span> <span class="nf">custom_method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">custom_method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Generally the response of Appium follows `{ &#39;value&#39;: { data } }`</span>
         <span class="c1"># format.</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">()[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
 
     <span class="c1"># Used to register the command pair as &quot;Appium command&quot; in this driver.</span>
-    <span class="k">def</span> <span class="nf">add_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;session/$sessionId/path/to/your/custom/url&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1392,14 +1392,14 @@ Passing <cite>None</cite> is equal to switching to native context.</p>
 </li>
 </ol>
 <p>You can give arbitrary arguments for the command like the below.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">YourCustomCommand</span><span class="p">(</span><span class="n">ExtensionBase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">YourCustomCommand</span><span class="p">(</span><span class="n">ExtensionBase</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">&#39;custom_method_name&#39;</span>
 
-    <span class="k">def</span> <span class="nf">test_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">argument</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">argument</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">argument</span><span class="p">)[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">add_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;post&#39;</span><span class="p">,</span> <span class="s1">&#39;session/$sessionId/path/to/your/custom/url&#39;</span><span class="p">)</span>
 
 <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Remote</span><span class="p">(</span><span class="s1">&#39;http://localhost:4723/wd/hub&#39;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
@@ -1411,14 +1411,14 @@ Passing <cite>None</cite> is equal to switching to native context.</p>
 </pre></div>
 </div>
 <p>When you customize the URL dynamically with element id.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CustomURLCommand</span><span class="p">(</span><span class="n">ExtensionBase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">CustomURLCommand</span><span class="p">(</span><span class="n">ExtensionBase</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">&#39;custom_method_name&#39;</span>
 
-    <span class="k">def</span> <span class="nf">custom_method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element_id</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">custom_method_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element_id</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">({</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">element_id</span><span class="p">})[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">add_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;session/$sessionId/path/to/your/custom/$id/url&#39;</span><span class="p">)</span>
 
 <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Remote</span><span class="p">(</span><span class="s1">&#39;http://localhost:4723/wd/hub&#39;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
