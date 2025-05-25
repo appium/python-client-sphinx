@@ -27,6 +27,8 @@ jobs:
         pip install --user pipenv
         python -m pipenv lock --clear
         python -m pipenv install --dev --system
+        python -m pip install setuptools
+        python setup.py install
       working-directory: python-client
     - name: Build doc
       shell: bash -xe {0}
