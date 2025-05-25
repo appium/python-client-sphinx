@@ -11,19 +11,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         path: ./python-client-sphinx
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: appium/python-client
         path: ./python-client
     - name: Set up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
+        python-version: '3.12'
     - name: Setup python-client
       run: |
+        pip install --user pipenv
+        python -m pipenv lock --clear
+        python -m pipenv install --dev --system
         python -m pip install setuptools
         python setup.py install
       working-directory: python-client
