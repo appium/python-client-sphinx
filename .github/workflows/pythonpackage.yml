@@ -30,8 +30,6 @@ jobs:
     - name: Build doc
       shell: bash -xe {0}
       run: |
-        python -m pip install selenium==4.34.2
-        python -m pip install -r requirements.txt
         bash generate.sh
       working-directory: python-client/docs
     - name: Check if PR needed
