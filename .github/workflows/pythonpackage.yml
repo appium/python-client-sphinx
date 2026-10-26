@@ -38,17 +38,7 @@ jobs:
       shell: bash -xe {0}
       run: |
         export PATH="$HOME/.local/bin:$PATH"
-        python - <<'PY'
-        import pathlib, re, tomllib
-        pyproject = pathlib.Path('../pyproject.toml')
-        if pyproject.exists():
-            version = tomllib.loads(pyproject.read_text(encoding='utf-8'))['project']['version']
-            conf = pathlib.Path('conf.py')
-            text = conf.read_text(encoding='utf-8')
-            text = re.sub(r"^project\s*=\s*['\"].*?['\"]", f"project = 'Python client {version}'", text, flags=re.M)
-            text = re.sub(r"^release\s*=\s*['\"].*?['\"]", f"release = '{version}'", text, flags=re.M)
-            conf.write_text(text, encoding='utf-8')
-        PY
+        python ../../python-client-sphinx/scripts/sync_conf_version.py
         bash generate.sh
       working-directory: python-client/docs
     - name: Check if PR needed
@@ -56,29 +46,7 @@ jobs:
       env:
         TARGET_REF: ${{ inputs.ref || 'master' }}
       run: |
-        VERSION=$(python -c "import pathlib, re, tomllib; p = pathlib.Path('../python-client/pyproject.toml'); print(tomllib.loads(p.read_text())['project']['version'] if p.exists() else re.search(r\"release\s*=\s*'([^']+)'\", pathlib.Path('../python-client/docs/conf.py').read_text()).group(1))")
-        MAJOR_MINOR="v$(echo "$VERSION" | cut -d. -f1,2)"
-
-        mkdir -p docs
-        if [ "$TARGET_REF" = "master" ] || [ "$TARGET_REF" = "main" ]; then
-          find docs -mindepth 1 -maxdepth 1 ! -name 'v*' ! -name 'latest' -exec rm -rf {} +
-          cp -r ../python-client/docs/_build/html/. ./docs/
-          rm -rf "docs/latest"
-          mkdir -p "docs/latest"
-          cp -r ../python-client/docs/_build/html/. "docs/latest/"
-        fi
-
-        rm -rf "docs/$MAJOR_MINOR"
-        mkdir -p "docs/$MAJOR_MINOR"
-        cp -r ../python-client/docs/_build/html/. "docs/$MAJOR_MINOR/"
-
-        for rst in $(git status --porcelain | awk '{print $2}' | grep '_sources/index\.rst\.txt$' || true); do
-          if [ -z "$(git diff -I 'sphinx-quickstart on' -- "$rst")" ]; then
-            git checkout -- "$rst"
-          fi
-        done
-
-        git --no-pager status --short
+        bash scripts/update_docs.sh
       working-directory: python-client-sphinx
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
