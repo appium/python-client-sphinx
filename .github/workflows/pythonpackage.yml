@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 0 * * SUN'
   workflow_dispatch:
+    inputs:
+      ref:
+        description: 'appium/python-client git ref (branch or tag) to build docs from'
+        required: false
+        default: 'master'
 
 jobs:
   build:
@@ -17,6 +22,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         repository: appium/python-client
+        ref: ${{ inputs.ref || 'master' }}
         path: ./python-client
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -24,21 +30,23 @@ jobs:
         python-version: '3.12'
     - name: Setup python-client
       run: |
+        export PATH="$HOME/.local/bin:$PATH"
         make install-uv
         make sync-dev
       working-directory: python-client
     - name: Build doc
       shell: bash -xe {0}
       run: |
+        export PATH="$HOME/.local/bin:$PATH"
+        python ../../python-client-sphinx/scripts/sync_conf_version.py
         bash generate.sh
       working-directory: python-client/docs
     - name: Check if PR needed
       shell: bash -xe {0}
+      env:
+        TARGET_REF: ${{ inputs.ref || 'master' }}
       run: |
-        rm -r docs
-        cp -r ../python-client/docs/_build/html ./docs
-        git --no-pager diff --stat
-        if (git --no-pager diff --stat | grep -q "docs/_sources/index.rst.txt | 2 +-"); then exit 1; fi
+        bash scripts/update_docs.sh
       working-directory: python-client-sphinx
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
