@@ -52,3 +52,4 @@ jobs:
       uses: peter-evans/create-pull-request@v3
       with:
         path: ./python-client-sphinx
+        branch: create-pull-request/docs-${{ inputs.ref || 'master' }}
