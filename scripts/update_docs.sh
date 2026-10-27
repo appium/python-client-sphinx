@@ -34,10 +34,12 @@ rm -rf "docs/$MAJOR_MINOR"
 mkdir -p "docs/$MAJOR_MINOR"
 cp -r ../python-client/docs/_build/html/. "docs/$MAJOR_MINOR/"
 
-for rst in $(git status --porcelain | awk '{print $2}' | grep '_sources/index\.rst\.txt$' || true); do
-  if [ -z "$(git diff -I 'sphinx-quickstart on' -- "$rst")" ]; then
+# Only tracked, modified files can have a timestamp-only diff to restore.
+# New files have an empty git diff but must be kept for publication.
+while IFS= read -r -d '' rst; do
+  if git diff --quiet -I 'sphinx-quickstart on' -- "$rst"; then
     git checkout -- "$rst"
   fi
-done
+done < <(git diff --name-only --diff-filter=M -z -- 'docs/**/_sources/index.rst.txt' 'docs/_sources/index.rst.txt')
 
 git --no-pager status --short
