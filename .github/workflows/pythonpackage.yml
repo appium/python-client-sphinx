@@ -34,6 +34,11 @@ jobs:
         make install-uv
         make sync-dev
       working-directory: python-client
+    - name: Select documentation version
+      working-directory: python-client-sphinx
+      env:
+        TARGET_REF: ${{ inputs.ref || 'master' }}
+      run: echo "APPIUM_DOCS_VERSION=$(python scripts/docs_version.py)" >> "$GITHUB_ENV"
     - name: Build doc
       shell: bash -xe {0}
       run: |

@@ -1,3 +1,4 @@
+import json
 import os
 from pathlib import Path
 import subprocess
@@ -61,14 +62,15 @@ class UpdateDocsTest(unittest.TestCase):
         self.commit()
         self.write(self.html / INDEX, 'New index\n')
         self.update()
-        for target in ('docs', 'docs/latest', 'docs/v6.0'):
+        for target in ('docs', 'docs/latest'):
             self.assertEqual((self.repo / target / INDEX).read_text(), 'New index\n')
 
     def test_timestamp_only_changes_are_reverted_in_all_targets(self):
         old = 'Title\n   sphinx-quickstart on yesterday.\n'
         new = 'Title\n   sphinx-quickstart on today.\n'
-        for target in ('docs', 'docs/latest', 'docs/v6.0'):
+        for target in ('docs', 'docs/latest'):
             self.write(self.repo / target / INDEX, old)
+        self.write(self.repo / 'docs/switcher.json', '[]\n')
         self.commit()
         self.write(self.html / INDEX, new)
         self.update()
@@ -97,20 +99,34 @@ class UpdateDocsTest(unittest.TestCase):
         self.assertFalse((self.repo / 'docs/v6.0/obsolete.html').exists())
 
     def test_master_build_preserves_other_versions_and_removes_stale_files(self):
-        self.write(self.repo / 'docs/v5.0/index.html', 'Previous release')
-        for target in ('docs', 'docs/latest', 'docs/v6.0'):
+        self.write(self.repo / 'docs/v6.0/index.html', 'Previous release')
+        for target in ('docs', 'docs/latest'):
             self.write(self.repo / target / 'obsolete.html', 'obsolete')
         self.commit()
         self.write(self.html / 'index.html', 'Current documentation')
         self.update()
         self.assertEqual(
-            (self.repo / 'docs/v5.0/index.html').read_text(), 'Previous release'
+            (self.repo / 'docs/v6.0/index.html').read_text(), 'Previous release'
         )
-        for target in ('docs', 'docs/latest', 'docs/v6.0'):
+        for target in ('docs', 'docs/latest'):
             self.assertEqual(
                 (self.repo / target / 'index.html').read_text(), 'Current documentation'
             )
             self.assertFalse((self.repo / target / 'obsolete.html').exists())
+
+    def test_switcher_lists_only_available_versions_in_numeric_order(self):
+        self.write(self.repo / 'docs/v5.12/index.html', 'Previous release')
+        self.write(self.repo / 'docs/v5.9/index.html', 'Older release')
+        self.write(self.repo / 'docs/v9.0/other.html', 'No landing page')
+        self.write(self.html / 'index.html', 'Development')
+        self.update()
+        self.update(ref='v6.0.1')
+        entries = json.loads((self.repo / 'docs/switcher.json').read_text())
+        self.assertEqual([e['version'] for e in entries], ['latest', 'v6.0', 'v5.12', 'v5.9'])
+        self.assertEqual(entries[0]['name'], 'Development')
+        for entry in entries:
+            directory = entry['url'].removeprefix('https://appium.github.io/python-client-sphinx/')
+            self.assertTrue((self.repo / 'docs' / directory / 'index.html').is_file())
 
 
 if __name__ == '__main__':
