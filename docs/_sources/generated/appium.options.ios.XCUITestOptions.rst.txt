@@ -1,0 +1,154 @@
+﻿appium.options.ios.XCUITestOptions
+==================================
+
+.. currentmodule:: appium.options.ios
+
+.. autoclass:: XCUITestOptions
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~XCUITestOptions.__init__
+      ~XCUITestOptions.as_w3c
+      ~XCUITestOptions.enable_mobile
+      ~XCUITestOptions.get_capability
+      ~XCUITestOptions.ignore_local_proxy_environment_variables
+      ~XCUITestOptions.load_capabilities
+      ~XCUITestOptions.set_capability
+      ~XCUITestOptions.to_capabilities
+      ~XCUITestOptions.to_w3c
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~XCUITestOptions.W3C_CAPABILITY_NAMES
+      ~XCUITestOptions.absolute_web_locations
+      ~XCUITestOptions.additional_webview_bundle_ids
+      ~XCUITestOptions.allow_provisioning_device_registration
+      ~XCUITestOptions.app
+      ~XCUITestOptions.app_install_strategy
+      ~XCUITestOptions.app_push_timeout
+      ~XCUITestOptions.auto_accept_alerts
+      ~XCUITestOptions.auto_dismiss_alerts
+      ~XCUITestOptions.auto_web_view
+      ~XCUITestOptions.automation_name
+      ~XCUITestOptions.browser_name
+      ~XCUITestOptions.bundle_id
+      ~XCUITestOptions.calendar_access_authorized
+      ~XCUITestOptions.calendar_format
+      ~XCUITestOptions.capabilities
+      ~XCUITestOptions.clear_system_files
+      ~XCUITestOptions.command_timeouts
+      ~XCUITestOptions.connect_hardware_keyboard
+      ~XCUITestOptions.custom_ssl_cert
+      ~XCUITestOptions.default_capabilities
+      ~XCUITestOptions.derived_data_path
+      ~XCUITestOptions.device_name
+      ~XCUITestOptions.disable_automatic_screenshots
+      ~XCUITestOptions.enable_async_execute_from_https
+      ~XCUITestOptions.enable_performance_logging
+      ~XCUITestOptions.enforce_fresh_simulator_creation
+      ~XCUITestOptions.event_timings
+      ~XCUITestOptions.force_app_launch
+      ~XCUITestOptions.force_simulator_software_keyboard_presence
+      ~XCUITestOptions.full_context_list
+      ~XCUITestOptions.full_reset
+      ~XCUITestOptions.include_device_caps_to_session_info
+      ~XCUITestOptions.include_safari_in_webviews
+      ~XCUITestOptions.ios_simulator_logs_predicate
+      ~XCUITestOptions.is_headless
+      ~XCUITestOptions.keep_key_chains
+      ~XCUITestOptions.keychain_password
+      ~XCUITestOptions.keychain_path
+      ~XCUITestOptions.keychains_exclude_patterns
+      ~XCUITestOptions.language
+      ~XCUITestOptions.launch_with_idb
+      ~XCUITestOptions.locale
+      ~XCUITestOptions.localizable_strings_dir
+      ~XCUITestOptions.max_typing_frequency
+      ~XCUITestOptions.mjpeg_server_port
+      ~XCUITestOptions.native_web_tap
+      ~XCUITestOptions.new_command_timeout
+      ~XCUITestOptions.no_reset
+      ~XCUITestOptions.orientation
+      ~XCUITestOptions.other_apps
+      ~XCUITestOptions.permissions
+      ~XCUITestOptions.platform_version
+      ~XCUITestOptions.prebuilt_wda_path
+      ~XCUITestOptions.print_page_source_on_find_failure
+      ~XCUITestOptions.process_arguments
+      ~XCUITestOptions.reduce_motion
+      ~XCUITestOptions.reset_location_service
+      ~XCUITestOptions.reset_on_session_start_only
+      ~XCUITestOptions.result_bundle_path
+      ~XCUITestOptions.safari_garbage_collect
+      ~XCUITestOptions.safari_ignore_fraud_warning
+      ~XCUITestOptions.safari_ignore_web_hostnames
+      ~XCUITestOptions.safari_initial_url
+      ~XCUITestOptions.safari_log_all_communication
+      ~XCUITestOptions.safari_log_all_communication_hex_dump
+      ~XCUITestOptions.safari_open_links_in_background
+      ~XCUITestOptions.safari_socket_chunk_size
+      ~XCUITestOptions.safari_web_inspector_max_frame_length
+      ~XCUITestOptions.scale_factor
+      ~XCUITestOptions.screenshot_quality
+      ~XCUITestOptions.should_terminate_app
+      ~XCUITestOptions.should_use_singleton_test_manager
+      ~XCUITestOptions.show_ios_log
+      ~XCUITestOptions.show_xcode_log
+      ~XCUITestOptions.shutdown_other_simulators
+      ~XCUITestOptions.simple_is_visible_check
+      ~XCUITestOptions.simulator_devices_set_path
+      ~XCUITestOptions.simulator_pasteboard_automatic_sync
+      ~XCUITestOptions.simulator_startup_timeout
+      ~XCUITestOptions.simulator_trace_pointer
+      ~XCUITestOptions.simulator_window_center
+      ~XCUITestOptions.skip_log_capture
+      ~XCUITestOptions.udid
+      ~XCUITestOptions.updated_wda_bundle_id
+      ~XCUITestOptions.use_json_source
+      ~XCUITestOptions.use_native_caching_strategy
+      ~XCUITestOptions.use_new_wda
+      ~XCUITestOptions.use_prebuilt_wda
+      ~XCUITestOptions.use_preinstalled_wda
+      ~XCUITestOptions.use_simple_build_test
+      ~XCUITestOptions.use_xctestrun_file
+      ~XCUITestOptions.wait_for_idle_timeout
+      ~XCUITestOptions.wait_for_quiescence
+      ~XCUITestOptions.wda_base_url
+      ~XCUITestOptions.wda_connection_timeout
+      ~XCUITestOptions.wda_eventloop_idle_delay
+      ~XCUITestOptions.wda_launch_timeout
+      ~XCUITestOptions.wda_local_port
+      ~XCUITestOptions.wda_startup_retries
+      ~XCUITestOptions.wda_startup_retry_interval
+      ~XCUITestOptions.web_driver_agent_url
+      ~XCUITestOptions.webkit_response_timeout
+      ~XCUITestOptions.webview_connect_retries
+      ~XCUITestOptions.webview_connect_timeout
+      ~XCUITestOptions.xcode_org_id
+      ~XCUITestOptions.xcode_signing_id
+      ~XCUITestOptions.browser_version
+      ~XCUITestOptions.platform_name
+      ~XCUITestOptions.accept_insecure_certs
+      ~XCUITestOptions.strict_file_interactability
+      ~XCUITestOptions.set_window_rect
+      ~XCUITestOptions.enable_bidi
+      ~XCUITestOptions.page_load_strategy
+      ~XCUITestOptions.unhandled_prompt_behavior
+      ~XCUITestOptions.timeouts
+      ~XCUITestOptions.proxy
+      ~XCUITestOptions.enable_downloads
+      ~XCUITestOptions.web_socket_url
+   
+   
