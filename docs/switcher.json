@@ -3,5 +3,10 @@
     "name": "Development",
     "version": "latest",
     "url": "https://appium.github.io/python-client-sphinx/latest/"
+  },
+  {
+    "name": "6.5.x",
+    "version": "v6.5",
+    "url": "https://appium.github.io/python-client-sphinx/v6.5/"
   }
 ]
