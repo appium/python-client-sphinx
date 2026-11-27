@@ -1,0 +1,145 @@
+﻿appium.options.android.UiAutomator2Options
+==========================================
+
+.. currentmodule:: appium.options.android
+
+.. autoclass:: UiAutomator2Options
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~UiAutomator2Options.__init__
+      ~UiAutomator2Options.as_w3c
+      ~UiAutomator2Options.enable_mobile
+      ~UiAutomator2Options.get_capability
+      ~UiAutomator2Options.ignore_local_proxy_environment_variables
+      ~UiAutomator2Options.load_capabilities
+      ~UiAutomator2Options.set_capability
+      ~UiAutomator2Options.to_capabilities
+      ~UiAutomator2Options.to_w3c
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~UiAutomator2Options.W3C_CAPABILITY_NAMES
+      ~UiAutomator2Options.adb_exec_timeout
+      ~UiAutomator2Options.adb_port
+      ~UiAutomator2Options.allow_delay_adb
+      ~UiAutomator2Options.allow_test_packages
+      ~UiAutomator2Options.android_install_timeout
+      ~UiAutomator2Options.app
+      ~UiAutomator2Options.app_activity
+      ~UiAutomator2Options.app_package
+      ~UiAutomator2Options.app_wait_activity
+      ~UiAutomator2Options.app_wait_duration
+      ~UiAutomator2Options.app_wait_for_launch
+      ~UiAutomator2Options.app_wait_package
+      ~UiAutomator2Options.auto_grant_permissions
+      ~UiAutomator2Options.auto_web_view
+      ~UiAutomator2Options.auto_webview_timeout
+      ~UiAutomator2Options.automation_name
+      ~UiAutomator2Options.avd
+      ~UiAutomator2Options.avd_args
+      ~UiAutomator2Options.avd_env
+      ~UiAutomator2Options.avd_launch_timeout
+      ~UiAutomator2Options.avd_ready_timeout
+      ~UiAutomator2Options.browser_name
+      ~UiAutomator2Options.build_tools_version
+      ~UiAutomator2Options.capabilities
+      ~UiAutomator2Options.chrome_logging_prefs
+      ~UiAutomator2Options.chrome_options
+      ~UiAutomator2Options.chromedriver_args
+      ~UiAutomator2Options.chromedriver_chrome_mapping_file
+      ~UiAutomator2Options.chromedriver_disable_build_check
+      ~UiAutomator2Options.chromedriver_executable
+      ~UiAutomator2Options.chromedriver_executable_dir
+      ~UiAutomator2Options.chromedriver_port
+      ~UiAutomator2Options.chromedriver_ports
+      ~UiAutomator2Options.chromedriver_use_system_executable
+      ~UiAutomator2Options.clear_device_logs_on_start
+      ~UiAutomator2Options.clear_system_files
+      ~UiAutomator2Options.default_capabilities
+      ~UiAutomator2Options.device_name
+      ~UiAutomator2Options.disable_suppress_accessibility_service
+      ~UiAutomator2Options.disable_window_animation
+      ~UiAutomator2Options.enable_performance_logging
+      ~UiAutomator2Options.enforce_app_install
+      ~UiAutomator2Options.ensure_webviews_have_pages
+      ~UiAutomator2Options.event_timings
+      ~UiAutomator2Options.extract_chrome_android_package_from_context_name
+      ~UiAutomator2Options.full_reset
+      ~UiAutomator2Options.gps_enabled
+      ~UiAutomator2Options.ignore_hidden_api_policy_error
+      ~UiAutomator2Options.intent_action
+      ~UiAutomator2Options.intent_category
+      ~UiAutomator2Options.intent_flags
+      ~UiAutomator2Options.is_headless
+      ~UiAutomator2Options.key_alias
+      ~UiAutomator2Options.key_password
+      ~UiAutomator2Options.keystore_password
+      ~UiAutomator2Options.keystore_path
+      ~UiAutomator2Options.language
+      ~UiAutomator2Options.locale
+      ~UiAutomator2Options.locale_script
+      ~UiAutomator2Options.logcat_filter_specs
+      ~UiAutomator2Options.logcat_format
+      ~UiAutomator2Options.mjpeg_screenshot_url
+      ~UiAutomator2Options.mjpeg_server_port
+      ~UiAutomator2Options.mock_location_app
+      ~UiAutomator2Options.native_web_screenshot
+      ~UiAutomator2Options.network_speed
+      ~UiAutomator2Options.new_command_timeout
+      ~UiAutomator2Options.no_reset
+      ~UiAutomator2Options.no_sign
+      ~UiAutomator2Options.optional_intent_arguments
+      ~UiAutomator2Options.orientation
+      ~UiAutomator2Options.other_apps
+      ~UiAutomator2Options.platform_version
+      ~UiAutomator2Options.print_page_source_on_find_failure
+      ~UiAutomator2Options.recreate_chrome_driver_sessions
+      ~UiAutomator2Options.remote_adb_host
+      ~UiAutomator2Options.remote_apps_cache_limit
+      ~UiAutomator2Options.show_chromedriver_log
+      ~UiAutomator2Options.skip_device_initialization
+      ~UiAutomator2Options.skip_log_capture
+      ~UiAutomator2Options.skip_logcat_capture
+      ~UiAutomator2Options.skip_server_installation
+      ~UiAutomator2Options.skip_unlock
+      ~UiAutomator2Options.suppress_kill_server
+      ~UiAutomator2Options.system_port
+      ~UiAutomator2Options.udid
+      ~UiAutomator2Options.uiautomator2_server_install_timeout
+      ~UiAutomator2Options.uiautomator2_server_launch_timeout
+      ~UiAutomator2Options.uiautomator2_server_read_timeout
+      ~UiAutomator2Options.uninstall_other_packages
+      ~UiAutomator2Options.unlock_key
+      ~UiAutomator2Options.unlock_strategy
+      ~UiAutomator2Options.unlock_success_timeout
+      ~UiAutomator2Options.unlock_type
+      ~UiAutomator2Options.use_keystore
+      ~UiAutomator2Options.user_profile
+      ~UiAutomator2Options.webview_devtools_port
+      ~UiAutomator2Options.browser_version
+      ~UiAutomator2Options.platform_name
+      ~UiAutomator2Options.accept_insecure_certs
+      ~UiAutomator2Options.strict_file_interactability
+      ~UiAutomator2Options.set_window_rect
+      ~UiAutomator2Options.enable_bidi
+      ~UiAutomator2Options.page_load_strategy
+      ~UiAutomator2Options.unhandled_prompt_behavior
+      ~UiAutomator2Options.timeouts
+      ~UiAutomator2Options.proxy
+      ~UiAutomator2Options.enable_downloads
+      ~UiAutomator2Options.web_socket_url
+   
+   
